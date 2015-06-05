@@ -1037,7 +1037,7 @@ SN.createTooltip = function (artistName) {
     }
 
     content += '<div class="sk-bt">';
-    content += '<img class="skLogo" width="169" height="17"></span>';
+    content += '<img class="skLogo">';
     content += '</div>';
     content += '</div>';
     return content;
@@ -1346,22 +1346,19 @@ SN.formatTrack = function (artistName, prevTrackIndex, trackIndex, nextTrackInde
         track: track,
     };
 
-    return SN.templates['track'](context);
+    return SN.templates.track(context);
 }
 
 SN.formatEvent = function (event, artistName) {
-    var content = '<li>';
-    if (event.distance < 1000000) {
-        content += '<div class="Event">';
-        content += '  <div class="Event-date">' + event.date + '</div>';
-        content += '  <div class="Event-title"><a href="' + event.url + '" target="_blank">' + event.title + '</a></div>';
-        content += '  <div class="Event-location">' + event.city + ', ' + event.province + '</div>';
-        content += '</div>';
-    } else {
-        content += '<span class="artistName">' + artistName + '</span> is currently not on tour near you. Check the <a href="' + event.url + '" target="_blank">full schedule</a> to find their concerts in other cities.';
-    }
-    content += '</li>';
-    return content;
+
+    // Context object for the Handlebars template.
+    var context = {
+        event: event,
+        artistName: artistName,
+        threshold: 1000000
+    };
+
+    return SN.templates.event(context);
 };
 
 SN.spotifyCallbacks = [];
@@ -1488,7 +1485,7 @@ SN.addPlayer = function () {
     });
            
     // Template to add to DOM
-    var player = SN.templates['player']();
+    var player = SN.templates.player();
 
     // Add to Dom
     $('body').append(player);
@@ -2754,11 +2751,58 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;;
+// Create a custom function helper to check the event is close enough.
+// distanceToEvent and threshold are parameters that come from the event.hbs file where
+// this helper is called.
+// the options param is some other object that contains two functions, fn() and inverse().
+// These are both standard hbs template functions that return HTML.
+// options.fn() is a hbs template for the body of this custom helper block
+// from the hbs template. options.inverse() is the else clause.
+// this is the context object given to the original template,
+// so fn(this) will process the body of this clause within the templates context.
+Handlebars.registerHelper('closeEvent', function (distanceToEvent, threshold, options){
+    if (distanceToEvent < threshold) {
+        return options.fn(this);
+    } else {
+        return options.inverse(this);
+    }
+});
+;
 this["SN"] = this["SN"] || {};
 this["SN"]["templates"] = this["SN"]["templates"] || {};
 
+this["SN"]["templates"]["event"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "        <div class=\"Event\">\r\n            <div class=\"Event-date\">"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.event : depth0)) != null ? stack1.date : stack1), depth0))
+    + "</div>\r\n            <div class=\"Event-title\"><a href=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.event : depth0)) != null ? stack1.url : stack1), depth0))
+    + "\" target=\"_blank\">"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.event : depth0)) != null ? stack1.title : stack1), depth0))
+    + "</a></div>\r\n            <div class=\"Event-location\">"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.event : depth0)) != null ? stack1.city : stack1), depth0))
+    + ", "
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.event : depth0)) != null ? stack1.province : stack1), depth0))
+    + "</div>\r\n        </div>\r\n";
+},"3":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=this.escapeExpression;
+
+  return "        <span class=\"artistName\">"
+    + alias1(((helper = (helper = helpers.artistName || (depth0 != null ? depth0.artistName : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"artistName","hash":{},"data":data}) : helper)))
+    + "</span> is currently not on tour near you.\r\n        Check the <a href=\""
+    + alias1(this.lambda(((stack1 = (depth0 != null ? depth0.event : depth0)) != null ? stack1.url : stack1), depth0))
+    + "\" target=\"_blank\">full schedule</a> to find their concerts in other cities.\r\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<li>\r\n"
+    + ((stack1 = (helpers.closeEvent || (depth0 && depth0.closeEvent) || helpers.helperMissing).call(depth0,((stack1 = (depth0 != null ? depth0.event : depth0)) != null ? stack1.distance : stack1),(depth0 != null ? depth0.threshold : depth0),{"name":"closeEvent","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(3, data, 0),"data":data})) != null ? stack1 : "")
+    + "</li>";
+},"useData":true});
+
 this["SN"]["templates"]["player"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"SN-player\" id=\"snPlayer\">\n    <div class=\"SN-player-front-panel\">\n        <span class=\"SN-player-close SN-clickable\" id=\"snPlayerClose\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-cross\" /></svg></span>\n        <div class=\"SN-player-col-b\">\n            <div class=\"SN-player-trackData\">\n                <svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-spotify\" /></svg>\n                <a data-purchase-link=\"2\" target=\"spotify\" class=\"SN-clickable\">\n                    <span id=\"snArtistName\"></span> &ndash; <span id=\"snTrackName\"></span>\n                </a>\n            </div>\n        </div>\n        <div class=\"SN-player-controlbar\">\n            <span class=\"SN-player-mymusic-add SN-clickable\">\n                <svg class=\"icon add\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-plus\" /></svg>\n                <svg class=\"icon added\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-ok\" /></svg>\n                <svg class=\"icon remove\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-cross\" /></svg>\n            </span>\n            <span class=\"SN-player-prev SN-clickable\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-last\" /></svg></span>\n            <span class=\"SN-player-play SN-clickable\" style=\"display: none;\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-play\"/></svg></span> \n            <span class=\"SN-player-pause SN-clickable\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-pause\" /></svg></span>\n            <span class=\"SN-player-next SN-clickable\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-next\" /></svg></span>\n            <audio class=\"SN-player-controls\" id=\"snTrackPlayer\" src=\"\" autoplay>Sorry your browser is not supported\n            </audio>\n            <span class=\"SN-player-toggle-extension SN-clickable\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-dots\" /></svg></span>\n        </div>\n    </div>\n</div>\n<div class=\"SN-player-extension\">\n    <ul class=\"SN-player-extension-menu SN-player-extension-menu-top\">\n        <li class=\"SN-player-spotify-add SN-clickable\"><i class=\"icon icon-fw icon-music\"></i> Add to playlist</li>\n        <li>\n            <div class=\"SN-player-select-action SN-clickable\" data-for=\"#snTrackViewUrl\"><i class=\"icon icon-fw icon-link\"></i> Copy spotify URL</div>\n            <input id=\"snTrackViewUrl\" readonly style=\"width: 100%\">\n        </li>\n        <li><i class=\"icon icon-fw icon-help\"></i> Feedback</li>\n    </ul>\n    <ul class=\"SN-player-extension-menu SN-player-extension-menu-playlists\">\n    </ul>\n    <ul class=\"SN-player-extension-menu SN-player-extension-menu-playlist-new\">\n        <li class=\"SN-player-spotify-add SN-clickable\"><i class=\"icon icon-fw icon-angle-left\"></i> Add to existing playlist</li>\n        <li>\n            <input id=\"snNewPlaylistName\" placeholder=\"Playlist name\" style=\"width: 50%;\">\n            <button class=\"SN-player-spotify-add-new-submit SN-spotify-button\" data-for=\"#snNewPlaylistName\">Create</button>\n        </li>\n    </ul>\n</div>";
+    return "<div class=\"SN-player\" id=\"snPlayer\">\r\n    <div class=\"SN-player-front-panel\">\r\n        <span class=\"SN-player-close SN-clickable\" id=\"snPlayerClose\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-cross\" /></svg></span>\r\n        <div class=\"SN-player-col-b\">\r\n            <div class=\"SN-player-trackData\">\r\n                <svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-spotify\" /></svg>\r\n                <a data-purchase-link=\"2\" target=\"spotify\" class=\"SN-clickable\">\r\n                    <span id=\"snArtistName\"></span> &ndash; <span id=\"snTrackName\"></span>\r\n                </a>\r\n            </div>\r\n        </div>\r\n        <div class=\"SN-player-controlbar\">\r\n            <span class=\"SN-player-mymusic-add SN-clickable\">\r\n                <svg class=\"icon add\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-plus\" /></svg>\r\n                <svg class=\"icon added\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-ok\" /></svg>\r\n                <svg class=\"icon remove\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-cross\" /></svg>\r\n            </span>\r\n            <span class=\"SN-player-prev SN-clickable\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-last\" /></svg></span>\r\n            <span class=\"SN-player-play SN-clickable\" style=\"display: none;\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-play\"/></svg></span> \r\n            <span class=\"SN-player-pause SN-clickable\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-pause\" /></svg></span>\r\n            <span class=\"SN-player-next SN-clickable\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-next\" /></svg></span>\r\n            <audio class=\"SN-player-controls\" id=\"snTrackPlayer\" src=\"\" autoplay>Sorry your browser is not supported\r\n            </audio>\r\n            <span class=\"SN-player-toggle-extension SN-clickable\"><svg class=\"icon\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-dots\" /></svg></span>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"SN-player-extension\">\r\n    <ul class=\"SN-player-extension-menu SN-player-extension-menu-top\">\r\n        <li class=\"SN-player-spotify-add SN-clickable\"><i class=\"icon icon-fw icon-music\"></i> Add to playlist</li>\r\n        <li>\r\n            <div class=\"SN-player-select-action SN-clickable\" data-for=\"#snTrackViewUrl\"><i class=\"icon icon-fw icon-link\"></i> Copy spotify URL</div>\r\n            <input id=\"snTrackViewUrl\" readonly style=\"width: 100%\">\r\n        </li>\r\n        <li><i class=\"icon icon-fw icon-help\"></i> Feedback</li>\r\n    </ul>\r\n    <ul class=\"SN-player-extension-menu SN-player-extension-menu-playlists\">\r\n    </ul>\r\n    <ul class=\"SN-player-extension-menu SN-player-extension-menu-playlist-new\">\r\n        <li class=\"SN-player-spotify-add SN-clickable\"><i class=\"icon icon-fw icon-angle-left\"></i> Add to existing playlist</li>\r\n        <li>\r\n            <input id=\"snNewPlaylistName\" placeholder=\"Playlist name\" style=\"width: 50%;\">\r\n            <button class=\"SN-player-spotify-add-new-submit SN-spotify-button\" data-for=\"#snNewPlaylistName\">Create</button>\r\n        </li>\r\n    </ul>\r\n</div>";
 },"useData":true});
 
 this["SN"]["templates"]["track"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
@@ -2766,11 +2810,11 @@ this["SN"]["templates"]["track"] = Handlebars.template({"1":function(depth0,help
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=this.lambda, alias2=this.escapeExpression, alias3=helpers.helperMissing, alias4="function";
 
-  return "<li>\n    <span class=\"Track-icon add "
+  return "<li>\r\n    <span class=\"Track-icon add "
     + ((stack1 = helpers['if'].call(depth0,((stack1 = (depth0 != null ? depth0.track : depth0)) != null ? stack1.spotifyAdded : stack1),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "icon\" data-track-add-spotify=\""
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.track : depth0)) != null ? stack1.spotifyId : stack1), depth0))
-    + "\" title=\"Click to add this song...\">\n                <svg class=\"icon plus\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-plus\" /></svg>\n                <svg class=\"icon ok\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-ok\" /></svg>\n                <svg class=\"icon remove\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-cross\" /></svg>\n    </span>\n    <p class=\"Track-title Track-previewLink SN-clickable\" data-prev-track-preview=\""
+    + "\" title=\"Click to add this song...\">\r\n                <svg class=\"icon plus\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-plus\" /></svg>\r\n                <svg class=\"icon ok\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-ok\" /></svg>\r\n                <svg class=\"icon remove\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-cross\" /></svg>\r\n    </span>\r\n    <p class=\"Track-title Track-previewLink SN-clickable\" data-prev-track-preview=\""
     + alias2(((helper = (helper = helpers.prevTrackIndex || (depth0 != null ? depth0.prevTrackIndex : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(depth0,{"name":"prevTrackIndex","hash":{},"data":data}) : helper)))
     + "\" data-track-preview=\""
     + alias2(((helper = (helper = helpers.trackIndex || (depth0 != null ? depth0.trackIndex : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(depth0,{"name":"trackIndex","hash":{},"data":data}) : helper)))
@@ -2778,7 +2822,7 @@ this["SN"]["templates"]["track"] = Handlebars.template({"1":function(depth0,help
     + alias2(((helper = (helper = helpers.nextTrackIndex || (depth0 != null ? depth0.nextTrackIndex : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(depth0,{"name":"nextTrackIndex","hash":{},"data":data}) : helper)))
     + "\" title=\"Click to preview this song...\" data-artist-name=\""
     + alias2(((helper = (helper = helpers.artistName || (depth0 != null ? depth0.artistName : depth0)) != null ? helper : alias3),(typeof helper === alias4 ? helper.call(depth0,{"name":"artistName","hash":{},"data":data}) : helper)))
-    + "\">\n      <span class=\"play-icon\">\n          <svg class=\"icon play\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-play\" /></svg>\n      </span>\n      "
+    + "\">\r\n      <span class=\"play-icon\">\r\n          <svg class=\"icon play\" viewBox=\"0 0 100 100\"><use xlink:href=\"#icon-play\" /></svg>\r\n      </span>\r\n      "
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.track : depth0)) != null ? stack1.trackName : stack1), depth0))
-    + "\n    </p>\n</li>\n\n\n";
+    + "\r\n    </p>\r\n</li>\r\n\r\n\r\n";
 },"useData":true});

@@ -635,6 +635,8 @@
   display: table-cell;
   padding-right: 4px;
   width: 40px; }
+.Tip .artistName {
+  text-transform: capitalize; }
 .Tip .Event-title {
   display: table-cell;
   padding-right: 4px; }
@@ -654,7 +656,9 @@
   display: inline-block;
   content: "";
   position: absolute;
-  right: 11px; }
+  right: 11px;
+  width: 169px !important;
+  height: 17px !important; }
 
 /*Player*/
 #snPlayer {
