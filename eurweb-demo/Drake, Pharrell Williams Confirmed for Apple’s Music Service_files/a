@@ -1,0 +1,31 @@
+(function(window) {
+    var v = {
+        mdom: 'http://event.altitude-arena.com/beacon/',
+        sdom: 'http://arena.altitude-arena.com',
+        com: 'qmp6b37555247145',
+        pub: '97hc5ab538247145',
+        sit: 'w6d2a0ec5a247145',
+        sec: '9jfc4cda6e347145',
+        siz: '300x250',
+        pos: 'btf',
+        pod: 'cgg94aa7bf347145',
+        par: 'apn',
+        um: 'px',
+        width: 300,
+        height: 250,
+        basicData: true,
+        advancedData: false,
+        customData: false,
+        codeType: 'apn',
+        code: '%3C%21--%20BEGIN%20JS%20TAG%20-%201_EurWeb.com_300x250_BTF%20%3C%20-%20DO%20NOT%20MODIFY%20--%3E%0A%3CSCRIPT%20SRC%3D%22http%3A%2F%2Fib.adnxs.com%2Fttj%3Fid%3D3521616%22%20TYPE%3D%22text%2Fjavascript%22%3E%3C%2FSCRIPT%3E%0A%3C%21--%20END%20TAG%20--%3E',
+        resType: 'display',
+        cid: '23A0DB85-0B5A-448B-A14E-C3564833F270'
+    };
+    v.quant_pxurl='//pixel.quantserve.com/pixel/p-j1T2WVPwku77p.gif?';v.pubName='EurWeb.comPUB';v.sitName='EurWeb.com';v.sitType='network';v.secName='MedRec%20300%20BTF';v.evb='1';v.floor='0.000';
+    if (window.ALT_ARENA) {
+        window.ALT_ARENA.run(v);
+    } else {
+        window.ALT_ARENA_V = v;
+        window.document.write('<scr' + 'ipt src="http://cdn.altitude-arena.com/js/aad157.js" type="text/javascript"></scr' + 'ipt>');
+    }
+})(window);

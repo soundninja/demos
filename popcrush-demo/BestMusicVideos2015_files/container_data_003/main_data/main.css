@@ -1,0 +1,23 @@
+html{
+	padding:0px;
+	margin:0px;
+}
+body{
+	color:#FFFFFF;
+	padding:0px;
+	margin:0px;
+	overflow:hidden;
+}
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('HelveticaNeue.eot'); /* IE9 Compatibility Modes */
+	src: url('HelveticaNeue.eot?') format('eot'), url('HelveticaNeue.woff') format('woff'), url('HelveticaNeue.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+.font-loader{
+	visibility: hidden;
+	position: absolute;
+}
+
+.font-loader .embedded-font-regular{
+	font-family: HelveticaNeue, Arial;
+}

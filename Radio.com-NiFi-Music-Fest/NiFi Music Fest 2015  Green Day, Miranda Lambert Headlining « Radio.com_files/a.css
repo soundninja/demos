@@ -1,0 +1,946 @@
+
+/*************************************************
+	Modular Header Generic Framework
+*/
+#page-header.page-header-type-modular {
+	background: #7eb4dd;
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	min-height: 50px;
+	padding: 0;
+	position: relative;
+	width: 970px;
+}
+#page-header.page-header-type-modular .wrapper {
+	padding: 6px 12px 10px;
+}
+#page-header.page-header-type-modular #header-rows {
+	min-width: 80%;
+}
+#page-header .header-row-top {
+	height: 25px;
+	margin-bottom: 5px;
+}
+#page-header .header-row-top,
+#page-header .header-row-inner {
+	float: left;
+	width: 100%;
+}
+#page-header .header-row-middle {
+	height: 52px;
+}
+#page-header .header-row-inner .header-row {
+	overflow: hidden;
+}
+#page-header #page-header-top-left,
+#page-header #page-header-top-left.header-cell,
+#page-header #page-header-middle-left,
+#page-header #page-header-middle-left.header-cell,
+#page-header #page-header-bottom-left,
+#page-header #page-header-bottom-left.header-cell,
+#page-header #page-header-tall-left {
+	clear: left;
+	display: block;
+	float: left;
+}
+#page-header #page-header-top-right,
+#page-header #page-header-top-right.header-cell,
+#page-header #page-header-middle-right,
+#page-header #page-header-middle-right.header-cell,
+#page-header #page-header-bottom-right,
+#page-header #page-header-bottom-right.header-cell,
+#page-header #page-header-tall-right,
+#page-header #page-header-clear-right {
+	clear: right;
+	display: block;
+	float: right;
+}
+
+#page-header #page-header-top-left.header-cell .header-component,
+#page-header #page-header-middle-left.header-cell .header-component,
+#page-header #page-header-bottom-left.header-cell .header-component,
+#page-header #page-header-top-right.header-cell .header-component,
+#page-header #page-header-middle-right.header-cell .header-component,
+#page-header #page-header-bottom-right.header-cell .header-component {
+	display: block;
+	float: left;
+	margin-right: 15px;
+}
+#page-header #page-header-top-right.header-cell .header-component,
+#page-header #page-header-middle-right.header-cell .header-component,
+#page-header #page-header-bottom-right.header-cell .header-component {
+	margin-left: 15px;
+	margin-right: 0;
+}
+#page-header,
+#page-header #component-search input,
+#page-header .sponsored-by .disclosure,
+#page-header #component-links a,
+#page-header #component-weather,
+#page-header #component-links .menu .menu-item:hover .sub-menu a {
+	color: black;
+	font-family: Arial, sans-serif;
+	font-weight: normal;
+}
+
+/*************************************************
+	Modular Header Components Generic CSS
+*/
+
+#page-header #page-header-top-right .header-component {
+	height: 25px;
+	line-height: 25px;
+}
+#page-header #page-header-top-right .header-component a {
+	color: black;
+}
+
+/* Logo */
+#page-header #component-logo {
+	display: block;
+	vertical-align: middle;
+}
+/* Account */
+#page-header #component-account .login,
+#page-header #component-account .manage {
+	border-right: 1px solid black;
+	margin-right: 10px;
+	padding-right: 10px;
+}
+#page-header #component-account span {
+	cursor: pointer;
+}
+#page-header #component-account span:hover {
+	text-decoration: underline;
+}
+/* Gamification */
+#page-header #component-gamification a {
+	display: block;
+	overflow: hidden;
+}
+#page-header #component-gamification strong {
+	display: block;
+	float: left;
+	font-weight: normal;
+	padding-right: 5px;
+}
+#page-header #component-gamification a:hover strong {
+	text-decoration: underline;
+}
+#page-header #component-gamification span {
+	background-color: #c82938;
+	border-radius: 20px; 
+	color: white;
+	display: block;
+	float: right;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 3px;
+	overflow: hidden;
+	text-align: center;
+	width: 20px;
+}
+/* Search Block */
+#page-header #component-search {
+	background-color: white;
+	height: 24px;
+	width: 175px;
+}
+#page-header #component-search input.query {
+	background: transparent;
+	border: none;
+	float: left;
+	height: 100%;
+	line-height: 24px;
+	padding: 0 0 0 5px;
+	width: 143px;
+}
+#page-header #component-search input.submit {
+	background-color: transparent;
+	background-position: center center;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	display: block;
+	float: right;
+	font-size: 1px;
+	height: 24px;
+	overflow: hidden;
+	text-indent: -900px;
+	width: 24px;
+}
+#page-header #component-search input.reset {
+	display: none;
+}
+/* Links Menu */
+#page-header #component-links .menu {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#page-header #component-links .menu .menu-item {
+	display: block;
+	float: left;
+	margin: 0 15px 0 0;
+	position: relative;
+}
+#page-header #component-links .menu .menu-item a {
+	display: block;
+	line-height: 25px;
+}
+#page-header #component-links .menu .menu-item.menu-item-has-children {
+	padding-right: 15px;
+}
+#page-header #component-links .menu .menu-item.menu-item-has-children > a:after {
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 7px solid transparent;
+	content: "";
+	height: 0;
+	margin-top: -4px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+}
+#page-header #component-links .menu .menu-item .sub-menu {
+	background-color: white;
+	border: 1px solid #ddd;
+	display: none;
+	margin: 0;
+	max-width: 160px;
+	min-width: 140px;
+	padding: 7px 0;
+	position: absolute;
+	z-index: 150;
+	width: auto;
+}
+#page-header #component-links .menu .menu-item .sub-menu .menu-item {
+	display: block;
+	float: none;
+	line-height: 100%;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: static;
+	width: 100%;
+}
+#page-header #component-links .menu .menu-item .sub-menu .menu-item a {
+	display: block;
+	line-height: 100%;
+	padding: 7px 12px;
+}
+#page-header #component-links .menu .menu-item.menu-item-has-children .sub-menu .menu-item > a:after {
+	content: none;
+}
+#page-header #component-links .menu .menu-item .sub-menu .menu-item:hover { 
+	background-color: #ccc;
+} 
+#page-header #component-links .menu .menu-item .sub-menu .menu-item a:hover {
+	text-decoration: none;
+}
+#page-header #component-links .menu .menu-item:hover .sub-menu {
+	display: block;
+}
+/* Stations */
+#page-header #component-stations {
+	float: left;
+	height: 28px;
+	overflow: hidden;
+}
+#page-header #component-stations a {
+	float: left;
+	height: 100%;
+	margin: 0 10px 0 0;
+	overflow: hidden;
+}
+#page-header #component-stations a .thumbnail-wrapper,
+#page-header #component-stations a .thumbnail-wrapper img {
+	height: 100%;
+	width: auto;
+}
+#page-header #component-stations a .title-wrapper {
+	display: none;
+}
+/* Follow Us */
+#page-header #component-social {
+	height: 24px;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+#page-header #component-social .disclosure {
+	display: block;
+	float: left;
+	font-size: 12px;
+	line-height: 25px;
+}
+#page-header #component-social a {
+	background-image: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../../../../images/global/sprites/social-media-square-color.png);
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 24px;
+	margin-left: 7px;
+	overflow: hidden;
+	text-indent: -5000px;
+	width: 24px;
+	zoom: 1;
+}
+#page-header #component-social.type-blue a {
+	background-image: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../../../../images/global/sprites/social-media-square-blue.png);
+}
+#page-header #component-social.type-grey a {
+	background-image: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../../../../images/global/sprites/social-media-square-grey.png);
+}
+#page-header #component-social .facebook {
+	background-position: -360px 0;
+}
+#page-header #component-social .twitter {
+	background-position: -360px -60px;
+}
+#page-header #component-social .youtube {
+	background-position: -360px -180px;
+}
+#page-header #component-social .googleplus {
+	background-position: -360px -120px;
+}
+#page-header #component-social .tunein {
+	background-position: -360px -360px;
+}
+#page-header #component-social .instagram {
+	background-position: -360px -420px;
+}
+/* Weather */
+#page-header #component-weather .weather-today .temp_f {
+	display: block;
+	float: left;
+	margin-top: 4px;
+}
+#page-header #component-weather .weather-today strong {
+	font-size: 41px;
+	line-height: 30px;
+	font-weight: normal;
+}
+#page-header #component-weather .weather-today .temp_f strong:after {
+	content: "\00b0";
+	font-size: 21px;
+	vertical-align: super;
+}
+#page-header #component-weather .weather-tonight,
+#page-header #component-weather .weather-tomorrow,
+#page-header #component-weather .temp_f span,
+#page-header #component-weather .temp_f em {
+	display: none;
+}
+#page-header #component-weather .weather-today .icon {
+	float: left;
+	margin-right: 8px;
+}
+/* Sponsored Ad */
+#page-header #component-sponsored-ad {
+	display: none;
+	width: 130px;
+}
+#page-header #component-sponsored-ad .sponsored-by {
+	float: right;
+	width: 120px;
+}
+#page-header #component-sponsored-ad .sponsored-by .disclosure {
+	display: block;
+	font-size: 9px;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+
+
+
+/*************************************************
+	Market Modular Header
+*/
+#page-header.modular-header-market {
+	height: 127px;
+}
+#page-header.modular-header-market,
+#page-header.modular-header-market #component-search input,
+#page-header.modular-header-market .sponsored-by .disclosure,
+#page-header.modular-header-market #component-links a {
+	font-family: "Open Sans";
+}
+#page-header.modular-header-market #component-logo {
+	margin-top: 6px;
+}
+#page-header.modular-header-market #component-logo img {
+	max-height: 35px;
+	width: auto;
+}
+#page-header.modular-header-market #component-links .menu .menu-item.menu-item-has-children > a:after {
+	border-top-color: black;
+}
+#page-header.modular-header-market #component-links .menu > .menu-item:hover > a,
+#page-header.modular-header-market #component-gamification a:hover strong,
+#page-header.modular-header-market #component-account span:hover {
+	color: white;
+}
+#page-header.modular-header-market #component-links .menu .menu-item.menu-item-has-children:hover > a:after {
+	border-top-color: white;
+}
+#page-header.modular-header-market #component-search input.submit {
+	background-image: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../images/magglass-black.png);
+}
+#page-header.modular-header-market #component-social {
+	margin-top: 4px;
+}
+/*************************************************
+	Station Modular Header
+*/
+#page-header.modular-header-station {
+	height: 127px;
+}
+#page-header.modular-header-station,
+#page-header.modular-header-station #component-search input,
+#page-header.modular-header-station .sponsored-by .disclosure,
+#page-header.modular-header-station #component-links a {
+	font-family: "Open Sans";
+}
+#page-header.modular-header-station #component-links .menu .menu-item.menu-item-has-children > a:after {
+	border-top-color: black;
+}
+#page-header.modular-header-station #component-links .menu > .menu-item:hover > a {
+	color: white;
+}
+#page-header.modular-header-station #component-links .menu .menu-item.menu-item-has-children:hover > a:after {
+	border-top-color: white;
+}
+#page-header.modular-header-station #component-search input.submit {
+	background-image: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../images/magglass-black.png);
+}
+#page-header.modular-header-station #component-social {
+	margin-top: 4px;
+}
+/*************************************************
+	Compact Modular Header
+*/
+#page-header.modular-header-compact {
+	height: 80px;
+}
+#page-header.modular-header-compact,
+#page-header.modular-header-compact #component-search input,
+#page-header.modular-header-compact .sponsored-by .disclosure,
+#page-header.modular-header-compact #component-links a {
+	font-family: "Open Sans";
+}
+#page-header.modular-header-compact #component-links .menu .menu-item.menu-item-has-children > a:after {
+	border-top-color: black;
+}
+#page-header.modular-header-compact #component-links .menu > .menu-item:hover > a {
+	color: white;
+}
+#page-header.modular-header-compact #component-links .menu .menu-item.menu-item-has-children:hover > a:after {
+	border-top-color: white;
+}
+#page-header.modular-header-compact #page-header-bottom-right {
+	margin-top: 9px;
+}
+#page-header.modular-header-compact #component-search input.submit {
+	background-image: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../images/magglass-black.png);
+}
+#page-header.modular-header-compact #component-sponsored-ad {
+	margin-top: 4px;
+}
+#page-header.modular-header-compact #component-sponsored-ad .sponsored-by .disclosure {
+	display: none;
+}
+/*************************************************
+	Market Modular Header
+*/
+#page-header.modular-header-national {
+	height: 127px;
+}
+#page-header.modular-header-national,
+#page-header.modular-header-national #component-search input,
+#page-header.modular-header-national .sponsored-by .disclosure,
+#page-header.modular-header-national #component-links a {
+	font-family: "Open Sans";
+}
+#page-header.modular-header-national #component-links .menu .menu-item.menu-item-has-children > a:after {
+	border-top-color: black;
+}
+#page-header.modular-header-national #component-links .menu > .menu-item:hover > a {
+	color: white;
+}
+#page-header.modular-header-national #component-links .menu .menu-item.menu-item-has-children:hover > a:after {
+	border-top-color: white;
+}
+#page-header.modular-header-national #component-search input.submit {
+	background-image: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../images/magglass-black.png);
+}
+#page-header.modular-header-national #component-social {
+	margin-top: 40px;
+}
+
+/*************************************************
+	Magazine Header
+*/
+#page-header.modular-header-magazine {
+	min-height: 80px;
+}
+#page-header.modular-header-magazine .wrapper {
+	padding: 0;
+}
+#menu-header-magazine a:hover {
+	text-decoration: none;
+}
+#page-header.modular-header-magazine .header-row-middle-and-bottom {
+	padding: 25px 0 0 30px;
+}
+#page-header.modular-header-magazine .header-row-inner .header-row {
+	float: left;
+	overflow: visible;
+}
+#page-header.modular-header-magazine #component-links a {
+	color: white;
+}
+#page-header.modular-header-magazine #component-links .menu .menu-item .sub-menu {
+	max-width: 220px;
+	min-width: 170px;
+}
+#page-header.modular-header-magazine #component-links .menu .menu-item.menu-item-has-children > a:after {
+	border-top-color: white;
+}
+
+
+/*************************************************
+	Fixes for compatibility with already existing (old) items
+*/
+#main-header.old-main-header,
+header.old-main-header nav.main-nav {
+	clear: both;
+	padding-top: 0;
+}
+
+/*************************************************
+	Old Options
+*/
+
+/* Header options */
+
+#page-header.page-header-type-minimal {
+	background: #7eb4dd;
+	display: block;
+	height: 50px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 970px;
+}
+
+#page-header.page-header-type-minimal #cbs-logo {
+	color: black;
+	display: block;
+	height: 30px;
+	float: left;
+	margin: 13px 10px 0 40px;
+	overflow: hidden;
+}
+#page-header.page-header-type-minimal #cbs-logo .cbs-logo-image {
+	height: auto;
+	margin: 0;
+	width: auto;
+}
+#page-header.page-header-type-minimal #cbs-logo .cbs-logo-text {
+	border: none;
+	color: inherit;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: bold;
+}
+
+#page-header.page-header-type-minimal .social-button {
+	background: transparent url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../images/social-icons-white.png) 0 0 no-repeat;
+	cursor: pointer;
+	display: block;
+	float: right;
+	height: 30px;
+	margin: 10px 5px;
+	overflow: hidden;
+	padding: 0;
+	text-indent: -900px;
+	width: 35px;
+}
+#page-header.page-header-type-minimal .social-button.social-button-twitter {
+	background-position: 0 -97px;
+	margin-right: 40px;
+}
+
+/* Footer options */
+
+#page-footer.page-footer-type-minimal {
+	background: #7eb4dd;
+	display: block;
+	min-height: 70px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 25px 0 20px;
+	position: relative;
+	width: 970px;
+}
+
+#page-footer.page-footer-type-minimal .copyright-wrapper {
+	float: left;
+	padding: 7px 15px;
+	text-align: right;
+	width: 285px
+}
+#page-footer.page-footer-type-minimal .copyright-wrapper #cbs-logo {
+	display: block;
+	margin-bottom: 10px;
+}
+#page-footer.page-footer-type-minimal .copyright-wrapper #cbs-logo .cbs-logo-image {
+	display: inline;
+}
+#page-footer.page-footer-type-minimal .copyright-wrapper .copyright p {
+	color: #3b4b57;
+	font: normal normal 11px/13px Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+#page-footer.page-footer-type-minimal .footer-navigation-1 {
+	border-left: 1px solid white;
+	float: left;
+	margin: 0;
+	overflow: hidden;
+	padding: 0 0 0 50px;
+	width: auto;
+}
+#page-footer.page-footer-type-minimal .footer-navigation-1 li {
+	display: block;
+	float: left;
+	font: normal normal 18px/75px Arial, sans-serif;
+	list-style: none;
+	margin: 0 10px;
+	padding: 0;
+	text-align: center;
+}
+#page-footer.page-footer-type-minimal .footer-navigation-1 li a {
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+/*************************************************
+	Listen Live Experience
+*/
+#listen-live-button {
+	background-color: #e8e8e8;
+	display: block;
+	height: 55px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	text-indent: -5000px;
+	width: 300px;
+}
+#listen-live-button .listen-live-ad-block {
+	display: block;
+	float: right;
+	height: 30px;
+	width: 88px;
+}
+
+#listen-live-button .listen-live-logo {
+	background: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../images/headphones-white.png) no-repeat 13px 12px;
+	display: block;
+	float: left;
+	height: 55px;
+	background-color: #0093d0;
+	width: 55px;
+}
+#listen-live-button .listen-live-text {
+	color: #0093d0;
+	display: block;
+	float: left;
+	line-height: 35px;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	text-decoration: none;
+	text-indent: 0px;
+	text-transform: uppercase;
+	width: 125px;
+}
+#listen-live-button.listen-live-on-air .listen-live-text {
+	line-height: 24px;
+}
+
+#listen-live-button .listen-live-text.watch {
+	font-size: 14px;
+	line-height: 35px;
+}
+#listen-live-button.listen-live-on-air .listen-live-text.watch {
+	line-height: 20px;
+}
+
+#listen-live-button .wrapper {
+	float: left;
+	height: 35px;
+	padding: 10px;
+	position: relative;
+	vertical-align: middle;
+	width: 75%;
+}
+
+/* Listen Live Pop Up */
+
+#listen-live-wrapper {
+	display: none;
+}
+.listen-live {
+	text-align: left;
+	width: 776px;
+}
+.listen-live a img {
+	display: inline;
+}
+.listen-live .header {
+	background-color: #0093d0;
+	height: 70px;
+	margin: 0;
+	overflow: hidden;
+	width: auto;
+}
+
+.listen-live .listen-live-logo {
+	background: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../images/headphones-white.png) no-repeat;
+	display: block;
+	float: left;
+	height: 25px;
+	margin: 22px 20px 0;
+	width: 30px;
+}
+
+.listen-live h3 {
+	color: white;
+	display: block;
+	float: left;
+	font: bold 27px Arial;
+	margin-top: 18px;
+	padding: 0;
+}
+body.section .listen-live .sponsor,
+.listen-live .sponsor {
+	background: url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../images/txt-sponsored-by.png) no-repeat 0 50%;
+	float: left;
+	height: 70px;
+	margin: 0 0 0 40px;
+	overflow: hidden;
+	padding: 0;
+	width: 210px;
+}
+
+.listen-live .sponsor .listen-live-sponsor.cbs-ad-auto-center {
+	display: block;
+	float: left;
+	height: 60px;
+	margin: 5px 0 0 90px;
+	width: 120px;
+}
+
+.listen-live .lead-wrapper {
+	margin: 20px;
+}
+
+.listen-live h4 {
+	color: black;
+	font: bold 22px Arial, Helvetica,sans-serif;
+}
+
+.listen-live ul.stations {
+	list-style: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	margin: 6px 0 15px -14px;
+	width: 750px;
+}
+.listen-live ul.stations li {
+	border: 1px solid #ccc;
+	display: block;
+	float: left;
+	margin: 8px 0 0 14px;
+	padding: 0;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.listen-live ul.featured-posts li.list-item a .title-wrapper,
+.listen-live ul.stations li.list-item a .title-wrapper {
+	display: none;
+}
+
+.listen-live ul.featured-posts {
+	list-style: none;
+	margin: 0;
+	overflow: visible;
+	padding: 0;
+	margin: 6px 0 15px -14px;
+	width: 750px;
+}
+
+.listen-live ul.featured-posts li {
+	border: 1px solid #ccc;
+	display: block;
+	float: left;
+	margin: 8px 0 0 14px;
+	padding: 0;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.listen-live ul.featured-posts .thumbnail,
+.listen-live ul.featured-posts a.thumbnail {
+	height: 132px;
+	width: 234px;
+}
+
+/* Custom rules for number of Stations in the Lead */
+.listen-live .station-count-1,
+.listen-live .station-count-2,
+.listen-live .station-count-3 {
+	height: 234px;
+	width: 234px;
+}
+.listen-live .station-count-4 {
+	height: 171px;
+	width: 171px;
+}
+.listen-live .station-count-5 {
+	height: 134px;
+	width: 134px;
+}
+.listen-live .station-count-6 {
+	height: 109px;
+	width: 109px;
+}
+
+.listen-live li.list-item > a {
+	display: block;
+}
+
+.listen-live .advertise-on-our-streams {
+	background-color: #ccc;
+	color: black;
+	display: block;
+	font: normal 10px Arial;
+	height: 30px;
+	line-height: 3;
+	padding: 4px 20px 4px 4px;
+	text-align: right;
+	text-decoration: underline;
+}
+.listen-live .owl-buttons {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.listen-live .owl-buttons .disabled {
+	opacity: 0.4;
+	filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+.listen-live .owl-buttons .owl-prev,
+.listen-live .owl-buttons .owl-next {
+	background: #ededed url(/wp-content/themes/vip/cbs-local/plugins/modules/theme-manager/css/../../../../assistants/images/arrows-black-left-right.png) no-repeat 15px 7px;
+	border: 1px solid #dfe3e6;
+	float: left;
+	font-size: 1px;
+	height: 30px;
+	margin: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 48px;
+	text-indent: -900px;
+	top: -30px;
+	width: 43px;
+}
+.listen-live .owl-buttons .owl-next {
+	background-position: 18px -44px;
+	right: 0;
+}
+
+/* Featherlight Lightbox Overwrites */
+.featherlight {
+	z-index: 500;
+}
+.featherlight .featherlight-content {
+	border-bottom: none;
+	padding: 0;
+}
+.featherlight .featherlight-close-icon {
+	background: none;
+	color: white;
+	font-size: 20px;
+	font-weight: bolder;
+	padding: 2px;
+}
+/**
+ * Add text colors to the playlist shortcode light color scheme.
+ * 
+ * Core ticket: https://core.trac.wordpress.org/ticket/27562
+ */
+
+.wp-playlist-light {
+	color: #000;
+}
+
+.wp-playlist-light .wp-playlist-item {
+	color: #333;
+}
+
+.wp-playlist-light .wp-playlist-playing {
+	background: #fff;
+	color: #000;
+}
+
+.wp-playlist-dark .wp-playlist-item .wp-playlist-caption {
+	color: #fff;
+}
+
+.wp-playlist-caption {
+	display: block;
+}/**
+ * MP6 hacks, CSS that's either WPCOM specific or otherwise not suitably for MP6 proper
+ */
+
+/* Invert stats sparkline on light theme */
+body.admin-color-mp6-light li#wp-admin-bar-stats img {
+	filter: invert(100%);
+	-webkit-filter: invert(100%);
+}
+
+/* Fix dashicons priority so Japanese users can use the toolbar. Should long term be fixed in whatever plugin that forces all fonts to be Arial */
+i.mce-i-bold, i.mce-i-italic, i.mce-i-bullist, i.mce-i-numlist, i.mce-i-blockquote, i.mce-i-alignleft, i.mce-i-aligncenter, i.mce-i-alignright, i.mce-i-link, i.mce-i-unlink, i.mce-i-wp_more, i.mce-i-strikethrough, i.mce-i-spellchecker, i.mce-i-fullscreen, i.mce-i-wp_fullscreen, i.mce-i-wp_adv, i.mce-i-underline, i.mce-i-alignjustify, i.mce-i-forecolor, i.mce-i-pastetext, i.mce-i-pasteword, i.mce-i-removeformat, i.mce-i-charmap, i.mce-i-outdent, i.mce-i-indent, i.mce-i-undo, i.mce-i-redo, i.mce-i-help, i.mce-i-wp_help, i.mce-i-wp-media-library, i.mce-i-ltr, i.mce-i-wp_page, .mce-close {
+	font: normal 20px/1 'dashicons' !important;
+}
+
+.dashicons, .dashicons-before:before {
+	font-family: 'dashicons' !important;
+}
+
+.noticon {
+	font-family: "Noticons" !important;
+}.bbp-staff-role {
+	color: #f1831e;
+}
+
+.bbp-a8c-reply {
+	background: #e9eff3 !important;
+	border: 1px solid #c8d7e1;
+	width: 98% !important;
+}

@@ -1,0 +1,17 @@
+.sn-admin-panel {
+  position: fixed;
+  width: 30%;
+  right: 0;
+  height: 100vh;
+  background-color: red;
+  top: 0;
+  z-index: 1000; }
+
+.sn-admin-panel-close {
+  position: absolute;
+  right: 0; }
+
+.sn-admin-panel-title {
+  text-align: center; }
+
+/*# sourceMappingURL=admin.css.map */

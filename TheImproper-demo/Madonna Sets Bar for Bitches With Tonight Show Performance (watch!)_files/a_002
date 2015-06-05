@@ -1,0 +1,178 @@
+// version: 12.5.1
+
+					var arrScripts = document.getElementsByTagName('script');
+					var strScriptTag;
+					for (var i = arrScripts.length - 1; i >= 0; i--)
+					{
+						if(arrScripts[i].parentNode.nodeName == 'SPAN')
+						{
+						  strScriptTag = arrScripts[i];
+						  break;
+						}
+					}
+
+					var id = '';
+					var spanDiv;
+					if(strScriptTag)
+					{
+						 spanDiv = strScriptTag.parentNode;
+						 id = strScriptTag.parentNode.getAttribute("id").split('-').join('_');
+					}
+						  
+					window['adinfoOver_' + id] = function(id) 
+					{
+						if(document.getElementById('adInfo-' + id))
+						{
+						  document.getElementById('adInfo-' + id).style.visibility = 'hidden';
+						}
+						
+						if(document.getElementById('adInfo-over-' + id))
+						{
+						  document.getElementById('adInfo-over-' + id).style.visibility = 'visible';		
+						}
+					}
+
+					window['adinfoOut_' + id] = function(id) 
+					{
+						if(document.getElementById('adInfo-'+id))
+						{
+						  document.getElementById('adInfo-'+id).style.visibility = 'visible';
+						}
+						  
+						if(document.getElementById('adInfo-over-'+id))
+						{
+						  document.getElementById('adInfo-over-'+id).style.visibility = 'hidden';
+						}
+					}
+
+					window['adinfoClick_' + id] = function(id)
+					{
+						var url = "http://dtmc.conversantmedia.com/adinfo/choice/prod/?type=general&cid=2000&cname=Conversant%20Media&cmagic=7d619c&clogo=newco.jpg&purl=http%3A%2F%2Fwww.conversantmedia.com%2Flegal%2Fprivacy&lang=en-gb&loc=us&optout_options=global";
+						var wf = "status=0,toolbar=0,location=0,menubar=0,directories=0,scrollbars=1,width=921,height=758";
+						var w = window['RAC'] || window;
+						w.open(url,"_blank",wf);
+					}
+	
+					window['adinfoInit_' + id] = function(spanDiv)
+					{			
+						var nodeTypes = ['DIV', 'OBJECT', 'SPAN', 'IFRAME', 'A', 'IMG'];
+						
+						if(spanDiv)
+						{
+							var id = spanDiv.getAttribute("id").split('-').join('_');
+						
+							if(spanDiv.previousSibling)
+							{
+								var adinfoDiv = null;
+							
+								var children = spanDiv.previousSibling.parentNode.childNodes;
+			
+								var isFound = false;
+								var maxCount = 20;
+								var couter = 1;
+								for (var i = children.length - 1; i >= 0; i--)
+								{
+						
+									if(isFound)
+									{
+										var isNodeValid = false;
+										for (var j = 0; j < nodeTypes.length; j++)
+										{
+											if(nodeTypes[j] == children[i].nodeName)
+											{
+												isNodeValid = true;
+						
+												if(children[i].nodeName == 'IMG' && (children[i].offsetWidth < 30 && children[i].offsetHeight < 30))
+												{
+													isNodeValid = false;
+												}
+						
+												if(!window['dmo'])
+												{
+													var width = parseInt(children[i].style.width.replace('px', ''));
+													if(children[i].nodeName == 'SPAN' && (width >= 0 && width < 30))
+													{
+														isNodeValid = false;
+													}
+												}
+						
+												if(isNodeValid)
+												{
+													break;
+												}
+											}
+										}
+										
+										if(isNodeValid)
+										{
+											adinfoDiv = children[i];
+											
+											if(adinfoDiv.nodeName == 'DIV')
+											{
+												if(adinfoDiv.childNodes.length > 0)
+												{
+													adinfoDiv = adinfoDiv.childNodes[0];
+												}
+											}						
+											
+											break;
+										}
+	
+						
+										if(couter > maxCount)
+										{
+											break;
+										}
+										else
+										{
+											couter++;
+										}
+									}
+									else if(children[i] == spanDiv.previousSibling)
+									{
+										isFound = true;
+										i++;
+									}
+								}	
+					
+								if(adinfoDiv)
+								{
+									var spanTag = document.createElement("span");  
+									spanTag.id = 'menu-' + id;
+						
+									if(window['dmo'])
+									{
+										spanTag.innerHTML = '<img style="position: absolute; z-index: 9999998; left: 160px; top:0px; margin-left: -20px; margin-top: 0px; padding: 0px; visibility: visible; cursor: pointer;" id="adInfo-' + id + '" alt="" src="http://usweb.dotomi.com/adinfo/script/prod/public/img/icon-tr.png" onmouseover="adinfoOver_' + id + '(\'' + id + '\');" onmouseout="adinfoOut_' + id + '(\'' + id + '\');" onmouseup="adinfoClick_' + id + '();" />'+
+															 '<img style="position: absolute; z-index: 9999999; left: 160px; top:0px; margin-left: -80px; margin-top: 0px; padding: 0px; visibility: hidden; cursor: pointer;" id="adInfo-over-' + id + '" alt="" src="http://usweb.dotomi.com/adinfo/script/prod/public/img/en-gb/icon-tr-full.png" onmouseover="adinfoOver_' + id + '(\'' + id + '\');" onmouseout="adinfoOut_' + id + '(\'' + id + '\');" onmouseup="adinfoClick_' + id + '();" />';
+															 
+										adinfoDiv.parentNode.insertBefore(spanTag, adinfoDiv);
+									}
+									else
+									{
+										setTimeout(function()
+										{ 
+											var offset = 0;
+											if(160 < adinfoDiv.parentNode.offsetWidth)
+											{		
+												offset = (adinfoDiv.parentNode.offsetWidth - 160)*0.5
+											}					 
+
+											var style0 = 'position: absolute; z-index: 9999998; margin-left: [MARGIN_LEFT]px; margin-top: 0px; padding: 0px; visibility: visible; cursor: pointer;';
+											style0 = style0.replace('[MARGIN_LEFT]', (offset + 140));		
+
+											var style1 = "position: absolute; z-index: 9999999; margin-left: [MARGIN_LEFT]px; margin-top: 0px; padding: 0px; visibility: hidden; cursor: pointer;";
+											style1 = style1.replace('[MARGIN_LEFT]', (offset + 80));							
+
+											spanTag.innerHTML = '<img style="' + style0 + '" id="adInfo-' + id + '" alt="" src="http://usweb.dotomi.com/adinfo/script/prod/public/img/icon-tr.png" onmouseover="adinfoOver_' + id + '(\'' + id + '\');" onmouseout="adinfoOut_' + id + '(\'' + id + '\');" onmouseup="adinfoClick_' + id + '();" />'+
+																 '<img style="' + style1 + '" id="adInfo-over-' + id + '" alt="" src="http://usweb.dotomi.com/adinfo/script/prod/public/img/en-gb/icon-tr-full.png" onmouseover="adinfoOver_' + id + '(\'' + id + '\');" onmouseout="adinfoOut_' + id + '(\'' + id + '\');" onmouseup="adinfoClick_' + id + '();" />';
+											
+											adinfoDiv.parentNode.insertBefore(spanTag, adinfoDiv);
+										
+										}, 500);
+									}
+								}	
+							}
+						}
+					}
+						
+					window['adinfoInit_' + id](spanDiv);	  

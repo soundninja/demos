@@ -1,0 +1,39 @@
+
+.yarpp-thumbnails-horizontal .yarpp-thumbnail, .yarpp-thumbnail-default, .yarpp-thumbnail-title {
+    display: inline-block;
+}
+.yarpp-thumbnails-horizontal .yarpp-thumbnail {
+    border: 1px solid rgba(127, 127, 127, 0.1);
+    height: 175px;
+    margin: 5px 5px 5px 0;
+    vertical-align: top;
+    width: 130px;
+}
+.yarpp-thumbnail > img, .yarpp-thumbnail-default {
+    height: 120px;
+    margin: 5px;
+    width: 120px;
+
+}
+.yarpp-thumbnails-horizontal .yarpp-thumbnail > img, .yarpp-thumbnails-horizontal .yarpp-thumbnail-default {
+	display: block;
+}
+.yarpp-thumbnails-horizontal .yarpp-thumbnail-title {
+	font-size: 0.60em;!important;
+	max-height: 2.8em;
+	line-height: 1.0em;
+	margin: 7px;
+	margin-top: 0px;
+	width: 120px;
+	text-decoration: inherit;
+font-family: Arial, Helvetica, sans-serif; !important;
+	overflow: visible;
+}
+
+.yarpp-thumbnail-default {
+	overflow: visible;
+}
+.yarpp-thumbnail-default > img {
+	min-height: 120px;
+	min-width: 120px;
+}

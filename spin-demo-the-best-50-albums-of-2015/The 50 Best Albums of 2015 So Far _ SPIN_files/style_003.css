@@ -1,0 +1,135 @@
+.ad_desktop {
+  margin: 0;
+}
+div.track.not-streamable {
+  color: red;
+}
+div.track.not-streamable > * {
+  opacity: .50;
+}
+div.track.not-streamable .play,
+div.track.not-streamable .pause {
+  display: none;
+}
+#player-box .playlists {
+  max-height: 375px;
+  overflow: scroll;
+}
+#player-box .playlists .playlist {
+  margin: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+#player-box .playlists .playlist h1 {
+  font-size: 1.6em;
+  line-height: 1.2em;
+}
+#player-box .playlists .playlist:hover {
+  background-color: rgba(200, 200, 200, 0.5);
+}
+#player-box .playlists .playlist .sc_artwork {
+  margin-right: 5px;
+  float: left;
+  clear: left;
+}
+#player-box .playlists .playlist .artwork {
+  width: 100px;
+  height: 70px;
+  margin-right: 5px;
+  float: left;
+  clear: left;
+  font-size: 24px;
+  text-align: center;
+  background-color: #f8f8f8;
+  padding-top: 30px;
+}
+#player-box .player-preview .track {
+  margin: 5px;
+}
+#player-box .player-preview .track .artwork {
+  width: 47px;
+  height: 47px;
+  margin-right: 5px;
+  float: left;
+  clear: left;
+  font-size: 24px;
+  text-align: center;
+}
+#player-box .player-preview .track .artist,
+#player-box .player-preview .track .title {
+  width: 88%;
+  border: solid 1px white;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+#player-box .player-preview .track .artist:hover:not(:focus),
+#player-box .player-preview .track .title:hover:not(:focus) {
+  background-color: rgba(200, 200, 200, 0.5);
+}
+#player-box .player-preview .track .artist:focus,
+#player-box .player-preview .track .title:focus {
+  border: solid 1px slategrey;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0666667) 0px 1px 2px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0666667) 0px 1px 2px 0px inset;
+}
+#player-box .player-preview .track .artist {
+  font-size: 1.3em;
+  font-weight: lighter;
+  color: grey;
+}
+/** For player on post page **/
+body.single-player {
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+body.single-player .play,
+body.single-player .pause,
+body.single-player .duration-bar,
+body.single-player .skip-forward,
+body.single-player .skip-reverse {
+  cursor: pointer;
+}
+body.single-player .container {
+  width: 768px;
+}
+body.single-player .player-content {
+  position: relative;
+}
+body.single-player div#menu {
+  display: none;
+}
+body.single-player footer#footer {
+  display: none;
+}
+body.single-player .sc_playlist_title {
+  display: inline-block;
+  color: white;
+  padding: 7px 20px;
+  font-size: 2.3em;
+  vertical-align: middle;
+}
+body.single-player .article-body {
+  margin: auto;
+  height: 560px;
+}
+body.single-player div#player {
+  max-height: 418px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+body.single-player div#player .track.not-streamable .play,
+body.single-player div#player .track.not-streamable .pause {
+  display: none;
+}
+body.single-player #hero .waveform {
+  width: 546px;
+  height: 85px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(80, 80, 80, 0.8);
+}
+body.single-player #hero .waveform img {
+  position: absolute;
+}

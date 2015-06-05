@@ -1,0 +1,96 @@
+//<script>
+    (function(global) {
+        "use strict";
+
+        global.ITGS = global.ITGS || {loadedMedias:{}};
+
+        var options = {"siteId":11065,"publisherId":11156,"domainName":"widgets.kiosked.com","resDomainName":"http:\/\/resources.kiosked.com","loader":"http:\/\/resources.kiosked.com\/scripts\/mediakiosk775.js","loaderWithDiag":"http:\/\/resources.kiosked.com\/scripts\/mediakioskDiag775.js","scriptUrl":"\/\/widgets.kiosked.com\/ssp\/placement-identifier\/?site=11065\u0026pub=11156\u0026ref=http%3A%2F%2Fwww.theimproper.com%2Fmusic%2F13678%2Fmadonna-sets-bar-bitches-tonight-show-performance-watch%2F","environment":"production","ipAddress":"69.181.160.233","endPoint":"widgets.kiosked.com\/ssp\/zone-data","maxKioskedImages":0,"countryCode":"US","settingsData":{"settings":[{"key":"ui.sniff.disableKiosksInElements","value":"#left, .yarpp-thumbnails-horizontal, #taboola-below-article-thumbs-mix, #top_web_stories, #discovery-top","target":null,"targetDeviceFamily":"0","lastUpdate":"1429915562","meta":{"origin":"override"}},{"key":"ui.media.overridePlugins","value":"BannerSlot","target":null,"targetDeviceFamily":"0","lastUpdate":"1429912454","meta":{"origin":"override"}},{"key":"ui.media.overridePlugins","value":"ExternalBannerSlot","target":".kskdInlineZone","targetDeviceFamily":"0","lastUpdate":"1429912638","meta":{"origin":"override"}},{"key":"ui.media.Banner.horizontalZoneId","value":"4699628","target":null,"targetDeviceFamily":"0","lastUpdate":"1429914028","meta":{"origin":"override"}},{"key":"ui.media.Banner.minMediaSize.horizontalWidth","value":"400","target":null,"targetDeviceFamily":"0","lastUpdate":"1429916103","meta":{"origin":"override"}},{"key":"ui.media.Banner.provider","value":"appnexus","target":null,"targetDeviceFamily":"0","lastUpdate":"1429912563","meta":{"origin":"override"}},{"key":"ui.media.Banner.bannerReloading.offScreen.hide","value":"true","target":null,"targetDeviceFamily":"0","lastUpdate":"1429912457","meta":{"origin":"override"}},{"key":"ui.media.Banner.bannerReloading.onScreen.hide","value":"60","target":null,"targetDeviceFamily":"0","lastUpdate":"1429912424","meta":{"origin":"override"}},{"key":"ui.media.Banner.bannerReloading.offScreen.reappearanceMode","value":"refresh","target":null,"targetDeviceFamily":"0","lastUpdate":"1429912472","meta":{"origin":"override"}},{"key":"ui.media.Banner.bannerReloading.onScreen.reappearanceMode","value":"refresh","target":null,"targetDeviceFamily":"0","lastUpdate":"1429912416","meta":{"origin":"override"}},{"key":"ui.sniff.paragraphSniff","value":"#middle","target":null,"targetDeviceFamily":"0","lastUpdate":"1429914104","meta":{"origin":"override"}},{"key":"ui.sniff.paragraphSniffNthElement","value":"4","target":null,"targetDeviceFamily":"0","lastUpdate":"1429912606","meta":{"origin":"override"}},{"key":"ui.media.maxPlugins.BannerSlot","value":"1","target":null,"targetDeviceFamily":"0","lastUpdate":"1429914140","meta":{"origin":"override"}},{"key":"ui.media.maxPlugins.ExternalBannerSlot","value":"2","target":null,"targetDeviceFamily":"0","lastUpdate":"1429914084","meta":{"origin":"override"}},{"key":"ui.media.cutSizeFromParents","value":"auto","target":null,"targetDeviceFamily":"0","lastUpdate":"0","meta":{"origin":"default"}},{"key":"ui.media.zIndex","value":"auto","target":null,"targetDeviceFamily":"0","lastUpdate":"0","meta":{"origin":"default"}},{"key":"ui.sniff.minMediaHeight","value":"200","target":null,"targetDeviceFamily":"0","lastUpdate":"0","meta":{"origin":"default"}},{"key":"ui.sniff.minMediaWidth","value":"290","target":null,"targetDeviceFamily":"0","lastUpdate":"0","meta":{"origin":"default"}},{"key":"ui.media.overlays.Disclaimer.containerWidth","value":"264","target":null,"targetDeviceFamily":"0","lastUpdate":"0","meta":{"origin":"default"}},{"key":"ui.media.overlays.Disclaimer.disclaimerText","value":"Advertisement","target":null,"targetDeviceFamily":"0","lastUpdate":"0","meta":{"origin":"default"}},{"key":"ui.media.Banner.showDisclaimer","value":"true","target":null,"targetDeviceFamily":"0","lastUpdate":"0","meta":{"origin":"default"}},{"key":"ui.sniff.disableIndexPageAnalysis","value":"true","target":null,"targetDeviceFamily":"0","lastUpdate":"1409222197","meta":{"origin":"default"}},{"key":"ui.media.overlays.Disclaimer.disclaimerLink","value":"http:\/\/page.kiosked.com\/who-served-this-ad","target":null,"targetDeviceFamily":"0","lastUpdate":"1412848290","meta":{"origin":"default"}},{"key":"ui.sniff.quantcastEnabled","value":"true","target":null,"targetDeviceFamily":"0","lastUpdate":"1423226192","meta":{"origin":"default"}},{"key":"ui.sniff.sendZoneDataRequests","value":"false","target":null,"targetDeviceFamily":"0","lastUpdate":"1423827257","meta":{"origin":"default"}}],"meta":{"appliedAbTest":null,"appliedAbTestStatus":0}}};
+        if (!options || (typeof options !== "object")) {
+            throw new Error("Options is empty or null - cannot load!");
+        }
+        options.cachedZoneResponse = [];
+        var scriptLoadInterval = null;
+
+        function initialise() {
+            var namespace = global.ITGS;
+            if (namespace.mediaJsLoading === "done") {
+                clearInterval(scriptLoadInterval);
+                namespace.tools.environment.setContext(options.environment);
+                namespace.tools.environment.setDomainName(options.domainName);
+                namespace.tools.environment.setIPAddress(options.ipAddress);
+
+                var deviceFilter = new namespace.SettingsDeviceFilter(options.settingsData.settings);
+                options.settingsData.settings = deviceFilter.getMergedSettingsForCurrentDevice();
+
+                overrideFunctions();
+                namespace.messaging.libraryInit();
+
+                var sla = new namespace.Sniffing.SettingsLayoutAdapter(
+                    namespace.tools.deepClone(options.settingsData.settings)
+                );
+                options.settingsData.settings = sla.getSettingsInNewLayout();
+
+                namespace.snifferController = new namespace.Sniffing.SnifferController(options);
+                namespace.snifferController.start();
+            }
+        }
+
+        function overrideFunctions() {
+            ITGS.overrideFunctions = {};
+            ITGS.overrideFunctions['SnifferUtilities.processPageURL'] = function(url) {return ITGS.Facades.URLProcessing.getURLPathOnly(url);};
+        }
+
+        // Functionality for diagnostics switching
+        var targetLoader = options.loader;
+        if ((window.ITGS_load_diagnostics === true) &&
+            (options.loaderWithDiag && (options.loaderWithDiag.length > 0))) {
+            targetLoader = options.loaderWithDiag;
+        }
+
+        var bakeCallback = function(loadScript) {
+            if (loadScript) {
+                // Cache invalid, load from remote
+                (function (scriptSrc) {
+                    if (typeof global.ITGS.mediaJsLoading !== "string") {
+                        global.ITGS.mediaJsLoading = "loading";
+                        var s = document.createElement('script');
+                        s.setAttribute('src', scriptSrc);
+                        s.setAttribute('async', 'async');
+                        s.setAttribute('type', 'text/javascript');
+                        document.getElementsByTagName('head')[0].appendChild(s);
+                    }
+                })(targetLoader);
+            }
+        };
+        global.ITGS.Bootstrap.setBakeCompletedCallback(function(usedBake) {
+            (bakeCallback)(!usedBake);
+        });
+
+        scriptLoadInterval = setInterval(initialise, 100);
+
+        if (window.ITGS_load_diagnostics === true) {
+            (bakeCallback)(true);
+        } else {
+            (function (scriptURL) {
+                var matches = scriptURL.match(/(mediakiosk|get-kiosk-script\?)(\d{1,})/),
+                    versionMatch = matches[2],
+                    setVersion = false;
+                try {
+                    var version = parseInt(versionMatch, 10);
+                    global.ITGS.Bootstrap.loadHandler.setCachedBakeVersion(version);
+                    setVersion = true;
+                } catch (e) {
+                    console.warn("(Kiosked) Failed storing version: ", e.message);
+                } finally {
+                    if (setVersion === true) {
+                        ITGS.Bootstrap.processBake();
+                    } else {
+                        // failed to set the version, so load the main library from remote
+                        console.log("(Kiosked) Loading library from remote");
+                        (bakeCallback)(true);
+                    }
+                }
+            })(options.loader);
+        }
+
+    })(window);

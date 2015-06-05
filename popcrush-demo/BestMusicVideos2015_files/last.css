@@ -1,0 +1,557 @@
+
+/* Start CSS for last played page */
+.last-played-page #location_wrap {
+	margin:0 0 10px 0 !important;
+}
+.last-played-page #location_wrap h1.heading{
+	font-size: 22px !important;
+	letter-spacing: 0 !important;
+	width:540px !important;
+	margin:0;
+	padding:0;
+}
+
+#lastplayed {
+	position:relative;
+}
+#lastplayed #lheader .lsocial{
+	position: absolute;
+	right: -8px;
+	top: -39px;
+}
+
+#lastplayed ul{
+	list-style:none !important;
+	padding:0 !important;
+	margin:0 !important;
+}
+#lastplayed #lheader ul{
+	height:55px;
+}
+#lastplayed ul li{
+	float:left;
+	margin:0;
+}
+
+#lastplayed ul li.first{
+	width: 570px;
+}
+
+
+#lastplayed li{
+	height:47px !important;
+}
+
+#lastplayed ul li{
+	font-size: 0.917em;
+	font-weight:normal;
+	line-height:11px;
+	padding:0;
+	text-align:center;
+}
+
+#lastplayed #plist .noplaylist{
+	width: 100% !important;
+	float: left !important;
+	min-width: 0px !important;
+	height: 47px !important;
+	padding: 0px !important;
+	margin: 0px !important;
+	text-align: center !important;
+}
+
+#lastplayed #plist .noplaylist em{
+	margin: 14px 10px 0 10px !important;
+	display: block !important;
+	font-style:normal !important;
+}
+
+
+#lastplayed #plist .litem{
+	width:100%;
+	min-width: 100%;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+	margin: 0 !important;
+
+}
+
+#lastplayed #plist .altr{
+	width:100%;
+	min-width: 100%;
+
+	background-image:none;
+	background-repeat: repeat-x;
+	background-position: 0 0;
+
+}
+
+#lastplayed #plist .litem li.buy,
+#lastplayed #plist .litem li.rt,
+#lastplayed #lheader li.hbuy,
+#lastplayed #lheader li.hrt {
+	width:60px;
+}
+
+#lastplayed #plist .litem li.buy img{
+	margin:13px 0 0 11px;
+	display:inline !important;
+}
+
+#lastplayed #plist .litem li.buy{
+	position:relative;
+}
+
+#lastplayed #plist .litem li.buy .blinks{
+	display: none;
+	height: 72px;
+	left: -20px;
+	position: absolute;
+	top: 26px;
+	width: 300px;
+	z-index: 999;
+	text-align:left;
+}
+
+
+#lastplayed #plist .litem li.buy:hover .blinks p.itunes{
+	margin:22px 0 0 20px;
+}
+
+#lastplayed #plist .litem li.buy:hover .blinks img, #lastplayed #plist .litem li.buy .blinks img{
+	margin:-2px 6px 0 0;
+}
+
+#lastplayed #plist .litem li.buy .blinks .clbtn{
+	position: absolute;
+	margin: 12px 0 0 0;
+	right: 0px;
+}
+
+#lastplayed #plist .litem li.buy:hover .blinks .clbtn img, #lastplayed #plist .litem li.buy .blinks .clbtn img{
+	margin:-2px 5px 0 0;
+}
+
+#lastplayed #plist .litem li.buy .blinks .cntnt{
+	margin: 10px 0 0 0;
+}
+
+#lastplayed #plist .litem li.buy:hover .blinks p.itunes a:hover{
+	color:#000;
+}
+#lastplayed #plist .litem li.buy:hover .blinks p.amazon a:hover{
+	color:#000;
+}
+
+#lastplayed #plist .litem li.buy:hover .blinks p.amazon{
+
+	margin:11px 0 0 19px;
+
+}
+
+#lastplayed #plist .litem li.buy:hover .blinks{
+	/*display:block;*/
+	width: 300px;
+}
+
+#lastplayed #plist .litem li.rt img{
+	margin:11px 0 0 12px;
+	display:inline !important;
+}
+
+
+#lastplayed #plist .litem li.lr{
+	display:none;
+}
+
+#lastplayed #plist .litem li.lr img{
+	margin:9px 0 0 12px;
+}
+
+#lastplayed #plist li.first{
+	text-align:left;
+	/* color:#fff; */
+}
+
+#lastplayed li.htitle{
+	font-size: 1.5em !important;
+	width: 570px;
+}
+#lastplayed li.htitle p{
+	margin: 0;
+	opacity: 0.7;
+	font-size: 0.9em !important;
+	text-align: left;
+	font-weight:bold;
+	line-height:20px;
+}
+
+#lastplayed #plist .litem .first div{
+	margin:6px 0 0 15px;
+}
+#lastplayed #plist .litem .first div img{
+	margin:0;
+	float:left;
+	width:34px;
+	height:34px;
+}
+
+#lastplayed #plist .litem .first div span{
+	float:left;
+	margin:0 0 0 10px;
+}
+
+#lastplayed #plist .litem .first div h4{
+	font-size: 1.2em;
+	/* color: #fffefd; */
+	line-height: 18px;
+}
+
+#lastplayed #plist .litem .first div em{
+	/* color: #8b8a89; */
+	font-style:normal;
+	font-weight:bold;
+}
+
+#lastplayed #plist .litem .first div p.dat{
+	font-size:1.1em;
+	/* opacity:0.3;
+	filter: alpha(opacity=30); */
+	width:100%;
+}
+
+#lastplayed #lheader .lphtitles{
+	clear:both;
+}
+
+#lastplayed #plist .lcredits{
+	background: #000;
+
+}
+
+#lastplayed #plist .lcredits p{
+	width:170px;
+	margin:0 auto;
+
+}
+/* End of CSS for last played page */
+
+/* prettyPhoto Css*/
+
+div.light_square .pp_expand {
+
+	cursor:pointer;
+}
+
+div.light_square .pp_expand:hover {
+
+	cursor:pointer;
+}
+
+div.light_square .pp_contract {
+
+	cursor:pointer;
+}
+
+div.light_square .pp_contract:hover {
+
+	cursor:pointer;
+}
+
+div.light_square .pp_close {
+	width:75px;
+	height:22px;
+
+	cursor:pointer;
+
+}
+
+div.light_square .pp_nav .pp_play {
+
+	height:15px;
+	width:14px;
+}
+
+div.light_square .pp_nav .currentTextHolder {
+	display:none;
+}
+
+div.light_square .pp_nav .pp_pause {
+
+	height:15px;
+	width:14px;
+}
+
+div.light_square .pp_arrow_previous {
+
+}
+
+div.light_square .pp_arrow_next {
+
+}
+
+div.light_square .pp_next:hover {
+
+	cursor:pointer;
+}
+
+div.light_square .pp_previous:hover {
+
+	cursor:pointer;
+}
+
+
+div.pp_pic_holder a:focus {
+	outline:none;
+}
+
+div.pp_overlay {
+	background:#000;
+	display:none;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+	z-index:9500;
+}
+
+div.pp_pic_holder {
+	display:none;
+	position:absolute;
+	width:100px;
+	z-index:10000;
+	border:2px solid #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.pp_content {
+	height:40px;
+	min-width:40px;
+}
+
+* html .pp_content {
+	width:40px;
+}
+
+.pp_content_container {
+	position:relative;
+	text-align:left;
+	width:100%;
+}
+
+.pp_content_container .pp_left {
+	padding-left:20px;
+}
+
+.pp_content_container .pp_right {
+	padding-right:20px;
+}
+
+.pp_content_container .pp_details {
+	float:left;
+	margin:10px 0 2px;
+}
+
+.pp_description {
+	display:none;
+	margin:0;
+}
+
+.pp_social {
+	float:left;
+	margin:7px 0 0;
+}
+
+.pp_social .facebook {
+	float:left;
+	position:relative;
+	top:-1px;
+	margin-left:5px;
+	width:55px;
+	overflow:hidden;
+}
+
+.pp_social .twitter {
+	float:left;
+}
+
+.pp_nav {
+	clear:right;
+	float:left;
+	margin:3px 10px 0 0;
+}
+
+.pp_nav p {
+	float:left;
+	margin:2px 4px;
+}
+
+.pp_nav .pp_play,.pp_nav .pp_pause {
+	float:left;
+	margin-right:4px;
+	text-indent:-10000px;
+}
+
+a.pp_arrow_previous,a.pp_arrow_next {
+	display:block;
+	float:left;
+	height:15px;
+	margin-top:3px;
+	overflow:hidden;
+	text-indent:-10000px;
+	width:14px;
+}
+
+.pp_hoverContainer {
+	position:absolute;
+	top:0;
+	width:100%;
+	z-index:2000;
+}
+
+.pp_gallery {
+	display:none;
+	left:50%;
+	margin-top:-50px;
+	position:absolute;
+	z-index:10000;
+}
+
+
+a.pp_next {
+	display:block;
+	float:right;
+	height:100%;
+	text-indent:-10000px;
+	width:49%;
+}
+
+a.pp_previous {
+	display:block;
+	float:left;
+	height:100%;
+	text-indent:-10000px;
+	width:49%;
+}
+
+a.pp_expand,a.pp_contract {
+	cursor:pointer;
+	display:none;
+	height:20px;
+	position:absolute;
+	right:30px;
+	text-indent:-10000px;
+	top:10px;
+	width:20px;
+	z-index:20000;
+}
+
+a.pp_close {
+	position:absolute;
+	right:0;
+	top:0;
+	display:block;
+	line-height:22px;
+	text-indent:-10000px;
+}
+
+.pp_loaderIcon {
+	display:block;
+	height:24px;
+	left:50%;
+	position:absolute;
+	top:50%;
+	width:24px;
+	margin:-12px 0 0 -12px;
+}
+
+
+div.ppt {
+	/* color:#fff; */
+	display:none !important;
+	font-size:17px;
+	z-index:9999;
+	margin:0 0 5px 15px;
+}
+
+
+div.light_square .pp_content .ppt,div.light_square #pp_full_res .pp_inline{
+	color:#000;
+}
+
+div.light_square .pp_loaderIcon {
+
+}
+
+
+div.light_square .pp_details{
+	position:relative;
+}
+
+div.light_square .pp_left,div.light_square .pp_middle,div.light_square .pp_right,div.light_square .pp_content{
+	background:#000;
+
+}
+
+
+.pp_top,.pp_bottom {
+	height:20px;
+	position:relative;
+}
+
+* html .pp_top,* html .pp_bottom {
+	padding:0 20px;
+}
+
+.pp_top .pp_left,.pp_bottom .pp_left {
+	height:20px;
+	left:0;
+	position:absolute;
+	width:20px;
+}
+
+.pp_top .pp_middle,.pp_bottom .pp_middle {
+	height:20px;
+	left:20px;
+	position:absolute;
+	right:20px;
+}
+
+* html .pp_top .pp_middle,* html .pp_bottom .pp_middle {
+	left:0;
+	position:static;
+}
+
+.pp_top .pp_right,.pp_bottom .pp_right {
+	height:20px;
+	left:auto;
+	position:absolute;
+	right:0;
+	top:0;
+	width:20px;
+}
+
+.pp_fade,.pp_gallery li.default a img {
+	display:none;
+}
+
+/* End lasplayed css */
+
+#list_playlist_buy_button {
+	width:280px;
+	text-align:center;
+}
+#list_playlist_buy_button .itunes_buy_wrap,
+#list_playlist_buy_button .amazon_buy_wrap {
+	font:bold 14px/normal "Helvetica Neue", arial, sans-serif;
+	line-height:normal;
+}
+#list_playlist_buy_button .itunes_buy_wrap {
+	padding:8px 0 20px;
+	border-bottom:1px dotted #333;
+}
+#list_playlist_buy_button .amazon_buy_wrap {
+	padding:20px 0 8px;
+}

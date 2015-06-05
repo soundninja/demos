@@ -1,0 +1,1 @@
+/**/ typeof _tynt_jp.ai66bqjqe === 'function' && _tynt_jp.ai66bqjqe({"userId":"","sessionId":"76sfeuq7-1kdw9o4r-9innz5f3-5v6jxrf0","deviceFamily":"desktop"});

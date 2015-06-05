@@ -1,0 +1,1 @@
+(function(){stButtons.processCB({"google":4,"clicks_total":35,"facebook":33,"pinterest":2,"total":39,"shares":{"facebook":2,"all":4,"pinterest":2},"url":"http:\/\/www.fuse.tv\/2015\/06\/marilyn-manson-korn-jonathan-davis-working-together","ourl":"http:\/\/www.fuse.tv\/2015\/06\/marilyn-manson-korn-jonathan-davis-working-together#sthash.V8yEh6vh"})})();

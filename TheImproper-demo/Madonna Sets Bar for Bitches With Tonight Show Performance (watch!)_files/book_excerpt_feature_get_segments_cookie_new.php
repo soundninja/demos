@@ -1,0 +1,1 @@
+var s = document.createElement('img');s.src= '//i.blogads.com/static/book_excerpt_feature/images/blank.gif?audience_segments=None';document.getElementsByTagName('body')[0].appendChild(s);
