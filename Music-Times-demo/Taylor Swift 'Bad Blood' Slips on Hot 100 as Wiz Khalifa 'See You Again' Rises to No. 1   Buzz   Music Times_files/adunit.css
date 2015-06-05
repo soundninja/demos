@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* adunit */
+.adunit_rectangle {width:100%; float:left; text-align:center; clear:both; overflow:hidden; margin-bottom:20px; background:url(../images/bg-ad.gif) repeat top left; padding:10px 0;}
+.adunit_leaderboard {width:100%; float:left; text-align:center; clear:both; overflow:hidden; padding:15px 0; background:url(../images/bg-ad.gif) repeat top left;}
+.adunit_leaderboard > div {width:1200px; margin:0 auto; text-align:center;}
+
+#adunit_video {width:100%; float:left; overflow:hidden; margin-bottom:20px; text-align:center;}
+#adunit_video > div {margin:0 auto;}
+
+/* rectangle */
+#adunit_main_right_top_computer {}
+#adunit_main_right_middle1_computer {}
+#adunit_main_right_middle2_computer {}
+#adunit_article_right_top_computer {}
+#adunit_article_right_middle1_computer {}
+#adunit_article_center_middle1_computer {width:300px!important; clear:left; margin-right:25px; margin-bottom:20px; padding:0!important; background:none!important;}
+#adunit_article_center_middle2_computer {background:none!important; width:50%!important; clear:none;}
+#adunit_article_center_middle3_computer {background:none!important; width:50%!important; clear:none;}
+#adunit_article_center_middle4_computer {background:none!important;}
+#adunit_section_right_top_computer {}
+#adunit_section_right_middle1_computer {}
+#adunit_section_right_middle2_computer {}
+
+/* leaderboard */
+#adunit_main_center_bottom_computer {}
+#adunit_article_center_top_computer {}
+#adunit_article_center_bottom_computer {}
+#adunit_section_center_top_computer {}
+#adunit_section_center_bottom_computer {}
+
+/* video_slide */
+#adunit_video_slide {width:100%; float:left; overflow:hidden;}
+
+/* mobile ad */
+.adunit_rectangle_phone {width:100%; float:left; text-align:center; clear:both; display:block; overflow:hidden; margin:0 auto; padding:20px 0;}
+#adunit_article_center_phone {}
+#adunit_article_center_middle1_phone {}
+#adunit_article_center_middle2_phone {}
+#adunit_article_center_middle3_phone {}
+#adunit_article_center_middle4_phone {}
+#adunit_article_center_middle5_phone {width:90%; float:left; text-align:center; clear:both; display:block; overflow:hidden; margin:20px 5%;}
+
+#adunit_article_center_middle6_phone {width:100%; float:left; text-align:center; clear:both; display:block; overflow:hidden; margin:0 auto; padding:10px 0;}
+#adunit_article_center_middle7_phone {width:100%; float:left; text-align:center; clear:both; display:block; overflow:hidden; margin:0 auto; padding:10px 0;}
+#adunit_article_center_bottom_phone {width:100%; position:fixed; bottom:-5px; text-align:center; clear:both; display:block; overflow:hidden; margin:0 auto;}
+
+
+@media screen and (max-width:1280px) {
+.adunit_leaderboard > div {width:1010px;}
+}
+@media screen and (max-width:728px) {
+.adunit_leaderboard {display:none;}
+}
