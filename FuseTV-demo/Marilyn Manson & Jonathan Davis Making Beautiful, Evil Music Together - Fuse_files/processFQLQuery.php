@@ -1,1 +1,0 @@
-/**/ stButtons.facebookCB({"data":[{"url":"http:\/\/www.fuse.tv\/2015\/06\/marilyn-manson-korn-jonathan-davis-working-together","like_count":1804,"total_count":2371,"comment_count":163,"share_count":404,"click_count":0}]});

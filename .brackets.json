@@ -1,6 +1,7 @@
 {
     "jscodehints.detectedExclusions": [
         "C:/dev/demos/eurweb-demo/Drake, Pharrell Williams Confirmed for Apple’s Music Service_files/a_data_002/vast.js",
-        "C:/dev/demos/eurweb-demo/Drake, Pharrell Williams Confirmed for Apple’s Music Service_files/a_data_002/videoAPI.js"
+        "C:/dev/demos/eurweb-demo/Drake, Pharrell Williams Confirmed for Apple’s Music Service_files/a_data_002/videoAPI.js",
+        "C:/dev/demos/eurweb-demo/Drake, Pharrell Williams Confirmed for Apple’s Music Service_files/DAC.js"
     ]
 }
