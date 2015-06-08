@@ -1806,9 +1806,8 @@ SN.events = function () {
     $doc.on('format-tracks-content-complete', SN.addContentToTooltip);
     $doc.on('format-seatgeek-content-complete', SN.addContentToTooltip); // TODO: go back and make this the same as other events
     $doc.on('format-events-content-complete', SN.addContentToTooltip);
+    $(window).on('hashchange', SN.addAdminPanel);
 };
-// have to bind right now otherwise music times will change the hash before we have a chance
-$(window).on('hashchange', SN.addAdminPanel);
 
 SN.loadCSS = function() {
     // Dynamically load Soundninja CSS.

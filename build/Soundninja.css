@@ -275,7 +275,8 @@
   text-align: center;
   white-space: nowrap;
   border: 0;
-  float: left; }
+  float: left;
+  max-height: 23px; }
   .SN-spotify-button.SN-player-spotify-add-new-submit {
     font-family: 'Arial';
     text-transform: uppercase;

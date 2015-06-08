@@ -49,9 +49,7 @@ this["SN"]["admin"]["whitelisttip"] = Handlebars.template({"1":function(depth0,h
         setup('whitelist');
 
         panel.isOpen = function isOpen() {
-            // can't just check window.location.hash because music times has already changed it
-            var $panel = $('.sn-admin-panel');
-            return $panel.css('display') != 'none';
+            return window.location.hash.substring(1) == 'sngod';
         };
 
         panel.addOptions = function (list, text, artists) {
@@ -63,9 +61,9 @@ this["SN"]["admin"]["whitelisttip"] = Handlebars.template({"1":function(depth0,h
         function toggle() {
             var $panel = $('.sn-admin-panel');
             if (panel.isOpen())
-                $panel.hide();
-            else
                 $panel.show();
+            else
+                $panel.hide();
         }
 
         function close() {
