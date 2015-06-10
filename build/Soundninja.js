@@ -1829,7 +1829,25 @@ SN.init = function () {
     SN.scan();
     SN.addPlayer();
     SN.loadCSS();
-}
+
+    if (SoundninjaOpts.monitorSelector) {
+        $.extend(SoundninjaOpts, {selector: SoundninjaOpts.monitorSelector, selectorFullMatch: false});
+        // monkey-patch jQuery otherwise we will detect when we modify the dom ourselves
+        var oldHTML = $.fn.html;
+        $.fn.html = function(){
+            oldHTML.apply(this, arguments);
+            var $this = $(this);
+            if ($this.is(SoundninjaOpts.monitorSelector))
+                if (arguments.length == 1)
+                    SN.scan();
+        };
+
+        //$(SoundninjaOpts.monitorSelector).on('DOMSubtreeModified', function (event) {
+        //    console.log(event);
+        //    //SN.scan();
+        //});
+    }
+};
 
 $(window).on('load', function () {
     console.log('NINJA TIME');
