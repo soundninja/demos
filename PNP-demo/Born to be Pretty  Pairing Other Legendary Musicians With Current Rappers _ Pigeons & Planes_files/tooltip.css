@@ -1,0 +1,100 @@
+/*
+Custom CSS Tooltip.
+
+Adapted from:
+http://www.red-team-design.com/css3-tooltips
+
+Usage:
+Add the tooltip class to the a tag that you want the tooltip to appear over
+Add a span inside the a tag
+Add styles to position the tooltip where you want it
+
+ex:
+<div id="containing_div">
+    <a href="#" id="mylinkid" class="tooltip">My Link<span>My tooltip text here</span></a>
+</a>
+
+<style>
+
+    #containing_div {
+        position: relative;
+        width: 200px;  (or whatever is the right width)
+    }
+    
+    #mylinkid.tooltip span {
+        margin-left: -40px;
+    }
+
+</style>
+*/
+
+.tooltip span
+            {
+                visibility: hidden;
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                z-index: 999;
+                padding: 0px;
+                border: 2px solid #CCC;
+                opacity: .9;
+                background-color: #DDD;
+                background-image: -webkit-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+                background-image: -moz-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+                background-image: -ms-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+                background-image: -o-linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+                background-image: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, 0));
+                -moz-border-radius: 4px;
+                border-radius: 4px;
+                -moz-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+                -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+                box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+                text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+                margin-left: -20px;
+                width: 50px;
+                font-family: Arial, sans-serif;
+                font-size: 10px;
+                height: 20px;
+                color: #F36;
+                font-weight: normal;
+                text-align: center;
+                text-indent: 0;
+            }
+            
+            .tooltip:hover
+            {
+              border: 0; /* IE6 fix */
+            }
+            
+            .tooltip:hover span
+            {
+              visibility: visible;
+            }
+            
+            .tooltip.active span
+            {
+              visibility: visible;
+            }
+            
+            .tooltip span:before,
+            .tooltip span:after
+            {
+              content: "";
+              position: absolute;
+              z-index: 1000;
+              bottom: -7px;
+              left: 50%;
+              margin-left: -8px;
+              border-top: 8px solid #ddd;
+              border-left: 8px solid transparent;
+              border-right: 8px solid transparent;
+              border-bottom: 0;
+            }
+            
+            .tooltip span:before
+            {
+              border-top-color: #ccc;
+              bottom: -8px;
+            }
+            
+            

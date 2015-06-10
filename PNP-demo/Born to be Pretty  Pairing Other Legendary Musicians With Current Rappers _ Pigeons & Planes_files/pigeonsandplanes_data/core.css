@@ -1,0 +1,370 @@
+/* ShoutMix v3 */
+
+/* General elements ==============================================================================*/
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	line-height: 1.4em;
+	word-wrap: break-word;
+}
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+	width: 0.8em;
+	height: 0.8em;
+}
+::-webkit-scrollbar-button {
+	display: none;
+}
+::-webkit-scrollbar-track-piece, ::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 1em;
+}
+html, body, form, fieldset, legend, ol, ul, li, dl, dt, dd, p, h1, h2, input {
+	text-align: left;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+input::-moz-focus-inner { /* Fix Firefox extra padding */
+    border: 0;
+    padding: 0;
+}
+img {
+	border: 0;
+}
+.smiley {
+	vertical-align: text-bottom;
+}
+a:link, a:visited, a:active {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+input, .button, #header a, #header strong, #compose label, #options:before, #mode * {
+	overflow: visible;
+	outline-width: 0.3em;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
+}
+input {
+	word-wrap: normal;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+select {
+	word-wrap: normal;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+	outline: none;
+	-webkit-box-shadow: 0 1px 1px -1px black inset;
+	-moz-box-shadow: 0 1px 1px -1px black inset;
+	box-shadow: 0 1px 1px -1px black inset;
+}
+input[type="submit"] {
+	-webkit-appearance: none; /* Standardize Mobile Safari input border */
+}
+
+/* Real-time update status =======================================================================*/
+
+body.idle #content {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+body.ready #footer {
+	background: url('load.png') -16px -16px no-repeat; /* Preloading */
+}
+body.ready #profile {
+	background: url('live.png') center right no-repeat;
+}
+body.busy #profile {
+	background: url('load.png') center right no-repeat;
+}
+
+/* Main layout ===================================================================================*/
+
+body, #control, #footer {
+	position: absolute;
+	overflow: hidden;
+}
+* html body {
+	position: static; /* IE needs this to prevent bugs in certain embed scenarios */
+}
+body {
+	border-style: solid;
+	border-width: 1px;
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	padding: 10.4em 0 2.4em 0;
+}
+#control {
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 10.4em;
+}
+#content {
+	height: 100%;
+	margin: 0.1em;
+	overflow: auto;
+}
+#footer {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 2.2em;
+}
+
+/* Control styling ===============================================================================*/
+
+#header {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+#title {
+	font-size: 1.2em;
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	margin: 0;
+	padding: 0.3em 0.5em;
+}
+#title img {
+	height: 1.2em;
+	vertical-align: top;
+}
+#header {
+	font-size: 0.8em;
+	font-weight: bold;
+	padding: 0.8em 0.5em;
+}
+#header a, #header strong {
+	padding: 0.3em 0.5em;
+}
+#compose {
+	padding: 0.8em;
+}
+#compose fieldset {
+	text-align: right;
+}
+#profile {
+	width: 100%;
+	height: 1.4em;
+	margin-bottom: -0.1em;
+	overflow: hidden;
+}
+#profile a {
+	font-weight: bold;
+}
+#message {
+	border-style: solid;
+	border-width: 1px;
+	width: 100%;
+	margin: 0.5em 0;
+	padding: 0.3em;
+}
+* html #message {
+	margin: 0.3em 0;
+}
+#send {
+	font-weight: bold;
+	text-align: center;
+	padding: 0.3em 0.5em;
+}
+* html #send {
+	padding: 0.1em 0.5em;
+}
+#send.popup, #send.popup:hover {
+	float: right;
+	text-decoration: none;
+}
+#options {
+	font-size: 0.8em;
+	text-decoration: none;
+	float: left;
+}
+#options:before {
+	font-family: Courier;
+	content: '+';
+	margin-right: 0.5em;
+	padding: 0 0.3em;
+}
+#options.less:before {
+	content: '-';
+}
+
+/* Content =======================================================================================*/
+
+#content {
+	padding: 0 0.2em;
+}
+#mode {
+	font-size: 0.8em;
+	text-align: right;
+	margin-bottom: 0.3em;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0.5em 0.3em;
+}
+#mode a, #mode strong {
+	font-weight: bold;
+	padding: 0.3em 0.5em;
+}
+#mode abbr {
+	font-size: 0.9em;
+	position: relative;
+	top: -0.5em;
+	left: 0.5em;
+	padding: 0.1em 0.3em;
+}
+#messages p {
+	text-align: center;
+	padding: 0.5em;
+}
+#content #note {
+	font-weight: bold;
+	text-align: left;
+	border-style: solid;
+	border-width: 1px;
+	width: 100%;
+	margin-bottom: 0.2em;
+	padding: 0.5em;
+}
+#content #pm {
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 0.2em;
+	padding: 0.5em;
+}
+#content #empty {
+	font-size: 1em;
+	padding: 1em;
+}
+#more a {
+	display: block;
+	padding: 0.5em;
+}
+
+/* Extras panel ==================================================================================*/
+
+#extras {
+	display: none;
+	margin-bottom: 0.3em;
+	padding: 0 0.3em;
+}
+#extras fieldset {
+	border-style: solid;
+	border-width: 1px 0 0 0;
+	width: 100%;
+	margin: 0.5em 0 0 0;
+	padding: 0.5em 0 1em 0;
+}
+#extras fieldset legend {
+	font-size: 0.8em;
+	padding: 0 0.3em;
+}
+#extras p {
+	text-align: center;
+}
+#extras p.loader {
+	margin-top: 1em;
+}
+#extras .button {
+	display: block;
+	width: 48%;
+	float: left;
+	margin: 0.3em 0;
+	padding: 0.3em;
+}
+#extras .wide {
+	width: 100%;
+}
+#extras .left {
+	margin-right: 2%;
+}
+#extras .right {
+	margin-left: 2%;
+	margin-right: -2%; /* Prevents wrapping to new line in some browsers */
+}
+#extras a:hover {
+	text-decoration: none;
+}
+#smileys {
+	width: 100%;
+	overflow: hidden;
+}
+#smileys img {
+	margin: 0.3em;
+	cursor: pointer;
+}
+
+/* Messages layout ===============================================================================*/
+
+#messages div, #preview {
+	position: relative;
+	width: 100%;
+	margin-bottom: 0.1em;
+	padding: 0.3em;
+	overflow: hidden;
+}
+img.avatar {
+	float: right;
+	width: 2.8em;
+	height: 2.8em;
+	margin-left: 0.5em;
+}
+#preview img.avatar {
+	opacity: 0.5;
+}
+cite {
+	font-style: normal;
+	font-weight: bold;
+}
+cite, q, small {
+	text-align: left;
+	display: block;
+	padding: 0.2em;
+}
+q:before, q:after {
+	content: '';
+}
+#messages small, #preview small {
+	font-size: 0.8em;
+	text-align: right;
+	float: left;
+	width: 100%;
+	padding: 0.5em 0.3em;
+}
+#messages .type {
+	float: left;
+	margin-right: 0.5em;
+}
+#messages .status {
+	margin: 0 0.2em;
+}
+#messages .status a {
+	text-decoration: none;
+}
+
+/* Footer ========================================================================================*/
+
+#footer {
+	border-style: solid;
+	border-width: 1px 0 0 0;
+	padding: 0.5em 0.8em;
+}
+#footer p {
+	font-size: 0.8em;
+	text-align: right;
+}
+#powered_by {
+	font-weight: bold;
+}
