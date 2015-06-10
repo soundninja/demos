@@ -572,23 +572,32 @@ h2.cgj_title { display: none; }
         });
 
         function nextSlide() {
-          var ckey = larr[getActiveThumbTitle()].next;
-
-          if(typeof(window.history.pushState) == 'function') {
-            window.history.pushState({ key: ckey }, decode64(larr[ckey][5]), larr[ckey][4]);
-          }
-
+          var ckey = larr[getActiveThumbTitle()]['next'];
           changeSlide({ key: ckey });
+
+//          if(typeof(window.history.pushState) == 'function') {
+//            window.history.pushState({ key: ckey }, decode64(larr[ckey][5]), larr[ckey][4]);
+//          }
+            if( original_url.contains(ckey) ){
+              var pushArr = larr[ckey][4].split('/s/');
+              window.history.pushState({ key: ckey }, decode64(larr[ckey][5]), pushArr[0]);
+            } else {
+              window.history.pushState({ key: ckey }, decode64(larr[ckey][5]), larr[ckey][4]);
+            }
+            
         }
 
         function prevSlide() {
-          var ckey = larr[getActiveThumbTitle()].prev;
-
-          if(typeof(window.history.pushState) == 'function') {
-            window.history.pushState({ key: ckey }, decode64(larr[ckey][5]), larr[ckey][4]);
-          }
+          var ckey = larr[getActiveThumbTitle()]['prev'];
 
           changeSlide({ key: ckey });
+
+          if( original_url.contains(ckey) ){
+              var pushArr = larr[ckey][4].split('/s/');
+              window.history.pushState({ key: ckey }, decode64(larr[ckey][5]), pushArr[0]);
+            } else {
+              window.history.pushState({ key: ckey }, decode64(larr[ckey][5]), larr[ckey][4]);
+            }
         }
 
         // Extracts the thumb title from the thumb html. thumb.actice>a doesn't work in IE
