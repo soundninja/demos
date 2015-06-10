@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'BenchNine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('BenchNine Regular'), local('BenchNine-Regular'), url(https://fonts.gstatic.com/s/benchnine/v4/xmB9oJNpSFKa3qTF2JABPltXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(https://fonts.gstatic.com/s/benchnine/v4/xmB9oJNpSFKa3qTF2JABPj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'BenchNine';
+  font-style: normal;
+  font-weight: 700;
+  src: local('BenchNine Bold'), local('BenchNine-Bold'), url(https://fonts.gstatic.com/s/benchnine/v4/qZpi6ZVZg3L2RL_xoBLxWegdm0LZdjqr5-oayXSOefg.woff2) format('woff2'), url(https://fonts.gstatic.com/s/benchnine/v4/qZpi6ZVZg3L2RL_xoBLxWXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}

@@ -596,7 +596,7 @@ outline: 0px dotted black;
     font-size: 10px;
 }
 
-.slide-title, .contentbox #main_content h1.slide-title {
+.slide-title {
     font-size: 16px;
     color: #f2346d;
 }

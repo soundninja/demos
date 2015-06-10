@@ -302,3 +302,7 @@ img{position:absolute;top:0px;right:10px;display:none;width:16px;height:16px}.in
 auto;display:block}#sidebarAd{display:inline-block}#disqus_thread{padding:20px
 0}.YAD-7a5e4967-778c-38fa-9bbf-3fb9d3c42633{clear:both}#sidebar-scroll-ad-container{float:left;position:relative;width:310px}#sidebar-scroll-ad-container.fixed{position:fixed;top:50px}.sub-div{float:left;width:100%;margin:4px
 0 3px 0;height:5px;background:#111}#sidebar-scroll-300x250-container{position:relative;width:300px;height:250px;padding:5px;float:left}
+
+.leadmagnify {
+    display: none;
+}
