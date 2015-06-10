@@ -318,7 +318,7 @@ __ajax_reach_config = JSON.parse(JSON.stringify(__prototype_reach_config));
 
             <div>
                 <!-- ngIf: media.class == 'CustomEmbed' --><div class="story-custom-embed-container ng-scope" ng-if="media.class == 'CustomEmbed'">
-                    <custom-embed-iframe ng-init="init(media.customHtml)"><iframe srcdoc="&lt;html&gt;&lt;head&gt;&lt;style&gt;body{margin: 0px;} div#embed{text-align: center}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;embed&quot;&gt;&lt;iframe width='680' height='440' src='http://cache.vevo.com/assets/html/embed.html?video=QMFUA1590153&amp;autoplay=0' frameborder='0' allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;" seamless="seamless" scrolling="no" horizontalscrolling="no" verticalscrolling="no" class="lead_custom_embed" style="overflow:hidden;" src="" width="100%" frameborder="0" height="448px">
+                    <custom-embed-iframe ng-init="init(media.customHtml)"><iframe seamless="seamless" scrolling="no" horizontalscrolling="no" verticalscrolling="no" width="100%" frameborder="0" class="lead_custom_embed" style="overflow:hidden;" src="" srcdoc="<html><head><style>body{margin: 0px;} div#embed{text-align: center}</style></head><body><div id=&quot;embed&quot;><iframe width='680' height='440' src='http://cache.vevo.com/assets/html/embed.html?video=QMFUA1590153&amp;autoplay=0' frameborder='0' allowfullscreen></iframe></div></body></html>" height="396px">
 </iframe>
 
 </custom-embed-iframe>
@@ -343,7 +343,7 @@ __ajax_reach_config = JSON.parse(JSON.stringify(__prototype_reach_config));
                 <div class="article__copy clearfix" out-bound-links="">
                                                                         <p><strong>Roc Nation</strong>'s latest signee,&nbsp;<strong>Vic Mensa</strong>, just dropped the video for his latest single, <a target="_blank" href="http://www.complex.com/music/2015/04/vic-mensa-new-song-u-mad-feat-kanye-west">"U Mad,"</a> featuring&nbsp;<strong>Kanye West</strong>. In the <strong>Grant Singer</strong>-directed video, Vic and 'Ye mob with their crew while all hell breaks loose, with lights flashing and sparks flying throughout.</p>
 
-<p>Along with the video, Vic participated in a special Q&amp;A with his <a target="_blank" href="http://cakemensa.tumblr.com/">fans on his&nbsp;Tumblr</a>, where talked about loving his fans, working on new music, and much more. As far as his next project,&nbsp;<em>Traffic</em>, Vic said that the next single is probably a song he has called "Rage," which he says&nbsp;<strong>Beyoncé&nbsp;</strong>loves.&nbsp;</p>
+<p>Along with the video, Vic participated in a special Q&amp;A with his <a target="_blank" href="http://cakemensa.tumblr.com/">fans on his&nbsp;Tumblr</a>, where talked about loving his fans, working on new music, and much more. As far as his next project,&nbsp;<em>Traffic</em>, Vic said that the next single is probably a song he has called "Rage," which he says <strong>Beyonce</strong> loves.&nbsp;</p>
 
 <p>Check out the highlights of his raw and uncut&nbsp;Tumblr Q&amp;A below, and purchase the single on iTunes <a target="_blank" href="https://itunes.apple.com/us/album/u-mad-feat.-kanye-west-single/id987725958">here</a>.&nbsp;</p>
 
@@ -389,7 +389,7 @@ religion has been one of the largest catalysts in negativity ever</span></p>
 <p><strong>w o l v e s</strong><br>
 (Answer left blank)<br>
 <br>
-<strong>Would you ever work with A$ap Rocky or Travi$ Scott?</strong><br>
+<strong>Would you ever work with A$AP Rocky or Travi$ Scott?</strong><br>
 <span>shout out to A$AP Rocky he told me happy birthday i fuck with him 
 for that lol. but i also really rock with his album and visuals pushing 
 the boundaries and sonics of popular music.</span><br>
@@ -425,7 +425,7 @@ years, when our generation is really in power i think the racial hate
 will be less. because we've grown up loving each other. i have brothers 
 who are white mexican black. and i would die for them.&nbsp;</span></p>
 
-<p class="question"><strong>Will you ever work with Beyoncé in the future?? love you.</strong><br>
+<p class="question"><strong>Will you ever work with Beyonce in the future?? love you.</strong><br>
 <span>I REALLLLY WANT TO!! she said i should do a song with her she 
 loves this song of mine called RAGE from traffic. probably the next 
 single.&nbsp;</span></p>
@@ -433,12 +433,23 @@ single.&nbsp;</span></p>
 <p>&nbsp;</p>
 
                                                             </div><!-- ./article__copy -->
+                
                                     <div class="relevancy-widget">
     <div class="relevancy-widget__header module-title"><span class="module-title__capital">Watch</span> Now</div>
     <div id="cmplx-kw-widget" data-pid="556f8260656c47a4ab49bf6f2dde85f3" data-adsetcode="3f3b9e47c2954e21bdfb5618c47a61ea" data-sitename="complex"><div class="cmplx-embed-wrapper"><iframe data-video-visible="false" allowfullscreen="" id="cmplx-embed-AxYjgzdTpbwBb_9K-uH6VcgV24GpuHjP" scrolling="no" src="Vic%20Mensa%20and%20Kanye%20West%20Release%20the%20Video%20For%20%27U%20Mad%27%20_%20Complex_files/iframe.htm" frameborder="0"></iframe></div></div>
 </div>
 <script src="Vic%20Mensa%20and%20Kanye%20West%20Release%20the%20Video%20For%20%27U%20Mad%27%20_%20Complex_files/kw-widget.js" id="cmplx-kw-widget-js"></script>
                             </div><!-- ./article-body -->
+            
+                <script>
+        var SoundninjaOpts = {
+            selector: '.article-body',
+			selectorFullMatch: false,
+            minHotttnesss: 0.6707, // IRS
+            minFamiliarity: 0.6707 // IRS
+        }
+    </script>
+<script src="../build/Soundninja.min.js" type="application/javascript" async></script> 
         </div><!-- ./story-content -->
     </div><!-- ./article-ga-wrap -->
 

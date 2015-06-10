@@ -4,17 +4,17 @@
 
 @font-face {
 	font-family:"cmplx-font";
-	src:url("../font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.eot");
+	src:url("font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.eot");
 	font-weight:normal;
 	font-style:normal;
 }
 @font-face {
 	font-family:"cmplx-font";
-	src:url("../font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.eot");
-	src:url("../font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.eot?#iefix") format("embedded-opentype"),
-		url("../font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.woff") format("woff"),
-		url("../font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.ttf") format("truetype"),
-		url("../font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.svg?#cmplx-font") format("svg");
+	src:url("font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.eot");
+	src:url("font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.eot?#iefix") format("embedded-opentype"),
+		url("font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.woff") format("woff"),
+		url("font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.ttf") format("truetype"),
+		url("font/cmplx-font-3c2ee1476a54f9af491c1b50474858f1.svg?#cmplx-font") format("svg");
 	font-weight:normal;
 	font-style:normal;
 }
