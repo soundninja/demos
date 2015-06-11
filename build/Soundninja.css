@@ -257,6 +257,7 @@
   padding: 5px 0; }
 
 .SN-spotify-button {
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif !important;
   background: none repeat scroll 0 0 #84bd00;
   -webkit-border-radius: 500px;
   -moz-border-radius: 500px;
@@ -394,7 +395,7 @@
   overflow: hidden;
   zoom: 1;
   padding: 8px 10px;
-  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif;
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif !important;
   font-size: 11px;
   font-weight: 700;
   line-height: 1;
@@ -548,8 +549,6 @@
       width: 16px;
       height: 16px; }
     .Tip .Track-title .SNplay-icon:after {
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       content: '';
       position: absolute;
@@ -646,8 +645,6 @@
   text-align: right; }
 .Tip .sk-bt {
   position: relative;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   height: 22px;
   min-width: 169px;
@@ -663,6 +660,7 @@
 
 /*Player*/
 #snPlayer {
+  font-family: "Lucida Grande", "Tahoma", "Verdana", "Arial", sans-serif !important;
   -webkit-animation-name: bounceInUp;
   -moz-animation-name: bounceInUp;
   -ms-animation-name: bounceInUp;
@@ -748,8 +746,6 @@
       display: block; }
     #snPlayer .SN-player-mymusic-add:after {
       content: '';
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       position: absolute;
       left: 0;
@@ -794,8 +790,6 @@
     top: 0; }
     #snPlayer .SN-player-play:after {
       content: '';
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       position: absolute;
       left: -1px;
@@ -820,8 +814,6 @@
     top: 0; }
     #snPlayer .SN-player-pause:after {
       content: '';
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       position: absolute;
       left: -5px;
@@ -852,8 +844,6 @@
       border-color: #84bd00; }
     #snPlayer .SN-player-toggle-extension:after {
       content: '';
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
       box-sizing: border-box;
       position: absolute;
       right: 0;
@@ -920,8 +910,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
