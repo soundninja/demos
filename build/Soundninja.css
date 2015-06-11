@@ -534,7 +534,7 @@
         background-color: #1c1c1f; }
         .Tip .Tracks li:hover p {
           color: #fff; }
-  .Tip .Track-title .play-icon {
+  .Tip .Track-title .SNplay-icon {
     display: inline-block;
     color: #fff;
     position: absolute;
@@ -544,10 +544,10 @@
     -moz-transition: opacity, 200ms ease-in;
     transition: opacity, 200ms ease-in;
     opacity: 0; }
-    .Tip .Track-title .play-icon .icon {
+    .Tip .Track-title .SNplay-icon .icon {
       width: 16px;
       height: 16px; }
-    .Tip .Track-title .play-icon:after {
+    .Tip .Track-title .SNplay-icon:after {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -563,7 +563,7 @@
       border-radius: 50%;
       width: 24px;
       height: 24px; }
-  .Tip .Track-title:hover .play-icon {
+  .Tip .Track-title:hover .SNplay-icon {
     opacity: 1; }
   .Tip .Track-icon {
     -webkit-transition: all, 200ms ease-in;
