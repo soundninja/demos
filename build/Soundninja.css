@@ -239,8 +239,11 @@
 
 .sn-match.is-active {
   cursor: pointer !important;
-  border-bottom: 1px dashed #777 !important;
   background-color: transparent !important; }
+
+.SN-icon {
+  width: .9em;
+  height: .9em; }
 
 .fa-soundninja {
   color: #84bd00;
