@@ -1,0 +1,421 @@
+﻿body
+{
+    margin: 10px;
+    background-color: #000;
+    color: #ccc;
+    font-size: 12px;
+}
+
+table td.artwork
+{
+    width: 44px;
+}
+table td, table th
+{
+    padding: 3px;
+}
+#divSlider
+{
+    background-size: 100% 100%;
+}
+
+#container table tr
+{
+    height: 48px;
+    background: -moz-linear-gradient(top, #333, #111); 
+    background: -webkit-linear-gradient(top, #333, #111); 
+}
+#container table tr td
+{
+    border-bottom:1px solid #000;
+    color:#eee;
+}
+#container table tr.selected
+{
+    background: #F8350E; 
+    background: -moz-linear-gradient(top, #F91, #F8350E); 
+    background: -webkit-linear-gradient(top, #F91, #F8350E);
+}
+#container1 tr:hover
+{
+    background-color:rgba(200,200,200,.7);
+    background: -moz-linear-gradient(top, #222, #444); 
+    background: -webkit-linear-gradient(top, #222, #444); 
+}
+#container1 table tr:hover td 
+{
+    border-top:1px solid #444;
+}
+
+#container table tr.selected td 
+{
+    border-top:1px solid #fb0;
+}
+tr.selected a
+{
+    color: #fff;
+}
+
+a
+{
+}
+a:hover
+{
+}
+#trackName, #time, #progress
+{
+    color: #fff;
+    left: 69px;
+    right:10px;
+    padding: 0 3px;
+    font-size: 11px;
+    height: 20px;
+    overflow: hidden;
+}
+#trackName
+{
+    position: absolute;
+    top: 30px;
+    z-index: 3;
+	font-weight:bold;
+}
+#time, #progress
+{
+    position: absolute;
+    top: 45px;
+    z-index: 3;
+    left:100px;
+    top:55px;
+}
+::-webkit-scrollbar
+{
+    background: #000;
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar:hover
+{
+    background-color: #111;
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: #222;
+    min-height: 50px;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: #333;
+}
+
+.ui-slider-horizontal
+{
+    height: 62px;
+    border: 0px solid #666;
+    cursor: pointer;
+}
+.ui-slider .ui-slider-handle
+{
+    position: absolute;
+    z-index: 2;
+    width: 2px;
+    height: 62px;
+    cursor: default;
+}
+.ui-slider-horizontal .ui-slider-handle
+{
+    top: 0;
+    margin-left: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: #f50;
+}
+.ui-slider-range
+{
+    background: rgba(0, 0, 0, .3);
+}
+
+#container tr 
+{
+    cursor:pointer;
+}
+#container tr:hover
+{
+    background-color:rgba(100,100,100,.7);
+}
+#container td a
+{
+    font-size: 11px;
+}
+.mcpBottom
+{
+    font-size: 9px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: #111;
+    padding: 0 3px;
+    text-align: right;
+}
+
+
+
+::-webkit-scrollbar {
+    background: #111;
+    width:8px;
+    height:8px;
+}
+::-webkit-scrollbar:hover {
+    background-color: #333;
+    width:8px;
+    height:8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    min-height:50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777;
+}
+
+#container 
+{
+	position: absolute;
+	top: 110px;
+	bottom: 18px;
+	overflow: auto;
+	left: 0;
+	right: 0;
+}
+
+#playlistName
+{
+    font-weight: bold;
+    position: absolute;
+    font-size:12px;
+    top: 80px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background:#ccc;
+    padding:7px 10px 3px;
+    height:19px;
+    background: -moz-linear-gradient(top, #222,#444); 
+    background: -webkit-linear-gradient(top, #222,#444); 
+    border-bottom: 1px solid #222;
+}
+
+#html5player
+{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    height: 80px;
+    background: #111;
+    background: -moz-linear-gradient(top, #444, #000);
+    background: -webkit-linear-gradient(top, #444, #000);
+    -moz-box-shadow: 0px -5px 25px black;
+    -webkit-box-shadow: 0px -5px 25px black;
+    box-shadow: 0px -5px 20px black;
+    z-index:39999;
+    border-top:1px solid #999px;
+    display:block !important;
+}
+#html5player #waveform
+{
+    position: absolute;
+    left: 70px;
+    height: 32px;
+    right: 5px;
+    top: 13px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#html5player #waveform .waveform
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+#html5player #waveform .waveform.loaded
+{
+    width: 0%;
+}
+#html5player #waveform .waveform.played
+{
+    width: 0%;
+}
+#html5player #waveformFull
+{
+    height:64px;
+}
+#html5player #waveformD
+{
+    position: absolute;
+    left: 70px;
+    height: 5px;
+    right: 5px;
+    top: 42px;
+    overflow: hidden;
+    cursor: pointer;
+    background:rgba(128,128,128,.3);
+    display:none;
+}
+#html5player #waveformDown
+{
+    margin-top:-20px;
+    height:30px;
+}
+#html5player #scrobler
+{
+    width:1px;
+    height:50px;
+    top:5px;
+    left:70px;
+    position:absolute;
+    background: #f50;
+    display:none;
+}
+
+#html5player span
+{
+    display: inline-block;
+}
+#html5player span.prev, #html5player span.next, #html5player span.shuffle
+{
+    width: 30px;
+    height: 24px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+#html5player span.play
+{
+    background-position: center -3752px;
+    background-image: url('images/icons31.png');
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 37px;
+    margin-left: 8px;
+    margin-top: 11px;
+    cursor:pointer;
+}
+#html5player span.play:hover
+{
+    background-position: center -3826px;
+}
+#html5player span.play.pause
+{
+    background-position: center -3789px;
+    background-image: url('images/icons31.png');
+    width: 50px;
+    height: 37px;
+}
+#html5player span.play.pause:hover
+{
+    background-position: center -3863px;
+}
+#html5player span.prev
+{
+    position: absolute;
+    left: 3px;
+    top: 50px;
+    background-position: center -3669px;
+    background-image: url('images/icons31.png');
+}
+#html5player span.prev:hover
+{
+    background-position: center -3688px;
+}
+#html5player span.next
+{
+    position: absolute;
+    left: 37px;
+    top: 50px;
+    background-position: center -3708px;
+    background-image: url('images/icons31.png');
+}
+#html5player span.next:hover
+{
+    background-position: center -3728px;
+}
+#html5player span.shuffle
+{
+    position: absolute;
+    left: 68px;
+    top: 50px;
+    background-position: center -4008px;
+    background-image: url('images/icons31.png');
+}
+#html5player span.shuffle:hover
+{
+    background-position: center -4009px;
+}
+#html5player span.vol
+{
+    width: 30px;
+    height: 24px;
+    text-indent: -9999px;
+    cursor: pointer;
+    background-position: -8px -3262px;
+    background-image: url('images/icons31.png');
+    padding-left: 0;
+    position: absolute;
+    top: 52px;
+    right: 156px;
+    margin-right: 4px;
+    z-index:5;
+}
+
+#html5player a
+{
+    width: 1em;
+    height: 1em;
+}
+
+#html5player #volume
+{
+    background: url(images/volumeBg.png) no-repeat center center;
+    height: 9px;
+    border: 0;
+    margin-right: 10px;
+    width: 145px;
+    position: absolute;
+    top: 59px;
+    right: 0px;
+    z-index:5;
+    overflow: hidden;
+    cursor:pointer;
+}
+#html5player #volume div
+{
+    height: 9px;
+    border: 0;
+}
+#html5player .ui-widget-header
+{
+    background: #333;
+    background: -moz-linear-gradient(top, #444, #222);
+    background: -webkit-linear-gradient(top, #444, #222);
+}
+#html5player #volume a
+{
+    background-position: 0px -3293px;
+    background-color: transparent;
+    background-image: url('images/icons31.png');
+    border: 0;
+    padding: 0px;
+    height: 9px;
+    margin-left: -7px;
+}
+
+.ujs_flashblock_placeholder 
+{
+    z-index:99999999 !important;
+    position:absolute;
+    top: 13px;
+    left: 17px;
+}

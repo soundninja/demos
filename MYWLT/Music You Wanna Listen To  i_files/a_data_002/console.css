@@ -1,0 +1,334 @@
+﻿body
+{
+    font-family: 'Trebuchet MS' , Tahoma, Segoe UI, Arial, sans-serif !important;
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #9f9f9f;
+    font-size: 12px;
+}
+img
+{
+    border: 0;
+}
+a
+{
+    text-decoration: none;
+    color: #9f9f9f;
+    cursor: pointer;
+}
+a:hover
+{
+    color: #ddd;
+    text-shadow: #888 0px 0px 15px;
+}
+
+input[type=button]
+{
+    cursor: pointer;
+    background:#212121 url(images/btnAll_bg.gif) repeat-x top center;
+    border-top:none;
+    color:#777;
+    font-size:11px;
+    font-weight:bold;
+    border:#090909 solid 1px;
+    -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+}
+
+input[type=button]:hover
+{
+    color: #eee !important;
+    text-shadow: #bbb 0px 0px 15px;
+}
+
+input[type=text], input[type=password], textarea
+{
+    border: 0;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 3px 6px;
+    color: #aaa;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+    background-color: #262626;
+}
+
+table
+{
+}
+table tr
+{
+    vertical-align:middle;
+}
+table tr td img.artwork
+{
+    max-height:30px;
+}
+tr.even, div.even, tr:nth-child(even)
+{
+    
+}
+tr.odd, div.odd, tr:nth-child(odd)
+{
+    
+}
+
+#activity
+{
+    width: 100%;
+}
+#activity tr td
+{
+    padding: 2px 4px;
+}
+
+.descr
+{
+    max-height:130px;
+    overflow:auto;
+}
+
+.divUser
+{
+    width:200px;
+    float:left;
+    height:100px;
+    border:1px #222 solid;
+    margin:3px;
+    padding:5px;
+    text-align: left;
+}
+.divUser.typef { background:#003; }
+.divUser.typel { background:#300; }
+.divUser.types { background:#000; }
+.divUser.android { background:#240; }
+.divUser.typeg { background:#330; }
+.divUser img
+{
+    max-height:50px;
+    float:left;
+    padding-right:5px;
+}
+.divUser h4,.divUser h5,.divUser h6
+{
+    margin:0;
+    padding:0;
+}
+
+/*scrollbars*/
+::-webkit-scrollbar {
+    background: transparent;
+    width:8px;
+    height:8px;
+}
+::-webkit-scrollbar:hover {
+    background-color: rgba(10,10,10,1);
+    width:8px;
+    height:8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(24, 24, 24, 1);
+    min-height:50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(60, 60, 60, 1);
+}
+table.menu 
+{
+    margin-bottom:10px;
+}
+table.menu td 
+{
+    margin:0 5px;
+    border:1px #eee solid;
+}
+table.menu td:hover
+{
+    border:1px #aaa solid;
+}
+table.menu td a
+{
+    display:block;
+    padding:1px 4px;
+}
+table.menu td.selected a
+{
+    font-size:18px;
+    color:#f50;
+}
+
+table#chart td.play
+{
+    width:42px;
+    height:42px;
+    background:url('images/play.png') no-repeat;
+    cursor:pointer;
+}
+table#chart td.pause
+{
+    width:42px;
+    height:42px;
+    background:url('images/pause.png') no-repeat;
+    cursor:pointer;
+}
+div.play
+{
+    width:48px;
+    height:48px;
+    background:url('images/play.png') no-repeat;
+    cursor:pointer;
+}
+div.pause
+{
+    width:48px;
+    height:48px;
+    background:url('images/pause.png') no-repeat;
+    cursor:pointer;
+}
+
+table#chart tr td img.artwork {
+    max-height: 44px;
+}
+
+body.embed
+{
+    margin:0;
+    padding:0;
+}
+
+#playerControlsWrap
+{
+    position:absolute;
+    top:0px;
+    left:0;
+    right:0;
+    height:62px;
+}
+#extraControlsWrap
+{
+    position:absolute;
+    top:62px;
+    left:0;
+    right:0;
+    height:24px;
+}
+
+#extraPlayerControls .prev
+{
+    width:28px;
+    height:24px;
+    background:url('images/prev24.png') no-repeat center top;
+    cursor:pointer;
+}
+#extraPlayerControls .next
+{
+    width:28px;
+    height:24px;
+    background:url('images/next24.png') no-repeat center top;
+    cursor:pointer;
+}
+#extraPlayerControls .shuffle
+{
+    width:28px;
+    height:24px;
+    background:url('images/shuffle24.png') no-repeat center top;
+    cursor:pointer;
+}
+
+#extraPlayerControls td
+{
+    padding:0px !important;
+}
+
+/* sliders */
+.ui-slider { position: relative; text-align: left; }
+.ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 1.2em; height: 1.2em; cursor: default; }
+.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background-position: 0 0; }
+
+.ui-slider-horizontal { height: .8em; border:1px solid #999 }
+.ui-slider-horizontal .ui-slider-handle { top: -.3em; margin-left: -.6em; border:1px solid #777; cursor:pointer; background-color:#ccc }
+.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+.ui-slider-horizontal .ui-slider-range-min { left: 0; }
+.ui-slider-horizontal .ui-slider-range-max { right: 0; }
+
+.ui-slider-vertical { width: .8em; height: 100px; }
+.ui-slider-vertical .ui-slider-handle { left: -.3em; margin-left: 0; margin-bottom: -.6em;}
+.ui-slider-vertical .ui-slider-range { left: 0; width: 100%; }
+.ui-slider-vertical .ui-slider-range-min { bottom: 0; }
+.ui-slider-vertical .ui-slider-range-max { top: 0; }
+
+#volSlider
+{
+    background: #ab1e06; /* Old browsers */
+    background: -moz-linear-gradient(left, #ab1e06 0%, #da5c04 51%, #f89506 100%); /* FF3.6+ */
+    background: -webkit-linear-gradient(left, #ab1e06 0%,#da5c04 51%,#f89506 100%); /* Chrome10+,Safari5.1+ */
+    height:9px;
+}
+
+#volSlider .ui-slider-handle
+{
+    height:8px;
+    width:12px;
+    margin-left:-8px;
+    border:1px solid #f50; 
+    background-color:transparent;
+    background: url(images/volumeHandle.png) no-repeat center left;border:0;padding:0px;
+    margin-top:0px;
+}
+
+#extraPlayerControls td.volWrap
+{
+    padding:0 5px 0 40px !important;
+    background:url('images/volume.png') left center no-repeat;
+}
+
+
+
+div.downloadAll, a.download
+{
+    margin-left:2px;
+    float:right;
+    display:block;
+    text-indent:-9999px;
+    margin-top:2px;
+    width:27px;
+    height:16px;
+    cursor:pointer;
+}
+div.downloadAll
+{
+    background:url('images/downloadAll.png') center center no-repeat;
+}
+tr a.download
+{
+    background:url('images/downloada.png') center center no-repeat;
+}
+tr.selected a.download
+{
+    background:url('images/download.png') center center no-repeat;
+}
+tr.selected  td.fblike div 
+{
+	display:none;
+}
+tr td.fblike div {
+	text-align:center;
+}
+td.fblike
+{
+	text-align:center;
+    width:75px;
+}
+tr div.fbLikes
+{
+    padding:2px 5px 2px 16px;
+    font-size:12px;
+    float:right;
+    background:url('images/like.png') left 3px no-repeat
+}
+tr.selected div.fbLikes
+{
+    background:none;
+    padding-left: 4px;
+}
