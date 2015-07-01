@@ -710,11 +710,15 @@
   min-width: 320px !important;
   padding: 5px 0 !important;
   position: fixed !important;
-  right: 40px !important;
+  right: 40px;
   bottom: 0 !important;
   z-index: 999999999999999999;
   font-size: 14px;
   line-height: 1; }
+  @media (max-width: 668px) {
+    #snPlayer {
+      left: 50%;
+      margin-left: -160px; } }
   #snPlayer.is-active {
     display: block !important; }
   #snPlayer .SN-player-mymusic-add {
