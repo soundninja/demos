@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monoton'), local('Monoton-Regular'), url(http://fonts.gstatic.com/s/monoton/v6/y6oxFxU60dYw9khW6q8jGw.woff2) format('woff2'), url(http://fonts.gstatic.com/s/monoton/v6/AKI-lyzyNHXByGHeOcds_w.woff) format('woff');
+}
