@@ -1,6 +1,6 @@
 var SoundninjaOpts = {
-    selector: '.blog-content',
+    selector: '.mh-excerpt, .entry',
     selectorFullMatch: false,
     minHotttnesss: 0.6707,
     minFamiliarity: 0.6707
-}
+};
