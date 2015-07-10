@@ -1,0 +1,21 @@
+HTTrack3.48-19+htsswf+htsjava launched on Fri, 10 Jul 2015 03:04:06 at http://thebluewalrus.com/2015/06/18/five-albums-to-watch-out-for-this-summer/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://thebluewalrus.com/2015/06/18/five-albums-to-watch-out-for-this-summer/ -O1 "C:\Users\Ross\Documents\Work\scrap\blueWalrus\walrus" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+03:04:07	Warning: 	Note: due to thebluewalrus.com remote robots.txt rules, links beginning with these path will be forbidden: /wp-admin/, /wp-includes/, /search/ (see in the options to disable this)
+03:04:31	Warning: 	Moved Permanently for thebluewalrus.com/2015/06/18/five-albums-to-watch-out-for-this-summer/12803 http://thebluewalrus.com/?p=12803
+03:04:31	Warning: 	File has moved from thebluewalrus.com/2015/06/18/five-albums-to-watch-out-for-this-summer/12803 http://thebluewalrus.com/?p=12803 to http://thebluewalrus.com/2015/06/18/five-albums-to-watch-out-for-this-summer/
+03:04:38	Error: 	"Not Found" (404) at link thebluewalrus.com/2015/06/18/five-albums-to-watch-out-for-this-summer/g.gif (from stats.wp.com/e-201528.js)
+03:04:38	Error: 	"Not Found" (404) at link thebluewalrus.com/2015/06/18/five-albums-to-watch-out-for-this-summer/c.gif (from stats.wp.com/e-201528.js)
+03:04:48	Error: 	"Not Found" (404) at link thebluewalrus.com/wp-content/themes/cassia/css/fonts/flexslider-icon.eot (from thebluewalrus.com/wp-content/themes/cassia/css/flexslider.css)
+03:04:48	Error: 	"Not Found" (404) at link thebluewalrus.com/wp-content/themes/cassia/css/fonts/flexslider-icon.eot? (from thebluewalrus.com/wp-content/themes/cassia/css/flexslider.css)
+03:04:48	Error: 	"Not Found" (404) at link thebluewalrus.com/wp-content/themes/cassia/css/fonts/flexslider-icon.woff (from thebluewalrus.com/wp-content/themes/cassia/css/flexslider.css)
+03:04:48	Error: 	"Not Found" (404) at link thebluewalrus.com/wp-content/themes/cassia/css/fonts/flexslider-icon.ttf (from thebluewalrus.com/wp-content/themes/cassia/css/flexslider.css)
+03:04:48	Error: 	"Not Found" (404) at link thebluewalrus.com/wp-content/themes/cassia/css/fonts/flexslider-icon.svg (from thebluewalrus.com/wp-content/themes/cassia/css/flexslider.css)
+
+HTTrack Website Copier/3.48-19 mirror complete in 42 seconds : 78 links scanned, 69 files written (815745 bytes overall) [572844 bytes received at 13639 bytes/sec], 621028 bytes transferred using HTTP compression in 34 files, ratio 27%, 4.5 requests per connection
+(7 errors, 3 warnings, 0 messages)

@@ -1,0 +1,31 @@
+/*
+Theme Name: Blue Cassia
+Theme URI: http://thebluewalrus.com
+Description: Blue Cassia is a child theme of Cassia theme by Solo Pine Designs
+Author: The Blue Walrus / Solo Pine Designs
+Author URI: http://thebluewalrus.com
+Template: cassia
+Version: 1.0.1
+*/
+
+@import url("../cassia/style.css");
+
+#topad { width: 970px; margin: 0 auto; padding-top: 140px; }
+
+img.size-large { width:580px; }
+
+#at4-share { margin-top: 10px !important; }
+
+.mashsb-box { margin: 0px auto; width:480px; }
+
+.tumblr_post { 
+	list-style-type: none !important;
+	margin-left: 0 !important;
+	border-bottom: 0 !important;
+	padding-bottom: 0 !important;
+	margin-bottom: 0 !important;	 
+}
+
+.tumblr_post p { display: none; }
+
+#social-sidebar { text-align: center; }
