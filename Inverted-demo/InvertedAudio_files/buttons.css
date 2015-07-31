@@ -1,0 +1,333 @@
+/* #Buttons
+================================================== */
+	
+/* New Pagination Styles */
+	.wp-paginate li a,
+	.p a, .m a,
+	.wp-paginate li span.current {
+	  padding: 3px 10px;	  
+	  display: inline-block;
+	  font-size: 22px;
+	  text-decoration: none;
+	  text-transform: capitalize;
+	  cursor: pointer;
+	  margin: 10px 2px;
+	  line-height: 21px;
+	  border: 1px solid #000;
+	  }
+
+	.wp-paginate li span.current {
+		color: #fff;
+		background: #000; 
+	}
+	
+	.wp-paginate li a,
+	.p a, .m a {
+		color: #000 ;
+		background: #fff; 
+	}
+
+	.wp-paginate li a:hover {
+		color: #fff ;
+		background: #000; 
+		border: 1px solid #000;
+	}	
+		
+	.wp-paginate li:first-child{display: none; background; none transparent; padding-right: 4px; font-weight: bold;}
+	.wp-paginate{text-align: center;}
+	
+	.em-wrapper .wp-paginate li:first-child {
+	display: inline !important;
+	padding: 0 !important;
+	font-weight: normal !important;
+}
+	
+	.wp-paginate .gap {
+		margin: 4px;
+		font-size: 25px;
+	}
+	
+	/* Default Settings */
+	a.button,
+	button,
+	div.button a,
+	#page-links div,
+	.tags a, 
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+	  padding: 4px 8px;
+	  /*-moz-border-radius: 3px;
+	  -webkit-border-radius: 3px;
+	  border-radius: 3px;	*/  
+	  display: inline-block;
+	  font-size: 23px;
+	  /*font-weight: bold;*/
+	  text-decoration: none;
+	  text-transform: capitalize;
+	  cursor: pointer;
+	  margin-bottom: 10px;
+	  line-height: 21px;
+	}
+	.button.full-width,
+	button.full-width,
+	input[type="submit"].full-width,
+	input[type="reset"].full-width,
+	input[type="button"].full-width {
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center; }
+	
+	#page-links div{color: #999 !important;}
+	#page-links a div{color: #222 !important;}
+	#page-links span{font-size: 10px; text-transform: uppercase; font-weight: bold; margin-right: 10px;}
+	
+	div.button a{margin-bottom: 0;}	
+	div.m{float: right;}
+	div.p{float: left;}
+	
+	/* Colors */
+	
+	/* Default Color */
+	a.button,
+	button,
+	#page-links div,
+	div.button a,
+	body .tags.gray a, body .tags.gray a:visited,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+		color: #000;
+		background: #fff; /* Old browsers */
+		border: 1px solid #000;
+		border-top: 1px solid #000;
+		border-left: 1px solid #000;
+	}
+
+	a.button:hover,
+	button:hover,
+	div.button a:hover,
+	#page-links div,
+	body .tags.gray a:hover, body .tags.gray a:active,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover {
+		color: #fff;
+		background: #000; /* Old browsers */
+		border: 1px solid #000;
+		border-top: 1px solid #000;
+		border-left: 1px solid #000; 
+		}
+
+  	a.button:active,
+  	button:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	input[type="button"]:active {
+		border: 1px solid #000;
+		background: #000; /* Old browsers */
+		color: #fff;
+	}
+
+
+	/* Blue Color */
+	a.button.blue,
+	button.blue,
+	body .tags.blue a, body .tags.blue a:visited,
+	input.blue[type="submit"],
+	input.blue[type="reset"],
+	input.blue[type="button"] {
+		color: #0d7ba4;
+		background: #eee; /* Old browsers */
+		border: 1px solid #40bde9;
+		border-top: 1px solid #40bde9;
+		border-left: 1px solid #40bde9;
+	}
+
+	a.button.blue:hover,
+	button.blue:hover,
+	body .tags.blue a:hover, body .tags.blue a:active,
+	input.blue[type="submit"]:hover,
+	input.blue[type="reset"]:hover,
+	input.blue[type="button"]:hover,
+	a.button.blue:active,
+  	button.blue:active,
+	input.blue[type="submit"]:active,
+	input.blue[type="reset"]:active,
+	input.blue[type="button"]:active {
+		color: #045675;
+		background: #eee; /* Old browsers */
+		border: 1px solid #57c5ee;
+		border-top: 1px solid #57c5ee;
+		border-left: 1px solid #57c5ee;
+		}
+		
+
+
+	/* Red Color */
+	a.button.red,
+	button.red,
+	body .tags.red a, body .tags.red a:visited,
+	input.red[type="submit"],
+	input.red[type="reset"],
+	input.red[type="button"] {
+		color: #92373e;
+		background: #eee; /* Old browsers */
+		border: 1px solid #e15560;
+		border-top: 1px solid #e15560;
+		border-left: 1px solid #e15560;
+	}
+
+	a.button.red:hover,
+	button.red:hover,
+	body .tags.red a:hover, body .tags.red a:active,
+	input.red[type="submit"]:hover,
+	input.red[type="reset"]:hover,
+	input.red[type="button"]:hover,
+	a.button.red:active,
+  	button.red:active,
+	input.red[type="submit"]:active,
+	input.red[type="reset"]:active,
+	input.red[type="button"]:active {
+		color: #6f2b31;
+		background: #eee; /* Old browsers */
+		border: 1px solid #d53e4a;
+		border-top: 1px solid #d53e4a;
+		border-left: 1px solid #d53e4a;
+		}
+		
+		
+	/* Green Color */
+	a.button.green,
+	button.green,
+	body .tags.green a, body .tags.green a:visited,
+	input.green[type="submit"],
+	input.green[type="reset"],
+	input.green[type="button"] {
+		color: #4b7f20;
+		background: #eee; /* Old browsers */
+		border: 1px solid #78c53a;
+		border-top: 1px solid #78c53a;
+		border-left: 1px solid #78c53a;
+	}
+
+	a.button.green:hover,
+	button.green:hover,
+	body .tags.green a:hover, body .tags.green a:active,
+	input.green[type="submit"]:hover,
+	input.green[type="reset"]:hover,
+	input.green[type="button"]:hover,
+	a.button.green:active,
+  	button.green:active,
+	input.green[type="submit"]:active,
+	input.green[type="reset"]:active,
+	input.green[type="button"]:active {
+		color: #3b620c;
+		background: #eee; /* Old browsers */
+		border: 1px solid #63ac28;
+		border-top: 1px solid #63ac28;
+		border-left: 1px solid #63ac28;
+		}
+		
+	/* Yellow Color */
+	a.button.yellow,	
+	button.yellow,
+	body .tags.yellow a, body .tags.yellow a:visited,
+	input.yellow[type="submit"],
+	input.yellow[type="reset"],
+	input.yellow[type="button"] {
+		color: #a07100;
+		background: #eee; /* Old browsers */
+		border: 1px solid #f8c600;
+		border-top: 1px solid #f8c600;
+		border-left: 1px solid #f8c600;
+	}
+
+	a.button.yellow:hover,
+	button.yellow:hover,
+	body .tags.yellow a:hover, body .tags.yellow a:active,
+	input.yellow[type="submit"]:hover,
+	input.yellow[type="reset"]:hover,
+	input.yellow[type="button"]:hover,
+	a.button.yellow:active,
+  	button.yellow:active,
+	input.yellow[type="submit"]:active,
+	input.yellow[type="reset"]:active,
+	input.yellow[type="button"]:active {
+		color: #694704;
+		background: #eee; /* Old browsers */
+		border: 1px solid #e0a60b;
+		border-top: 1px solid #e0a60b;
+		border-left: 1px solid #e0a60b;
+		}
+		
+
+	/* Purple Color */
+	a.button.purple,
+	button.purple,
+	body .tags.purple a, body .tags.purple a:visited,
+	input.purple[type="submit"],
+	input.purple[type="reset"],
+	input.purple[type="button"] {
+		color: #8d1579;
+		background: #eee; /* Old browsers */
+		border: 1px solid #c266b3;
+		border-top: 1px solid #c266b3;
+		border-left: 1px solid #c266b3;
+	}
+
+	a.button.purple:hover,
+	button.purple:hover,
+	body .tags.purple a:hover, body .tags.purple a:active,
+	input.purple[type="submit"]:hover,
+	input.purple[type="reset"]:hover,
+	input.purple[type="button"]:hover,
+	a.button.purple:active,
+  	button.purple:active,
+	input.purple[type="submit"]:active,
+	input.purple[type="reset"]:active,
+	input.purple[type="button"]:active {
+		color: #750b63;
+		background: #eee; /* Old browsers */
+		border: 1px solid #b955a8;
+		border-top: 1px solid #b955a8;
+		border-left: 1px solid #b955a8;
+		}
+		
+
+	/* Black Color */
+	a.button.black,
+	button.black,
+	body .tags.black a, body .tags.black a:visited,
+	input.black[type="submit"],
+	input.black[type="reset"],
+	input.black[type="button"] {
+		color: #FCFCFC;
+		background: #222; /* Old browsers */
+		border: 1px solid #111;
+		border-top: 1px solid #111;
+		border-left: 1px solid #111;		
+	 -webkit-text-shadow: 1px 0 1px #000;
+		-moz-text-shadow: 1px 0 1px #000;
+		  -o-text-shadow: 1px 0 1px #000;
+			 text-shadow: 1px 0 1px #000;
+	}
+
+	a.button.black:hover,
+	button.black:hover,
+	body .tags.black a:hover, body .tags.black a:active,
+	input.black[type="submit"]:hover,
+	input.black[type="reset"]:hover,
+	input.black[type="button"]:hover,
+	a.button.black:active,
+  	button.black:active,
+	input.black[type="submit"]:active,
+	input.black[type="reset"]:active,
+	input.black[type="button"]:active {
+		color: #FFF;
+		background: #222; /* Old browsers */
+		border: 1px solid #111;
+		border-top: 1px solid #111;
+		border-left: 1px solid #111;
+		}
