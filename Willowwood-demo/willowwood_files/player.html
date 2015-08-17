@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Stratus 2</title><link href="player_data/player.css" rel="stylesheet" type="text/css"><link href="player_data/default.css" rel="stylesheet" type="text/css"><script src="a_data/ga.js" async="" type="text/javascript"></script><script src="player_data/sdk.js"></script><script src="player_data/jquery_002.js"></script><script src="player_data/jquery.js"></script><script src="player_data/jquery_004.js"></script><script src="player_data/jquery_003.js"></script><script src="player_data/underscore.js"></script><script src="player_data/backbone.js"></script><script src="player_data/ICanHaz.js"></script><script src="player_data/color.js"></script><script src="player_data/player.js"></script><style>
+          #stratus .toggle, #stratus .played{ background: #fff !important; }
+      #stratus .toggle:hover{ background-color: #e6e6e6 !important; }
+      #stratus .position{ background-color: #fff !important; }
+      #stratus .loaded{ border-color: #fff !important; }
+      #stratus #tracks li.current{ background-color: #fff !important; }
+    #stratus .download{ display: none !important; }#stratus .purchase{ display: none !important; }#stratus #stats{ display: none !important; }</style></head><body><!-- Stratus--><div id="stratus"><div id="drawer"><div id="artwork"><img src="player_data/artworks-000114377249-bucig6-t300x300.jpg"></div><ul id="tracks"><li class="track track_173428532"><span class="user">avindale</span><span class="title">Dreamer</span>
+  <span class="duration">4.51</span></li><li class="track track_178698316"><span class="user">Kagu</span><span class="title">Shadow Of The Wind</span>
+  <span class="duration">3.53</span></li><li class="track track_180910721"><span class="user">dAVID sTRANGE</span><span class="title">Aztec Corn</span>
+  <span class="duration">3.29</span></li><li class="track track_181452558"><span class="user">LuckyMe Records</span><span class="title">How To Dress Well - Tomb For Anatole</span>
+  <span class="duration">3.00</span></li><li class="track track_179791808"><span class="user">Andrew Keoghan</span><span class="title">Better Company</span>
+  <span class="duration">3.09</span></li><li class="track track_161674929"><span class="user">NickHakim</span><span class="title">I Don't Know</span>
+  <span class="duration">4.59</span></li><li class="track track_181108270"><span class="user">littlesmokerva</span><span class="title">December head (demo)</span>
+  <span class="duration">3.09</span></li><li class="track track_122483209"><span class="user">Marzhattan</span><span class="title">Be Your Friend</span>
+  <span class="duration">2.25</span></li><li class="track track_133509917"><span class="user">shura</span><span class="title">Shura - Touch</span>
+  <span class="duration">3.34</span></li><li class="track track_124173519"><span class="user">Galimatias</span><span class="title">Alina Baraz &amp; Galimatias - Pretty Thoughts</span>
+  <span class="duration">3.31</span></li><li class="track track_178333655"><span class="user">Samm Henshaw</span><span class="title">Only Wanna Be With You</span>
+  <span class="duration">3.00</span></li><li class="track track_150199806"><span class="user">BRAINFEEDER</span><span class="title">Taylor McFerrin - Already There (feat. Robert Glasper and Thundercat)</span>
+  <span class="duration">3.00</span></li><li class="track track_89588392"><span class="user">Alice Phoebe Lou</span><span class="title">fiery heart, fiery mind.</span>
+  <span class="duration">3.00</span></li><li class="track track_176263897"><span class="user">Kevin Garrett</span><span class="title">Coloring</span>
+  <span class="duration">3.40</span></li><li class="track track_163976872"><span class="user">HowardMusic</span><span class="title">Money Can't Buy</span>
+  <span class="duration">3.22</span></li><li class="track track_171267535"><span class="user">Fazerdaze</span><span class="title">Somethink</span>
+  <span class="duration">3.08</span></li><li class="track track_177829683"><span class="user">Jack Garratt</span><span class="title">The Love You're Given</span>
+  <span class="duration">5.00</span></li><li class="track track_176533020"><span class="user">CATCHING FLIES</span><span class="title">Quiet Nights (Free DL)</span>
+  <span class="duration">3.37</span></li><li class="track track_87547507"><span class="user">Jodie Goffe</span><span class="title">He Will Be Young</span>
+  <span class="duration">4.17</span></li><li class="track track_175227546"><span class="user">Sub Pop</span><span class="title">Father John Misty - Bored In The Usa</span>
+  <span class="duration">4.22</span></li><li class="track track_141322868"><span class="user">Novo Amor</span><span class="title">Cold</span>
+  <span class="duration">4.23</span></li><li class="track track_175354732"><span class="user">José González</span><span class="title">Every Age</span>
+  <span class="duration">3.11</span></li><li class="track track_172589272"><span class="user">HowardMusic</span><span class="title">Song About Something</span>
+  <span class="duration">3.43</span></li><li class="track track_166034305"><span class="user">Kindness</span><span class="title">This Is Not About Us</span>
+  <span class="duration">3.20</span></li><li class="track track_163508642"><span class="user">80N7</span><span class="title">Spring King - Not Me, Not Now</span>
+  <span class="duration">3.34</span></li><li class="track track_175140523"><span class="user">Tei Shi</span><span class="title">See Me</span>
+  <span class="duration">4.32</span></li><li class="track track_153566784"><span class="user">NickHakim</span><span class="title">Cold</span>
+  <span class="duration">3.50</span></li><li class="track track_135237904"><span class="user">NickHakim</span><span class="title">Pour Another</span>
+  <span class="duration">5.51</span></li><li class="track track_159574864"><span class="user">Suicide Squeeze Records</span><span class="title">We Did It All Wrong by Kevin Morby</span>
+  <span class="duration">4.47</span></li><li class="track track_159960336"><span class="user">WOODSIST</span><span class="title">KEVIN MORBY - Parade</span>
+  <span class="duration">5.25</span></li><li class="track track_128891411"><span class="user">Brick Lane Records</span><span class="title">So Bari by Benjamin Verdoes</span>
+  <span class="duration">3.10</span></li><li class="track track_158844779"><span class="user">jacphou</span><span class="title">Layer Cake - Chapstick Island</span>
+  <span class="duration">2.28</span></li><li class="track track_119210985"><span class="user">Dukes of Chutney</span><span class="title">Domino</span>
+  <span class="duration">3.50</span></li><li class="track track_167882450"><span class="user">Jagjaguwar</span><span class="title">Angel Olsen - "All Right Now"</span>
+  <span class="duration">2.59</span></li><li class="track track_180484148"><span class="user">Father John Misty</span><span class="title">Chateau Lobby #4 (in C for Two Virgins)</span>
+  <span class="duration">2.50</span></li><li class="track track_169615321"><span class="user">Dr. Duloc</span><span class="title">Ode to Flats</span>
+  <span class="duration">2.31</span></li><li class="track track_158713232"><span class="user">Nettwerk Music Group</span><span class="title">Frazey Ford - September Fields</span>
+  <span class="duration">3.27</span></li><li class="track track_180496482"><span class="user">niia</span><span class="title">BODY - Niia x The Range</span>
+  <span class="duration">4.21</span></li><li class="track track_10339212"><span class="user">ewgarris</span><span class="title">James Blake - A Case of You</span>
+  <span class="duration">2.54</span></li><li class="track track_172618951"><span class="user">Small Houses</span><span class="title">Staggers and Rise</span>
+  <span class="duration">3.59</span></li><li class="track track_176678950"><span class="user">The Outdoor Type</span><span class="title">Are You Happy</span>
+  <span class="duration">4.12</span></li><li class="track track_184475667"><span class="user">Ian Ewing</span><span class="title">MKE To CHI</span>
+  <span class="duration">3.52</span></li><li class="track track_161884380"><span class="user">SAFIA</span><span class="title">James Vincent McMorrow - Cavalier (SAFIA Cover)</span>
+  <span class="duration">4.34</span></li><li class="track track_172389508"><span class="user">We Are The West</span><span class="title">Regards</span>
+  <span class="duration">6.08</span></li><li class="track track_184931424"><span class="user">Joey pecoraro</span><span class="title">Don't Sleep On Me</span>
+  <span class="duration">3.44</span></li><li class="track track_184805307"><span class="user">Polyvinyl Records</span><span class="title">of Montreal - Empyrean Abattoir</span>
+  <span class="duration">4.32</span></li><li class="track track_92282436"><span class="user">Our Man In Berlin</span><span class="title">The Run Around</span>
+  <span class="duration">3.45</span></li><li class="track track_178559373"><span class="user">Company Record Label</span><span class="title">Keath Mead - Polite Refusal</span>
+  <span class="duration">4.08</span></li><li class="track track_88093697"><span class="user">Le Tournedisque</span><span class="title">Le Tournedisque | Tournemix XIII</span>
+  <span class="duration">1.02.43</span></li><li class="track track_146909784"><span class="user">thirtytigers</span><span class="title">Sturgill Simpson - Turtles All The Way Down</span>
+  <span class="duration">3.08</span></li><li class="track track_58639242"><span class="user">Solo Woods</span><span class="title">Long Ways</span>
+  <span class="duration">3.39</span></li><li class="track track_124438131"><span class="user">Adrianne Lenker</span><span class="title">Steamboat</span>
+  <span class="duration">2.41</span></li><li class="track track_174084004"><span class="user">Aerial East</span><span class="title">keeping up appearances</span>
+  <span class="duration">3.24</span></li><li class="track track_178978380"><span class="user">James Fauntleroy</span><span class="title">10 You Can Get It</span>
+  <span class="duration">2.12</span></li><li class="track track_185391801"><span class="user">indieshuffle.com</span><span class="title">José González - "Waterfalls" (TLC Cover)</span>
+  <span class="duration">2.43</span></li><li class="track track_150589047"><span class="user">Gabriel Garzón-Montano</span><span class="title">Pour Maman</span>
+  <span class="duration">4.54</span></li><li class="track track_185533328"><span class="user">Django Django</span><span class="title">First Light</span>
+  <span class="duration">4.48</span></li><li class="track track_182460921"><span class="user">BURGER RECORDS</span><span class="title">Cotillon - Left Bank</span>
+  <span class="duration">1.54</span></li><li class="track track_182876629"><span class="user">HowardMusic</span><span class="title">Falling</span>
+  <span class="duration">2.38</span></li><li class="track track_144052428"><span class="user">Street Joy</span><span class="title">Same As Me</span>
+  <span class="duration">3.54</span></li><li class="track track_179999377"><span class="user">WOODSIST</span><span class="title">SIMON JOYNER - You Got Under My Skin</span>
+  <span class="duration">3.38</span></li><li class="track track_184690369"><span class="user">TURTLE GIANT</span><span class="title">Golden Summer</span>
+  <span class="duration">3.45</span></li><li class="track track_186200897"><span class="user">José González</span><span class="title">Leaf Off / The Cave</span>
+  <span class="duration">4.53</span></li><li class="track track_145830855"><span class="user">Them 9's</span><span class="title">Dreams</span>
+  <span class="duration">3.04</span></li><li class="track track_176237086"><span class="user">Louis The Child</span><span class="title">Oh Wonder - Body Gold (Louis The Child Remix)</span>
+  <span class="duration">3.24</span></li><li class="track track_185945408"><span class="user">Mint Records</span><span class="title">Faith Healer - Again</span>
+  <span class="duration">2.56</span></li><li class="track track_186357818"><span class="user">Easy Sound Recording Co.</span><span class="title">Vetiver - Current Carry</span>
+  <span class="duration">3.54</span></li><li class="track track_186857301"><span class="user">Polyvinyl Records</span><span class="title">Sonny &amp; The Sunsets - The Application</span>
+  <span class="duration">4.36</span></li><li class="track track_160718979"><span class="user">Samm Henshaw</span><span class="title">Best Song Ever</span>
+  <span class="duration">3.57</span></li><li class="track track_185884942"><span class="user">Carpark Records</span><span class="title">Toro Y Moi - Empty Nesters</span>
+  <span class="duration">3.43</span></li><li class="track track_184606899"><span class="user">western.vinyl</span><span class="title">Kaitlyn Aurelia Smith - Careen</span>
+  <span class="duration">3.28</span></li><li class="track track_188012303"><span class="user">Bop English</span><span class="title">Dani's Blues (It Was Beyond Our Control)</span>
+  <span class="duration">3.14</span></li><li class="track track_155984861"><span class="user">Gospels</span><span class="title">Sleepwalkers</span>
+  <span class="duration">4.18</span></li><li class="track track_148211315"><span class="user">Barsuk Records</span><span class="title">Chris Staples "Dark Side Of The Moon" (from American Soft)</span>
+  <span class="duration">3.27</span></li><li class="track track_187373531"><span class="user">Sacred Bones Records</span><span class="title">Moon Duo - Slow Down Low</span>
+  <span class="duration">5.34</span></li><li class="track track_189826317"><span class="user">Jens Kuross</span><span class="title">Steadier</span>
+  <span class="duration">3.55</span></li><li class="track track_189148025"><span class="user">DEEK Recordings</span><span class="title">Laura Groves - Committed Language</span>
+  <span class="duration">4.00</span></li><li class="track track_187988835"><span class="user">MrSuicideSheep</span><span class="title">Nick Leng - Inside Your Mind (feat. Carmody)</span>
+  <span class="duration">4.23</span></li><li class="track track_189064780"><span class="user">DAODA</span><span class="title">Pacific</span>
+  <span class="duration">4.05</span></li><li class="track track_189693665"><span class="user">The A&amp;R Department</span><span class="title">LOST WOODS - Ancient Psychic Tandem War Elephant</span>
+  <span class="duration">4.14</span></li><li class="track track_189693286"><span class="user">BURGER RECORDS</span><span class="title">Danny James Etc. - Tight Lipped</span>
+  <span class="duration">4.43</span></li><li class="track track_189588475"><span class="user">Ainslie Wills Music</span><span class="title">Drive</span>
+  <span class="duration">5.04</span></li><li class="track track_189687154"><span class="user">BURGER RECORDS</span><span class="title">BRGR016 King Tuff - Animal</span>
+  <span class="duration">2.24</span></li><li class="track track_188226603"><span class="user">Good Luck Spaceman</span><span class="title">Oso/Luna</span>
+  <span class="duration">5.40</span></li><li class="track track_189137400"><span class="user">Jagjaguwar</span><span class="title">Unknown Mortal Orchestra - "Multi-Love"</span>
+  <span class="duration">4.10</span></li><li class="track track_189527422"><span class="user">BURGER RECORDS</span><span class="title">BRGR015 Fever B - Pop Punk Love</span>
+  <span class="duration">3.00</span></li><li class="track track_186072102"><span class="user">WOODSIST</span><span class="title">John Andrews &amp; The Yawns  - Pennsylvania</span>
+  <span class="duration">4.06</span></li><li class="track track_189337490"><span class="user">Tennis System</span><span class="title">Here We Go</span>
+  <span class="duration">4.28</span></li><li class="track track_189040552"><span class="user">Fade In Mona Lisa</span><span class="title">Green Carnations</span>
+  <span class="duration">3.01</span></li><li class="track track_190175932"><span class="user">Indoors Outdoors</span><span class="title">The Districts - Hounds</span>
+  <span class="duration">3.41</span></li><li class="track track_190142931"><span class="user">Matt Turner</span><span class="title">The Pizazz - Ocean Liner</span>
+  <span class="duration">3.30</span></li><li class="track track_189594254"><span class="user">Alex Burey</span><span class="title">Alex Burey - "Amen"</span>
+  <span class="duration">2.44</span></li><li class="track track_189594255"><span class="user">Alex Burey</span><span class="title">Alex Burey - "Dome Creed"</span>
+  <span class="duration">1.50</span></li><li class="track track_164342346"><span class="user">Empty Cellar Records</span><span class="title">Cool Ghouls - What A Dream I Had</span>
+  <span class="duration">4.04</span></li><li class="track track_190439449"><span class="user">Oceaán</span><span class="title">Need U / This Woman's Work - Feat. Låpsley (Live at Maida Vale Studios)</span>
+  <span class="duration">3.29</span></li><li class="track track_51238002"><span class="user">BigSpaceStudios</span><span class="title">SOAK - Sea creatures</span>
+  <span class="duration">3.27</span></li><li class="track track_177859931"><span class="user">BRONCHO</span><span class="title">It's On</span>
+  <span class="duration">2.35</span></li><li class="track track_192412476"><span class="user">Spring King</span><span class="title">City</span>
+  <span class="duration">3.22</span></li><li class="track track_174528743"><span class="user">BURGER RECORDS</span><span class="title">Michael Rault - Nothing Means Nothing</span>
+  <span class="duration">2.56</span></li><li class="track track_174528742"><span class="user">BURGER RECORDS</span><span class="title">Michael Rault - Still Not Sad</span>
+  <span class="duration">2.32</span></li><li class="track track_193183480"><span class="user">Jagjaguwar</span><span class="title">Wolf People - "October Fires"</span>
+  <span class="duration">4.19</span></li><li class="track track_193182728"><span class="user">dogusbitus</span><span class="title">Georgia Souls</span>
+  <span class="duration">3.44</span></li><li class="track track_193172531"><span class="user">Beech Coma</span><span class="title">Lou E - Just One Thing</span>
+  <span class="duration">3.01</span></li><li class="track track_189389357"><span class="user">Jesse-Davidson</span><span class="title">Laika</span>
+  <span class="duration">3.44</span></li><li class="track track_141060894"><span class="user">turntocrime</span><span class="title">Sunday's Cool</span>
+  <span class="duration">4.27</span></li><li class="track track_193151026"><span class="user">Lupa J</span><span class="title">Waiting For Her</span>
+  <span class="duration">4.21</span></li><li class="track track_176916037"><span class="user">handsome eric</span><span class="title">an unbearable feeling of being</span>
+  <span class="duration">3.20</span></li><li class="track track_192128024"><span class="user">WOODSIST</span><span class="title">SIMON JOYNER Nostalgia Blues</span>
+  <span class="duration">7.14</span></li><li class="track track_181214654"><span class="user">Nevado</span><span class="title">GROUNDERS - Secret Friend</span>
+  <span class="duration">3.29</span></li><li class="track track_192991377"><span class="user">Swimm</span><span class="title">Beverly Hells</span>
+  <span class="duration">4.14</span></li><li class="track track_192618592"><span class="user">Ninja Tune</span><span class="title">Dorian Concept - 'Ann River, Mn' (Bibio Remix)</span>
+  <span class="duration">4.00</span></li><li class="track track_192239602"><span class="user">Crepes</span><span class="title">Stages of Fear</span>
+  <span class="duration">3.25</span></li><li class="track track_184909149"><span class="user">MergeRecords</span><span class="title">Twerps "I Don't Mind"</span>
+  <span class="duration">5.29</span></li><li class="track track_159268895"><span class="user">Diamond Rugs</span><span class="title">Voodoo Doll</span>
+  <span class="duration">3.10</span></li><li class="track track_159271691"><span class="user">Diamond Rugs</span><span class="title">Blame</span>
+  <span class="duration">2.13</span></li><li class="track track_166708441"><span class="user">Mini Mansions</span><span class="title">Any Emotions (with Brian Wilson)</span>
+  <span class="duration">3.15</span></li><li class="track track_192003521"><span class="user">Dead Oceans</span><span class="title">Ryley Walker - "Sweet Satisfaction"</span>
+  <span class="duration">6.23</span></li><li class="track track_185827849"><span class="user">boxedin</span><span class="title">All Your Love Is Gone</span>
+  <span class="duration">5.10</span></li><li class="track track_192821081"><span class="user">Aero Flynn</span><span class="title">Aero Flynn - Crisp</span>
+  <span class="duration">3.59</span></li><li class="track track_193681492"><span class="user">Indoors Outdoors</span><span class="title">BIGCOLOUR - Manifest Ecstasy</span>
+  <span class="duration">2.36</span></li><li class="track track_193680593"><span class="user">Indoors Outdoors</span><span class="title">BIGCOLOUR - I Hope No One Wants To Sleep With Me Tonight</span>
+  <span class="duration">2.48</span></li><li class="track track_127337725"><span class="user">Ξdo Lee</span><span class="title">Black Coffee</span>
+  <span class="duration">2.41</span></li><li class="track track_193373248"><span class="user">JUCELOVE</span><span class="title">JUCE - I Feel For You (Chaka Khan Cover)</span>
+  <span class="duration">3.02</span></li><li class="track track_193409296"><span class="user">Easy Sound Recording Co.</span><span class="title">Vetiver -  "Loose Ends"</span>
+  <span class="duration">3.28</span></li><li class="track track_193898734"><span class="user">helvetiamusic</span><span class="title">HELVETIA - RyBro</span>
+  <span class="duration">2.44</span></li><li class="track track_193893435"><span class="user">PANTHER MARTIN</span><span class="title">Friar Tuck</span>
+  <span class="duration">4.20</span></li><li class="track track_193884753"><span class="user">Bella Union</span><span class="title">Ezra Furman - Restless Year</span>
+  <span class="duration">2.25</span></li><li class="track track_192012024"><span class="user">Carpark Records</span><span class="title">Toro Y Moi -  Buffalo</span>
+  <span class="duration">3.18</span></li><li class="track track_145056060"><span class="user">Paradise of Bachelors</span><span class="title">Steve Gunn - Way Out Weather: "Way Out Weather"</span>
+  <span class="duration">6.17</span></li><li class="track track_187011488"><span class="user">MergeRecords</span><span class="title">Will Butler "Anna"</span>
+  <span class="duration">3.53</span></li><li class="track track_193972569"><span class="user">FilterFreeRodeo</span><span class="title">Do I Win?</span>
+  <span class="duration">2.24</span></li><li class="track track_194095917"><span class="user">BURGER RECORDS</span><span class="title">BRGR030 Danny James Etc. - Tight Lipped</span>
+  <span class="duration">4.43</span></li><li class="track track_194026981"><span class="user">Pop &amp; Obachan</span><span class="title">Dry Land</span>
+  <span class="duration">3.43</span></li><li class="track track_181088536"><span class="user">BOUQUET</span><span class="title">Come To Your House</span>
+  <span class="duration">2.52</span></li><li class="track track_193959411"><span class="user">PLANCHA RECORDS</span><span class="title">Foxes in Fiction - Flashing Lights Have Ended Now (Japanese Bonus Track)</span>
+  <span class="duration">5.00</span></li><li class="track track_87236003"><span class="user">Just SZA</span><span class="title">05 PRAY (Prod. Felix Snow)</span>
+  <span class="duration">3.18</span></li><li class="track track_194017173"><span class="user">Bop English</span><span class="title">Sentimental Wilderness</span>
+  <span class="duration">3.29</span></li><li class="track track_173655900"><span class="user">FORINT</span><span class="title">Track-01</span>
+  <span class="duration">4.16</span></li><li class="track track_62866627"><span class="user">DawnRaidMusic</span><span class="title">Aaradhna - I'm Not The Same</span>
+  <span class="duration">3.21</span></li><li class="track track_191053410"><span class="user">Dirty Laundry Music Inc.</span><span class="title">Twin Steps - Junkie Song</span>
+  <span class="duration">3.06</span></li><li class="track track_194036785"><span class="user">WOODSIST</span><span class="title">John Andrews &amp; The Yawns - I'll Go To Your Funeral (If You Go To Mine)</span>
+  <span class="duration">2.50</span></li><li class="track track_189673357"><span class="user">Company Record Label</span><span class="title">Keath Mead - Grow Up</span>
+  <span class="duration">3.42</span></li><li class="track track_191439234"><span class="user">CASCINE</span><span class="title">Yumi Zouma - Song For Zoe &amp; Gwen</span>
+  <span class="duration">4.05</span></li><li class="track track_194041745"><span class="user">MergeRecords</span><span class="title">Mikal Cronin "ii) Gold"</span>
+  <span class="duration">3.43</span></li><li class="track track_194565025"><span class="user">lolipoprecords</span><span class="title">WINTER - "Someone Like You"</span>
+  <span class="duration">3.13</span></li><li class="track track_165487809"><span class="user">Field Guides</span><span class="title">Lisa Loeb Probably Never Pierced Her Ears</span>
+  <span class="duration">1.59</span></li><li class="track track_197365177"><span class="user">The Midnight Hollow</span><span class="title">Nostalgia</span>
+  <span class="duration">3.28</span></li><li class="track track_196824152"><span class="user">OKAY-KAYA</span><span class="title">Damn, Gravity</span>
+  <span class="duration">2.42</span></li><li class="track track_186624292"><span class="user">Gengahr</span><span class="title">She's A Witch</span>
+  <span class="duration">2.41</span></li><li class="track track_186776060"><span class="user">El Segell del Primavera</span><span class="title">Bad Luck</span>
+  <span class="duration">3.14</span></li><li class="track track_197292769"><span class="user">Astronauts, etc.</span><span class="title">I Know</span>
+  <span class="duration">4.13</span></li><li class="track track_197229493"><span class="user">Morning Harvey</span><span class="title">Smith Street Swap Meet</span>
+  <span class="duration">3.23</span></li><li class="track track_197479808"><span class="user">Tei Shi</span><span class="title">Go Slow</span>
+  <span class="duration">3.32</span></li><li class="track track_144027338"><span class="user">Wilsen</span><span class="title">Wilsen - "Magnolia"</span>
+  <span class="duration">4.08</span></li><li class="track track_92613190"><span class="user">Wilsen</span><span class="title">Wilsen - "Oblivion" (Grimes cover)</span>
+  <span class="duration">4.15</span></li><li class="track track_196325784"><span class="user">Freemount Records</span><span class="title">Talkie Walkie - Banshee</span>
+  <span class="duration">2.38</span></li><li class="track track_162830577"><span class="user">Stones Throw Records</span><span class="title">Silk Rhodes - Pains</span>
+  <span class="duration">3.11</span></li><li class="track track_197779050"><span class="user">gorgeous bully</span><span class="title">Couldn't Keep It To Myself</span>
+  <span class="duration">3.10</span></li><li class="track track_197525434"><span class="user">Mistletone</span><span class="title">Toro Y Moi - Run Baby Run</span>
+  <span class="duration">2.45</span></li><li class="track track_170950516"><span class="user">JUNGLE FIRES</span><span class="title">HOLD</span>
+  <span class="duration">4.29</span></li><li class="track track_143556987"><span class="user">BRAINFEEDER</span><span class="title">Taylor McFerrin - The Antidote (feat. Nai Palm)</span>
+  <span class="duration">3.05</span></li><li class="track track_198327531"><span class="user">Tamu Massif</span><span class="title">Jejune / Selene</span>
+  <span class="duration">4.46</span></li><li class="track track_198876845"><span class="user">Spring King</span><span class="title">They're Coming After You</span>
+  <span class="duration">3.48</span></li><li class="track track_172970473"><span class="user">Fraser A. Gorman</span><span class="title">Book Of Love</span>
+  <span class="duration">3.45</span></li><li class="track track_190689244"><span class="user">FallBreakRecords</span><span class="title">Attic Fowler - Bradford Beach (Official Single)</span>
+  <span class="duration">4.03</span></li><li class="track track_199474898"><span class="user">BURGER RECORDS</span><span class="title">Hinds - Trippy Gum</span>
+  <span class="duration">4.32</span></li><li class="track track_199394981"><span class="user">Crepes</span><span class="title">Cold Summers</span>
+  <span class="duration">2.54</span></li><li class="track track_198872563"><span class="user">azul toga</span><span class="title">when are you going to</span>
+  <span class="duration">3.04</span></li><li class="track track_198315493"><span class="user">Tom Misch</span><span class="title">Brazilian Love</span>
+  <span class="duration">2.58</span></li><li class="track track_198054335"><span class="user">FallBreakRecords</span><span class="title">Attic Fowler - Quit Smoking (Official Single)</span>
+  <span class="duration">3.41</span></li><li class="track track_195330662"><span class="user">asthmatickitty</span><span class="title">Sufjan Stevens, "Should Have Known Better"</span>
+  <span class="duration">5.05</span></li><li class="track track_199699951"><span class="user">Day Wave</span><span class="title">Day Wave - Drag</span>
+  <span class="duration">3.08</span></li><li class="track track_200634825"><span class="user">Dead Oceans</span><span class="title">The Tallest Man On Earth - "Love is All"</span>
+  <span class="duration">4.15</span></li><li class="track track_199738200"><span class="user">Twin Peaks Dudes</span><span class="title">Twin Peaks - Got Your Money</span>
+  <span class="duration">3.36</span></li><li class="track track_194996253"><span class="user">All We Are</span><span class="title">Utmost Good</span>
+  <span class="duration">3.01</span></li><li class="track track_188152289"><span class="user">ELWD</span><span class="title">Dreamwaves</span>
+  <span class="duration">24.20</span></li><li class="track track_200586004"><span class="user">i-D</span><span class="title">Premiere: Samm Henshaw - Redemption</span>
+  <span class="duration">4.09</span></li><li class="track track_194566779"><span class="user">BEACHTAPE</span><span class="title">Maybe</span>
+  <span class="duration">2.59</span></li><li class="track track_199971375"><span class="user">San Fe</span><span class="title">Love in the Dark</span>
+  <span class="duration">2.23</span></li><li class="track track_158121273"><span class="user">Post-Echo</span><span class="title">Dear Blanca - Noma</span>
+  <span class="duration">3.10</span></li><li class="track track_197923657"><span class="user">BURGER RECORDS</span><span class="title">Michael Rault - Lovers Lie</span>
+  <span class="duration">3.08</span></li><li class="track track_201203814"><span class="user">danieldowning</span><span class="title">Crushed Again</span>
+  <span class="duration">3.00</span></li><li class="track track_201108104"><span class="user">The Pigskin Godhead</span><span class="title">LUNAR SAMPLES</span>
+  <span class="duration">3.09</span></li><li class="track track_201247503"><span class="user">Joey pecoraro</span><span class="title">Warm</span>
+  <span class="duration">2.10</span></li><li class="track track_157237949"><span class="user">Ξdo Lee</span><span class="title">Iota &amp; Edo Lee - Astro Blues</span>
+  <span class="duration">1.48</span></li><li class="track track_192111153"><span class="user">Adrian Recordings</span><span class="title">YAST - When You're Around</span>
+  <span class="duration">2.51</span></li><li class="track track_194247949"><span class="user">Fat Possum</span><span class="title">American Wrestlers - There's No One Crying Over Me Either</span>
+  <span class="duration">4.52</span></li><li class="track track_185980416"><span class="user">Flamingo Jones</span><span class="title">Skinny D.I.P.</span>
+  <span class="duration">3.24</span></li><li class="track track_194037590"><span class="user">Young Hunting [LA]</span><span class="title">Young Hunting - Every Living Thing</span>
+  <span class="duration">3.06</span></li><li class="track track_193214147"><span class="user">Penicillin Baby</span><span class="title">Stick It Out</span>
+  <span class="duration">3.33</span></li><li class="track track_13355773"><span class="user">martzattack</span><span class="title">The Tartans= West Of La Brea</span>
+  <span class="duration">2.09</span></li><li class="track track_202846548"><span class="user">Miya Folick</span><span class="title">I Got Drunk</span>
+  <span class="duration">3.49</span></li><li class="track track_202967260"><span class="user">Team Love Records</span><span class="title">The Berg Sans Nipple-Pink Rays Sugar</span>
+  <span class="duration">4.22</span></li><li class="track track_202957233"><span class="user">Trails and Ways</span><span class="title">Say You Will</span>
+  <span class="duration">2.54</span></li><li class="track track_193967554 current"><span class="user">Yukon Blonde</span><span class="title">Como</span>
+  <span class="duration">3.35</span></li><li class="track track_202167170"><span class="user">LEISURE</span><span class="title">Got It Bad</span>
+  <span class="duration">3.27</span></li><li class="track track_197822077"><span class="user">Section Sign Records</span><span class="title">Wren Kitz - 02 Hall Of Lame</span>
+  <span class="duration">6.24</span></li><li class="track track_183719753"><span class="user">Analogue Enhanced Digital</span><span class="title">_LINDEN: Rest and be Thankful</span>
+  <span class="duration">2.41</span></li><li class="track track_176436110"><span class="user">Adna.</span><span class="title">Living</span>
+  <span class="duration">4.41</span></li><li class="track track_197974684"><span class="user">XLR8R</span><span class="title">Cafe Lanai - Lanai</span>
+  <span class="duration">5.00</span></li><li class="track track_190001111"><span class="user">Keenan O'Meara</span><span class="title">Mania</span>
+  <span class="duration">4.29</span></li><li class="track track_194968365"><span class="user">Chelou</span><span class="title">Aneurysm (Free DL)</span>
+  <span class="duration">3.14</span></li><li class="track track_203383246"><span class="user">Moses Sumney</span><span class="title">Seeds</span>
+  <span class="duration">3.54</span></li><li class="track track_203474683"><span class="user">Astronauts, etc.</span><span class="title">No Justice</span>
+  <span class="duration">3.49</span></li><li class="track track_203293697"><span class="user">Bells Atlas</span><span class="title">Bling</span>
+  <span class="duration">4.05</span></li><li class="track track_152289189"><span class="user">Two Year Vacation</span><span class="title">Canned Heat</span>
+  <span class="duration">3.27</span></li><li class="track track_205306287"><span class="user">Admiral Fallow</span><span class="title">Building As Foreign</span>
+  <span class="duration">5.08</span></li><li class="track track_204213536"><span class="user">Nevado</span><span class="title">The Wooden Sky - Our Hearts Were Young</span>
+  <span class="duration">4.01</span></li><li class="track track_205094206"><span class="user">Favela</span><span class="title">Future Visions</span>
+  <span class="duration">4.14</span></li><li class="track track_200105384"><span class="user">capturedtracks</span><span class="title">Mac Demarco // The Way You'd Love Her</span>
+  <span class="duration">2.36</span></li><li class="track track_204687767"><span class="user">Girlpool</span><span class="title">your heart</span>
+  <span class="duration">2.52</span></li><li class="track track_205039246"><span class="user">BURGER RECORDS</span><span class="title">Laure Briard - Égoîste</span>
+  <span class="duration">2.37</span></li><li class="track track_203556628"><span class="user">BURGER RECORDS</span><span class="title">Part Time - Pussy Of My Dreams</span>
+  <span class="duration">3.00</span></li><li class="track track_203936913"><span class="user">BURGER RECORDS</span><span class="title">BRGR052 Conspiracy of Owls - A Silver Song</span>
+  <span class="duration">6.07</span></li><li class="track track_204276730"><span class="user">BURGER RECORDS</span><span class="title">Jaill - Got An F</span>
+  <span class="duration">3.25</span></li><li class="track track_203244121"><span class="user">BURGER RECORDS</span><span class="title">Mitchell Adam Johnson - Anyone Else</span>
+  <span class="duration">2.50</span></li><li class="track track_202710567"><span class="user">BURGER RECORDS</span><span class="title">Mitchell Adam Johnson - Round &amp; Around</span>
+  <span class="duration">1.47</span></li><li class="track track_202703424"><span class="user">BURGER RECORDS</span><span class="title">BRGR050 The Go - In The Dark</span>
+  <span class="duration">4.45</span></li><li class="track track_194979448"><span class="user">HINDS</span><span class="title">Davey Crockett (Thee Headcoats COVER)</span>
+  <span class="duration">2.56</span></li><li class="track track_195060958"><span class="user">Katorga Works</span><span class="title">Sheer Mag - Button Up</span>
+  <span class="duration">3.02</span></li><li class="track track_201864834"><span class="user">Joyful Noise Recordings</span><span class="title">Thee Oh Sees - The Ceiling</span>
+  <span class="duration">2.25</span></li><li class="track track_204234229"><span class="user">Slumberland Records</span><span class="title">Expert Alterations - Midnight Garden</span>
+  <span class="duration">2.48</span></li><li class="track track_195002850"><span class="user">Al Bairre</span><span class="title">Al Bairre - Bungalow</span>
+  <span class="duration">2.47</span></li><li class="track track_192582795"><span class="user">Hein Cooper</span><span class="title">The Art Of Escape</span>
+  <span class="duration">3.47</span></li><li class="track track_143077875"><span class="user">36? (your favorite band)</span><span class="title">Beauty/Strong - The Man at the Door</span>
+  <span class="duration">2.41</span></li><li class="track track_111934799"><span class="user">The Wet Secrets</span><span class="title">Sunshine</span>
+  <span class="duration">4.30</span></li><li class="track track_180868016"><span class="user">AOSOON</span><span class="title">Same Difference</span>
+  <span class="duration">3.46</span></li><li class="track track_172260266"><span class="user">AQUILO</span><span class="title">I Gave It All</span>
+  <span class="duration">3.51</span></li><li class="track track_157828372"><span class="user">Chelou</span><span class="title">The Quiet (Preview)</span>
+  <span class="duration">2.25</span></li><li class="track track_203555606"><span class="user">Feverist</span><span class="title">Criminal Mastermind</span>
+  <span class="duration">3.21</span></li><li class="track track_111355359"><span class="user">Heat Band</span><span class="title">Rooms</span>
+  <span class="duration">2.37</span></li><li class="track track_114085589"><span class="user">Heat Band</span><span class="title">The Natural World</span>
+  <span class="duration">2.41</span></li><li class="track track_201106010"><span class="user">Leif Erikson</span><span class="title">LOOKING FOR SIGNS</span>
+  <span class="duration">4.54</span></li><li class="track track_168701550"><span class="user">DouglasFirs</span><span class="title">12 When The Day Is Over (Bonus Track)</span>
+  <span class="duration">3.30</span></li><li class="track track_203191519"><span class="user">the gloomies</span><span class="title">GROVES</span>
+  <span class="duration">3.18</span></li><li class="track track_203955306"><span class="user">the gloomies</span><span class="title">LSD</span>
+  <span class="duration">2.52</span></li><li class="track track_207095246"><span class="user">AIYA</span><span class="title">If I Could Get</span>
+  <span class="duration">3.42</span></li><li class="track track_195271575"><span class="user">Tender Loving Empire</span><span class="title">Willis Earl Beal - Flying So Low</span>
+  <span class="duration">4.47</span></li><li class="track track_207615615"><span class="user">Oceaán</span><span class="title">Everything Everything - Regret (Oceaán Remix)</span>
+  <span class="duration">4.01</span></li><li class="track track_113994981"><span class="user">Hymn de Lune</span><span class="title">In Your Head</span>
+  <span class="duration">4.04</span></li><li class="track track_207267499"><span class="user">Stamp The Wax</span><span class="title">Premiere: Tamu Massif - A Fate Much Worse</span>
+  <span class="duration">2.59</span></li><li class="track track_156106391"><span class="user">TheMagicLantern</span><span class="title">Harvest Moon</span>
+  <span class="duration">4.45</span></li><li class="track track_131537837"><span class="user">Tropic of Youth</span><span class="title">Poa Kichizi Kama Ndizi - Single Version</span>
+  <span class="duration">3.41</span></li><li class="track track_206461823"><span class="user">Ark Xavia</span><span class="title">'99 Days'</span>
+  <span class="duration">3.53</span></li><li class="track track_201848071"><span class="user">Lianne La Havas</span><span class="title">Unstoppable</span>
+  <span class="duration">5.28</span></li><li class="track track_197536539"><span class="user">Klangstof</span><span class="title">Hostage</span>
+  <span class="duration">5.20</span></li><li class="track track_199532506"><span class="user">Her</span><span class="title">Quite Like</span>
+  <span class="duration">4.04</span></li><li class="track track_199573177"><span class="user">Vicktor Taiwò</span><span class="title">Feathers &amp; Wax</span>
+  <span class="duration">4.08</span></li><li class="track track_202894971"><span class="user">erynallenkane</span><span class="title">Eryn Allen Kane - Have Mercy</span>
+  <span class="duration">4.40</span></li><li class="track track_201051030"><span class="user">FOXTROTT</span><span class="title">Driven</span>
+  <span class="duration">3.18</span></li><li class="track track_205479798"><span class="user">Gia Margaret</span><span class="title">Babies</span>
+  <span class="duration">2.54</span></li><li class="track track_193413940"><span class="user">Moods (Official)</span><span class="title">Moods x SIAM - Organic</span>
+  <span class="duration">3.24</span></li><li class="track track_159521121"><span class="user">__Ruck P__</span><span class="title">Hands Down</span>
+  <span class="duration">3.49</span></li><li class="track track_179735409"><span class="user">GARREN</span><span class="title">Wanna Be There</span>
+  <span class="duration">3.44</span></li><li class="track track_209550208"><span class="user">Sacred Bones Records</span><span class="title">Moon Duo - "Wilding"</span>
+  <span class="duration">4.58</span></li><li class="track track_209453346"><span class="user">Indoors Outdoors</span><span class="title">SHEER MAG - FAN THE FLAMES</span>
+  <span class="duration">3.44</span></li><li class="track track_189178707"><span class="user">Garbanotas Bosistas</span><span class="title">Places, Planes And Trains</span>
+  <span class="duration">4.46</span></li><li class="track track_200934361"><span class="user">Leyya</span><span class="title">Superego</span>
+  <span class="duration">3.04</span></li><li class="track track_195035905"><span class="user">Brasstracks</span><span class="title">Corduroy</span>
+  <span class="duration">3.17</span></li><li class="track track_209384882"><span class="user">Future</span><span class="title">Weird Inside - Hopeless</span>
+  <span class="duration">2.20</span></li><li class="track track_195608376"><span class="user">weird outside</span><span class="title">robert glasper &amp; emeli sande - somebody else (weird inside remix)</span>
+  <span class="duration">2.27</span></li><li class="track track_176195042"><span class="user">Elliot Moss</span><span class="title">Best Light</span>
+  <span class="duration">5.24</span></li><li class="track track_199824578"><span class="user">CLUB KURU</span><span class="title">Loot</span>
+  <span class="duration">3.28</span></li><li class="track track_199467347"><span class="user">Waterstrider</span><span class="title">Passing Ships</span>
+  <span class="duration">4.05</span></li><li class="track track_140519010"><span class="user">Of Embla</span><span class="title">"Puppet"</span>
+  <span class="duration">4.17</span></li><li class="track track_204481612"><span class="user">Nao</span><span class="title">Nao - Apple Cherry</span>
+  <span class="duration">3.42</span></li><li class="track track_201747988"><span class="user">Pigeons &amp; Planes</span><span class="title">CE - "Mudra"</span>
+  <span class="duration">5.09</span></li><li class="track track_204025741"><span class="user">FAMILY FRIENDS</span><span class="title">On Your Mind</span>
+  <span class="duration">3.31</span></li><li class="track track_202732172"><span class="user">Rainy Day Women</span><span class="title">Are You Coming Home?</span>
+  <span class="duration">2.43</span></li><li class="track track_197276801"><span class="user">BOYS.</span><span class="title">Set Me On Fire</span>
+  <span class="duration">3.03</span></li><li class="track track_204308190"><span class="user">BUOY</span><span class="title">Don't Want To See You</span>
+  <span class="duration">4.08</span></li><li class="track track_200579137"><span class="user">BLØSH</span><span class="title">Keep Your Tongue</span>
+  <span class="duration">3.13</span></li><li class="track track_204974689"><span class="user">CASCINE</span><span class="title">The Legends - Keep Him</span>
+  <span class="duration">3.05</span></li><li class="track track_210622509"><span class="user">luca</span><span class="title">Best On ft. Tei Shi</span>
+  <span class="duration">2.45</span></li><li class="track track_62072143"><span class="user">Tough Love</span><span class="title">Fun Adults - Acacia</span>
+  <span class="duration">3.49</span></li><li class="track track_32314078"><span class="user">Fun Adults</span><span class="title">'Til Sleep</span>
+  <span class="duration">4.11</span></li><li class="track track_210910118"><span class="user">BRAINFEEDER</span><span class="title">Thundercat - 'Them Changes'</span>
+  <span class="duration">3.07</span></li><li class="track track_210263688"><span class="user">JUMPSWIM ❀</span><span class="title">Fall Out Of Love w/ Ninna Lundberg</span>
+  <span class="duration">2.48</span></li><li class="track track_210053129"><span class="user">Astronauts, etc.</span><span class="title">Eye to Eye</span>
+  <span class="duration">3.34</span></li><li class="track track_205359159"><span class="user">Jordan Rakei</span><span class="title">Jordan Rakei x Kiran Kai - Maya</span>
+  <span class="duration">3.01</span></li><li class="track track_212830839"><span class="user">Blood Orange</span><span class="title">Do You See My Skin Through The Flames?</span>
+  <span class="duration">10.52</span></li><li class="track track_212509126"><span class="user">Sub Pop</span><span class="title">Beach House - Sparks</span>
+  <span class="duration">5.21</span></li><li class="track track_212723514"><span class="user">Favela</span><span class="title">Blinker</span>
+  <span class="duration">4.17</span></li><li class="track track_203288648"><span class="user">siannaplavin</span><span class="title">Cruel</span>
+  <span class="duration">3.35</span></li><li class="track track_214451907"><span class="user">Leisure  Suite</span><span class="title">Sweet Gin</span>
+  <span class="duration">4.32</span></li><li class="track track_213967492"><span class="user">lontalius</span><span class="title">comfortable</span>
+  <span class="duration">2.16</span></li><li class="track track_213838950"><span class="user">Toro y Moi</span><span class="title">Pitch Black Ft. Rome Fortune</span>
+  <span class="duration">2.50</span></li><li class="track track_210592005"><span class="user">Secret Songs</span><span class="title">shh029: swim good x Merival - since u asked</span>
+  <span class="duration">2.39</span></li><li class="track track_213886153"><span class="user">Ta-ku</span><span class="title">Down For You feat. Alina Baraz</span>
+  <span class="duration">3.36</span></li><li class="track track_213662190"><span class="user">Delicieuse Musique</span><span class="title">PREMIERE : Gene Lawrence - Feel Like Making Love</span>
+  <span class="duration">3.30</span></li><li class="track track_209461807"><span class="user">Banff Music</span><span class="title">All Again (Future Self EP)</span>
+  <span class="duration">3.34</span></li><li class="track track_156161926"><span class="user">Valley Queen Official</span><span class="title">02 Make You Feel</span>
+  <span class="duration">4.03</span></li><li class="track track_116809663"><span class="user">Crooked Colours</span><span class="title">Come Down</span>
+  <span class="duration">3.34</span></li><li class="track track_146962641"><span class="user">Crooked Colours</span><span class="title">In Your Bones</span>
+  <span class="duration">3.33</span></li><li class="track track_208609332"><span class="user">Good Morning</span><span class="title">A Vessel</span>
+  <span class="duration">3.19</span></li><li class="track track_176373237"><span class="user">Solitaire Recordings</span><span class="title">Good Morning - Warned You</span>
+  <span class="duration">2.13</span></li><li class="track track_164805712"><span class="user">Sunbeam Sound Machine</span><span class="title">Wandering, I</span>
+  <span class="duration">2.59</span></li><li class="track track_209613540"><span class="user">Miya Folick</span><span class="title">Strange Darling</span>
+  <span class="duration">3.43</span></li><li class="track track_189603463"><span class="user">Workman Song</span><span class="title">Crazy Girl</span>
+  <span class="duration">4.41</span></li><li class="track track_159084943"><span class="user">The Harpoons</span><span class="title">Can We Work This Out</span>
+  <span class="duration">3.42</span></li><li class="track track_186534353"><span class="user">Paperhausmusic</span><span class="title">So Slow</span>
+  <span class="duration">3.05</span></li><li class="track track_67212339"><span class="user">Reuben Hollebon</span><span class="title">Clutch</span>
+  <span class="duration">2.32</span></li><li class="track track_167622438"><span class="user">RAVEEN</span><span class="title">Softly To Air</span>
+  <span class="duration">2.48</span></li><li class="track track_211083350"><span class="user">newbridge</span><span class="title">Afrodelic</span>
+  <span class="duration">1.52</span></li><li class="track track_217335651"><span class="user">Furnsss</span><span class="title">Manic Pixie Dream Girl</span>
+  <span class="duration">4.54</span></li><li class="track track_176880448"><span class="user">nancypants</span><span class="title">08 Halley's Comet</span>
+  <span class="duration">2.58</span></li><li class="track track_51130767"><span class="user">kid flicks</span><span class="title">The Spirits' Theme</span>
+  <span class="duration">3.45</span></li><li class="track track_209433171"><span class="user">NONIE</span><span class="title">Listen</span>
+  <span class="duration">3.18</span></li><li class="track track_163125060"><span class="user">Heavy Heart</span><span class="title">Daisy Chain</span>
+  <span class="duration">3.49</span></li><li class="track track_175076884"><span class="user">Heavy Heart</span><span class="title">Shell</span>
+  <span class="duration">3.41</span></li><li class="track track_204915033"><span class="user">Anna B Savage</span><span class="title">III</span>
+  <span class="duration">3.31</span></li><li class="track track_200772360"><span class="user">THREE BONES</span><span class="title">Love Is The Only Way</span>
+  <span class="duration">4.54</span></li><li class="track track_200772014"><span class="user">THREE BONES</span><span class="title">Hold On To Ya</span>
+  <span class="duration">2.34</span></li></ul></div><div style="display: block;" id="player"><div id="controls"><span class="prev">Previous</span><span class="toggle"><span class="play">Play</span><span class="pause">Pause</span></span><span class="next">Next</span></div><div id="time"><div class="played"></div><canvas height="40" width="180" id="waveform"></canvas><div style="width: 0%;" class="loaded"></div><div class="position"></div></div><div class="track"><a href="http://soundcloud.com/yukonblonde" class="user" target="_blank">Yukon Blonde</a><a href="http://soundcloud.com/yukonblonde/como/s-IQwd6" class="title" target="_blank">Como</a>
+  <span class="duration">3.35</span></div><ul style="" id="buttons"><li class="share"><span>Share</span></li>
+  <li class="button comment"><span>Comment</span></li>
+  <li class="button love"><span>Love</span></li>
+  <li class="button popup"><span>Popup</span></li>
+  <li class="soundcloud"><a href="https://stratus.soundcloud.com/" target="_blank">Stratus</a></li></ul><ul id="stats"><li class="plays"><span>Plays</span> 42479</li>
+  <li class="comments"><span>Comments</span> 10</li>
+  <li class="favorites"><span>Favoritings</span> 491</li></ul><div style="margin-right: 130px;" id="share"><ul id="social">
+    <li><a href="http://facebook.com/sharer.php?u=http://soundcloud.com/yukonblonde/como/s-IQwd6" class="facebook" target="_blank">Facebook</a></li>
+    <li><a href="http://twitter.com/intent/tweet?url=http://soundcloud.com/yukonblonde/como/s-IQwd6" class="twitter" target="_blank">Twitter</a></li>
+    <li><a href="https://m.google.com/app/plus/x/?v=compose&amp;content=http://soundcloud.com/yukonblonde/como/s-IQwd6" class="google" target="_blank">Google+</a></li>
+    <li><a href="mailto:?subject=Como%20by%20Yukon%20Blonde%20-%20SoundCloud&amp;body=http://soundcloud.com/yukonblonde/como/s-IQwd6" class="email">Email</a></li>
+    <li><a href="http://www.tumblr.com/share/audio?externally_hosted_url=http://soundcloud.com/yukonblonde/como/s-IQwd6" class="tumblr" target="_blank">Tumblr</a></li>
+    <li><a href="http://www.reddit.com/submit?url=http://soundcloud.com/yukonblonde/como/s-IQwd6" class="reddit" target="_blank">Reddit</a></li>
+    <li><a href="http://www.blogger.com/blog-this.g?n=Como%20by%20Yukon%20Blonde&amp;u=http://soundcloud.com/yukonblonde/como/s-IQwd6" class="blogger" target="_blank">Blogger</a></li>
+    <li><a href="http://www.stumbleupon.com/submit?url=http://soundcloud.com/yukonblonde/como/s-IQwd6&amp;title=$%7Bshare%7D" class="stumble" target="_blank">StumbleUpon</a></li>
+  </ul>
+  <div id="embed">
+    Embed: <input value="&lt;iframe width=&quot;100%&quot; height=&quot;166&quot; scrolling=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F193967554&amp;auto_play=false&amp;show_artwork=true&quot; frameborder=&quot;0&quot; &gt;&lt;/iframe&gt;" type="text">
+  </div>
+  <span class="close sharing">Close</span></div><div style="margin-right: 100px;" id="comment"><img id="avatar"><div id="add"><input placeholder="Add your comment" type="text"></div><span class="close commenting">Close</span></div></div></div><!-- Templates-->
+
+
+
+
+
+<!-- Google Analytics--><script type="text/javascript">var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-29650954-1"]);_gaq.push(["_trackPageview"]);(function(){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();</script><script src="player_data/soundmanager2.js" async=""></script></body></html>
