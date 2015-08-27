@@ -1,0 +1,395 @@
+@media only screen and (max-width: 750px) {
+	.posts-slider {
+		display:none;	
+	}
+}
+
+.single .entry-content > p:first-of-type:first-letter {
+	font-size:100%;
+	font-family:inherit;
+	float:none;
+	line-height:normal;
+	padding:0;
+}
+
+.sidebar .widget {
+	border-bottom:none !important;
+}
+
+.widget_ti_latest_reviews li {
+	position:relative;
+}
+ 
+.widget_ti_latest_reviews li a {
+	display:block;
+	padding-right:30px;
+}
+ 
+.widget_ti_latest_reviews .total {
+	position:absolute;
+	top:50%;
+	right:0;
+	margin-top:-15px;
+}
+
+.flexslider .widget-post-title {
+   height: 50px;
+}
+
+.main-menu > ul > .logo-item a {
+  display: none;
+  padding-left: 0px;
+  overflow: hidden;
+  text-indent: 115%;
+  width: 100px;
+  height: 50px;
+  margin-right: 13px!important;
+  background: url(http://hiphop-n-more.com/wp-content/uploads/2015/04/hhnm-new-sticky-1.png) no-repeat;
+  background-size: contain;
+  background-position: 0px 9px;
+}
+.sticky-active .main-menu > ul > .logo-item a {
+  display: block;
+}
+.widget-posts-entries span a {
+  color: #8C919B;
+  font-size: 80%;
+  font-weight: normal !important;
+}
+.widget-posts-entries .widget-post-title {
+  font-size: 80%;
+  letter-spacing: 0px;
+  font-weight: bold;
+}
+.sidebar .widget_ti_most_commented li a {
+  color: #000;
+  background: none repeat scroll 0% 0% #F5f5f5;
+}
+.secondary-menu > ul > li:first-child {
+  border-left-width: 0px;
+}
+.sub-menu li {
+  font-size: 12px;
+}
+.sticky-active .main-menu-fixed {
+  box-shadow: 0px 0px 10px 3px #D3D3D3;
+  border-bottom: none !important;
+  opacity: 0.97;
+}
+.loop-pagination a,
+.loop-pagination span {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.slide-dock h3 {
+  font-size: 20px !important;
+  border: none !important;
+}
+.posts-slider.loading li,
+.posts-slider .slides li {
+  max-height: 333px !important;
+}
+.posts-slider .entry-meta {
+  display: none;
+}
+.related-posts h3 {
+  font-size: 24px !important;
+  color: #75b2de !important;
+  text-transform: uppercase !important;
+}
+.entry-title {
+  margin-top: 6px !important;
+}
+.entry-content blockquote::after {
+  color: #D9D9D9 !important;
+}
+.page-content blockquote,
+.entry-content blockquote {
+  color: #868585 !important;
+  font-size: 17px;
+}
+.entry-content blockquote::before {
+  color: #D9D9D9 !important;
+}
+.wpt_widget_content .entry-title {
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+}
+.wpt_widget_content .tab_title a {
+  background: #c9c6c6 !important;
+  color: #fff !important;
+  text-transform: uppercase !important;
+}
+.wpt_widget_content .tab_title.selected a {
+  background: #000 !important;
+}
+.widget .wpt_widget_content .tab_title a,
+.widget .wp_review_tab_widget_content .tab_title a,
+.widget .wpt_widget_content .tab_title.selected a,
+.widget .wp_review_tab_widget_content .tab_title.selected a {
+  background: none repeat scroll 0 0 #000;
+}
+.wpt_widget_content img {
+  max-height: 160px !important;
+}
+.grid-8 .posts-slider .entry-title {
+  font-size: 26px;
+}
+.layout-boxed {
+  position: relative;
+  z-index: 2;
+  -webkit-box-shadow: 0px 0px 8px 0px #323232;
+  -moz-box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.35);
+  box-shadow: 0px 0px 8px 0px rgba(50, 50, 50, 0.35);
+}
+.page-content a,
+.entry-content a {
+  color: #75b2de;
+  font-weight: bold;
+  text-decoration: none;
+}
+.page-content a:hover,
+.entry-summary a:hover,
+.entry-content a:hover {
+  color: #75b2de;
+  background-color: #fff;
+  text-decoration: underline;
+  
+}
+.entries .hentry .entry-header .vcard.author {
+  color: #C4C2C2;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.entries .hentry .entry-header .vcard.author a {
+  color: #C4C2C2;
+  text-decoration: none;
+  font-weight: bold;
+  text-size: 9px;
+}
+#ADDTOANY_SHARE_SAVE_KIT {
+  margin-top: 20px !important;
+}
+.a2a_svg {
+  border-radius: 0 !important;
+}
+@media screen and (min-width: 750px) {
+  .a2a_button_whatsapp {
+    display: none !important;
+  }
+}
+body.home .a2a_floating_style,
+body.page .a2a_floating_style {
+  display: none;
+}
+.a2a_floating_style.a2a_default_style {
+  bottom: 0px;
+  left: 50% !important;
+  margin-left: -100px !important;
+}
+.home .entry-image {
+  background-color: transparent;
+}
+.entries .hentry .entry-image img:hover {
+  opacity: 1;
+}
+.comments-number {
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  transition: all 250ms ease;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 10px #000000;
+  -moz-box-shadow: 0 0 10px #000000;
+  -ms-box-shadow: 0 0 10px #000000;
+  -o-box-shadow: 0 0 10px #000000;
+  box-shadow: 0 0 10px #000000;
+  padding: 8px 13px 2px 17px;
+  color: #222222;
+  z-index: 800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.comments-number i {
+  font-style: normal;
+}
+.comments-number i:before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 1px;
+  width: 16px;
+  height: 10px;
+}
+.comments-number i:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  border: 5px solid transparent;
+  background: transparent;
+}
+.comments-number i:after {
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+}
+.entries .hentry .entry-title {
+  line-height: 150%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-size: 110%;
+}
+.entries .hentry .entry-title a:hover {
+  color: #17517b !important;
+}
+.entry-category a:hover {
+  background-color: #000;
+}
+.entry-category a {
+  font-size: 90% !important;
+  color: #fff !important;
+  background-color: #75b2de;
+  padding: 3px 1px 1px 3px;
+  border-radius: 0px;
+}
+/* category colour */
+.entry-meta,
+.entry-meta a {
+  color: #75b2de;
+}
+.sidebar {
+  padding: 18px;
+  background-color: #f5f5f5;
+}
+.sidebar .widget {
+  border-bottom: none;
+}
+/* Widget titles */
+.widget h3 {
+  /* widget titles */
+  font-size: 24px;
+  text-align: center !important;
+  border: 2px solid #000;
+}
+/* Read More link */
+.read-more-link {
+  color: #17517b;
+}
+#searchform button {
+  color: #000;
+  background: none;
+}
+#masthead .header-search #searchform input[type="text"] {
+  color: #000;
+}
+.header-ad {
+  margin-top: 25px;
+}
+.single-box.entry-content {
+  margin-bottom: 0px;
+}
+.single-box.advertisement {
+  margin-bottom: 25px;
+}
+.single-box.nav-single,
+.single-box.related-posts {
+  margin-bottom: 10px;
+  padding-top: 15px;
+  border-top: 2px solid #000;
+  border-bottom: none !important;
+}
+.ratings-panel {
+  clear: both;
+}
+.ratings-panel .the-ratings {
+  width: 48%;
+  float: left;
+  padding: 30px 0;
+}
+.ratings-panel .the-follow-links {
+  text-align: right;
+  width: 48%;
+  float: right;
+  padding: 30px 0;
+}
+@media only screen and (max-width: 750px) {
+  .sidebar {
+    display: none;
+  }
+  .header-ad {
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  .ratings-panel {
+    clear: both;
+  }
+  .ratings-panel .the-ratings {
+    width: 100%;
+    float: none;
+    padding: 30px 0;
+  }
+  .ratings-panel .the-follow-links {
+    display: none;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .posts-slider.loading li,
+  .posts-slider .slides li {
+    max-height: 190px !important;
+  }
+  .header-ad {
+    margin-top: 0px;
+    margin-bottom: 15px;
+  }
+  .ratings-panel {
+    clear: both;
+  }
+  .ratings-panel .the-ratings {
+    width: 100%;
+    float: none;
+    padding: 30px 0;
+  }
+  .ratings-panel .the-follow-links {
+    display: none;
+  }
+}
+.tab-content ul li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.2 !important;
+  font-weight: normal;
+}
+.tab-content ul li a img {
+  width: 50px !important;
+  height: 50px !important;
+}
+.sb_tabs {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.background-skin.left {
+  position: fixed;
+  width: 50%;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  overflow: hidden;
+  text-align: right;
+}
+.background-skin.right {
+  text-align: left;
+  position: fixed;
+  width: 50%;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  overflow: hidden;
+}
