@@ -1,12 +1,16 @@
-<svg display="none" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
 <symbol id="icon-mail" viewBox="0 0 1024 1024">
 	<title>mail</title>
 	<path class="path1" d="M930.909 884.364h-837.818c-51.386 0-93.091-41.705-93.091-93.091v-558.545c0-51.386 41.705-93.091 93.091-93.091h837.818c51.386 0 93.091 41.705 93.091 93.091v558.545c0 51.386-41.705 93.091-93.091 93.091zM884.364 791.273l-266.799-233.472-105.565 93.836-105.565-93.836-266.799 233.472h744.727zM93.091 744.727l261.818-232.727-261.818-232.727v465.455zM139.636 232.727l372.364 325.818 372.364-325.818h-744.727zM930.909 279.273l-261.818 232.727 261.818 232.727v-465.455z"></path>
 </symbol>
-<symbol id="icon-back" viewBox="0 0 1024 1024">
-	<title>back</title>
+<symbol id="icon-arrow_back" viewBox="0 0 1024 1024">
+	<title>arrow_back</title>
 	<path class="path1" d="M853.333 469.333h-519.253l238.293-238.293-60.373-60.373-341.333 341.333 341.333 341.333 60.373-60.373-238.293-238.293h519.253v-85.333z"></path>
+</symbol>
+<symbol id="icon-arrow_forward" viewBox="0 0 1024 1024">
+	<title>arrow_forward</title>
+	<path class="path1" d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
 </symbol>
 <symbol id="icon-feedback" viewBox="0 0 1024 1024">
 	<title>feedback</title>
