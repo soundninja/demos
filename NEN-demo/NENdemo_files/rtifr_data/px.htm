@@ -1,0 +1,43 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"></head><body><div><img class="tjkcloiscddakfjnlmte" src="px_data/a_004.gif"><script src="px_data/tpidprofile_id.gif"></script><img class="tjkcloiscddakfjnlmte" src="px_data/a_003.gif"><img class="tjkcloiscddakfjnlmte" src="px_data/a.gif"><iframe name="_rlcdn" src="px_data/127121.htm" frameborder="0" height="0" width="0"></iframe><img class="tjkcloiscddakfjnlmte" src="px_data/3PDPHandler.gif" height="1" width="1"><script src="px_data/pibiview_002.js"></script><script type="text/javascript" src="px_data/varlotjson"></script> <script type="text/javascript"> if (typeof(lotjson) != "undefined") { var blist = new Array(); if (lotjson.Profile.Audiences.ThirdPartyAudience != undefined) { for (var cci = 0; cci < lotjson.Profile.Audiences.ThirdPartyAudience.length; cci++) { id = lotjson.Profile.Audiences.ThirdPartyAudience[cci].id; if (id != 2712) blist.push(id); } if (blist.length > 0) { blist = blist.join(","); var img = new Image(); img.src= "http://api.choicestream.com/instr/crunch/lotame/seg?seg=" + blist + "&type=push"; } } } </script><script type="text/javascript" src="px_data/pixel"></script><img src="px_data/pixel.gif" alt=" " style="display:none">
+<img src="px_data/getuid.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/generic.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/lons7jax.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/match.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/GenericUserSync.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/a_005.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/activity_002.gif" alt=" " style="display:none">
+<img src="px_data/ping_match.gif" alt=" " style="display:none">
+<img src="px_data/img.gif" alt=" " style="display:none">
+<img src="px_data/utsync.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/g.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/eyeota_user_sync.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/activity.gif" alt=" " style="display:none">
+<img class="tjkcloiscddakfjnlmte" src="px_data/a_002.gif" style="display:none !important"><img class="tjkcloiscddakfjnlmte" src="px_data/3PDPHandler_002.gif" height="1" width="1"><script src="px_data/pibiview.js"></script><script>
+var xhr = new XMLHttpRequest();
+var method = "GET";
+var url = "http://segments.wt-data.com/get?pid=536d06614c3ba";
+if ("withCredentials" in xhr) {
+    xhr.open(method, url, true);
+} else if (typeof XDomainRequest != "undefined") {
+    xhr = new XDomainRequest();
+    xhr.open(method, url);
+} else {
+    xhr = null;
+}
+
+if (xhr !== null) {
+    xhr.withCredentials = true;
+    xhr.onload = function () {
+        if (xhr.responseText !== "") {
+            var result = eval("(" + xhr.responseText + ")");
+            var segs = "";
+            for (var i = 0; i < result.length; i++) {
+                segs = segs + "/seg=" + result[i];
+            }
+            document.body.innerHTML += "<img src=\"http://bcp.crwdcntrl.net/5/c=4619" + segs + "\" width=\"1\" height=\"1\"/>";
+        }
+    };
+    xhr.send();
+}
+</script><iframe name="_rlcdn" src="px_data/360331.htm" frameborder="0" height="0" width="0"></iframe></div><img src="px_data/seg152589.gif" height="1" width="1"></body></html>
