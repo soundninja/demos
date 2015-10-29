@@ -1,0 +1,407 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQQEWFdVGwUHVlRaBQc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"8658f31b28","agent":"js-agent.newrelic.com/nr-768.min.js","transactionName":"b1IDZ0NQChVRAkJZWVYYJ0ZfUhAPXw8ZRF9bXARHQh8BHkQERF5XVEQIVF9EFEhGCFNHRQJECFRfRBQ5RwhSV1NMaAReU1QA","applicationID":"6725826","errorBeacon":"bam.nr-data.net","applicationTime":44}</script>
+      <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+      <meta name="description" content="RSVP below to get on Nicky Digital&#39;s list for GIRLS + BOYS!
+ (Signup Widget for Nicky Digital)">
+      <title>Get on NickyDigital&#39;s Guest List for Girls &amp; Boys!</title>
+      <link rel="shortcut icon" href="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/img/hive.6e3e948066ef.ico" />
+      <meta property="fb:admins" content="500595700" />
+      <meta property="fb:app_id" content="579120958808795" />
+      <meta property="og:title" content="Get on NickyDigital&#39;s Guest List for Girls &amp; Boys!" />
+      <meta property="og:description" content="RSVP below to get on Nicky Digital&#39;s list for GIRLS + BOYS!
+" />
+      <meta property="og:image" content="https://static-hive-images-ticketlabsinc1.netdna-ssl.com/upload/b_black,c_fill,e_blur:2000,g_center,h_470,o_100,w_1200/e_blur:2000/c_fit,h_470,l_atwld87z3zhxm2jjc5ts,w_1200/b_rgb:ff00b0,c_pad,g_north,h_630,w_1200/g_south,l_text:black_name:Click%20here%20to%20sign%20up%20now%21,y_55/g_south,l_text:dark_name:Click%20here%20to%20sign%20up%20now%21,y_57/atwld87z3zhxm2jjc5ts.jpg" />
+      <meta property="og:url" content="https://www.hive.co/signup/widget/14/embed/" />
+      <meta property="og:site_name" content="Hive.co" />
+      <meta property="og:type" content="website" />
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@hivealive">
+      <meta name="twitter:url" content="https://www.hive.co/signup/widget/14/embed/" />
+      <meta name="twitter:title" content="RSVP below to get on Nicky Digital&#39;s list for GIRLS + BOYS!
+" />
+      <meta name="twitter:description" content="Signup Widget for Nicky Digital" />
+      <meta name="twitter:image" content="https://static-hive-images-ticketlabsinc1.netdna-ssl.com/upload/b_black,c_fill,e_blur:2000,g_center,h_470,o_100,w_1200/e_blur:2000/c_fit,h_470,l_atwld87z3zhxm2jjc5ts,w_1200/b_rgb:ff00b0,c_pad,g_north,h_630,w_1200/g_south,l_text:black_name:Click%20here%20to%20sign%20up%20now%21,y_55/g_south,l_text:dark_name:Click%20here%20to%20sign%20up%20now%21,y_57/atwld87z3zhxm2jjc5ts.jpg" />
+
+      <script>
+  window.DEBUG = false;
+  if (!window.DEBUG){
+    // Ignore certain errors if they are not ours...
+    var ignoreRemoteUncaught = function(isUncaught, args, payload) {
+      try {
+        var filename = payload.data.body.trace.frames[0].filename;
+        if (isUncaught && !filename.match(/^https?:\/\/static-hive-prod-ticketlabsinc1\.co.*/) && !filename.match(/^https?:\/\/hive\.co.*/)) {
+          // Ignore uncaught errors that are not from www.mycompany.com.
+          return true;
+        }
+      } catch (e) {
+        // Most likely there was no filename or the frame doesn't exist.
+      }
+      return false;
+    };
+
+    var _rollbarConfig = {
+      accessToken: "ceae03b93eb240d8bedbfcb60a0e97f5",
+      captureUncaught: true,
+      payload: {
+        environment: "production"
+      },
+      checkIgnore: ignoreRemoteUncaught,
+      ignoredMessages: [  // Messages of common spammy errors
+        'Permission denied to access property "toString"',
+        'Script error.'
+      ]
+    };
+    !function(a,b){function c(b){this.shimId=++f,this.notifier=null,this.parentShim=b,this.logger=function(){},a.console&&void 0===a.console.shimId&&(this.logger=a.console.log)}function d(b){var d=c;return e(function(){if(this.notifier)return this.notifier[b].apply(this.notifier,arguments);var c=this,e="scope"===b;e&&(c=new d(this));var f=Array.prototype.slice.call(arguments,0),g={shim:c,method:b,args:f,ts:new Date};return a._rollbarShimQueue.push(g),e?c:void 0})}function e(a,b){return b=b||this.logger,function(){try{return a.apply(this,arguments)}catch(c){b("Rollbar internal error:",c)}}}var f=0;c.init=function(a,b){var d=b.globalAlias||"Rollbar";if("object"==typeof a[d])return a[d];a._rollbarShimQueue=[],b=b||{};var f=new c;return e(function(){if(f.configure(b),b.captureUncaught){var c=a.onerror;a.onerror=function(){f.uncaughtError.apply(f,arguments),c&&c.apply(a,arguments)}}return a[d]=f,f},f.logger)()},c.prototype.loadFull=function(a,b,c,d){var f=e(function(){var a=b.createElement("script"),e=b.getElementsByTagName("script")[0];a.src=d.rollbarJsUrl,a.async=!c,a.onload=g,e.parentNode.insertBefore(a,e)},this.logger),g=e(function(){if(void 0===a._rollbarPayloadQueue)for(var b,c,d,e,f=new Error("rollbar.js did not load");b=a._rollbarShimQueue.shift();)for(d=b.args,e=0;e<d.length;++e)if(c=d[e],"function"==typeof c){c(f);break}},this.logger);e(function(){c?f():a.addEventListener?a.addEventListener("load",f,!1):a.attachEvent("onload",f)},this.logger)()};for(var g="log,debug,info,warn,warning,error,critical,global,configure,scope,uncaughtError".split(","),h=0;h<g.length;++h)c.prototype[g[h]]=d(g[h]);var i="//d37gvrvc0wt4s1.cloudfront.net/js/v1.0/rollbar.min.js";_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||i;var j=c.init(a,_rollbarConfig);j.loadFull(a,b,!1,_rollbarConfig)}(window,document);
+  }
+</script>
+
+      <link rel="stylesheet" type="text/css" media="screen" href="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/css/global.e56d08f47834.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/css/widget2.a57503cef65d.css">
+      <link href="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/css/font-awesome.min.04425bbdc624.css" rel="stylesheet" text="text/css">
+      <link rel="stylesheet" type="text/css" media="screen" href="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/css/signup-widget.4b8df47afe97.css">
+
+      <style type="text/css">
+        .signup-widget-button, .signup-widget-button:link {
+          background-color: #ff00b0;
+        }
+        .signup-widget-button:hover {
+          background-color: #ff00b8;
+        }
+        .signup-widget-button:active, .signup-widget-button:focus {
+          background-color: #ff00b0;
+        }
+        .signup-widget-style-0 .tinted-bg {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(https://static-hive-images-ticketlabsinc1.netdna-ssl.com/upload/h_200,w_300/e_blur:2000/e_blur:2000/e_blur:2000/c_fill,h_400,q_60,w_600/e_blur:2000/e_blur:2000/e_blur:2000/atwld87z3zhxm2jjc5ts.jpg);
+        }
+        .signup-widget-style-1 .tinted-bg {
+          background-image: linear-gradient(rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), url(https://static-hive-images-ticketlabsinc1.netdna-ssl.com/upload/h_200,w_300/e_blur:2000/e_blur:2000/e_blur:2000/c_fill,h_400,q_60,w_600/e_blur:2000/e_blur:2000/e_blur:2000/atwld87z3zhxm2jjc5ts.jpg);
+        }
+      </style>
+    </head>
+
+    <body class="signup-widget-body signup-widget-style-0 signup-widget-iframe" style="background-image: url(https://static-hive-images-ticketlabsinc1.netdna-ssl.com/upload/h_200,w_300/e_blur:2000/e_blur:2000/e_blur:2000/c_fill,h_400,q_60,w_600/e_blur:2000/e_blur:2000/e_blur:2000/atwld87z3zhxm2jjc5ts.jpg)">
+      
+      <div class="main-content">
+        <div class="signup-widget-wrapper">
+          <div class="signup-widget-section tinted-bg signup-widget-header">
+            <div class="title">Get on NickyDigital&#39;s Guest List for Girls &amp; Boys!</div>
+          </div>
+          <div class="signup-widget-banner" style="background-image: url(https://static-hive-images-ticketlabsinc1.netdna-ssl.com/upload/c_scale,q_60,w_1000/atwld87z3zhxm2jjc5ts.jpg)">
+            <img src="https://static-hive-images-ticketlabsinc1.netdna-ssl.com/upload/c_scale,q_60,w_1000/atwld87z3zhxm2jjc5ts.jpg"/>
+          </div>
+          <div class="signup-widget-section tinted-bg">
+            
+              <div id="loading">
+                <i class="fa fa-spinner fa-pulse"></i> <span>Waiting to hear back from Facebook...</span>
+              </div>
+            
+            <div id="step1">
+              <div class="desc">
+                RSVP below to get on Nicky Digital&#39;s list for GIRLS + BOYS!<br />
+              </div>
+              <a href="#" class="signup-widget-launch signup-widget-button"><span class="button-text">Click HERE to RSVP!</span> &raquo;</a>
+              <div class="clearfix"></div>
+              <a href="#" class="below pull-right" id="no-facebook-link">Signup via email</a>
+              <div class="clearfix"></div>
+            </div>
+            <div id="step2">
+              <form class="mini-form">
+                <div class="user-rollup">
+                  <img src="" class="user-pic" />
+                  <span class="name"></span>
+                  <span class="location"></span>
+                  <a href="#" class="edit-link"><span class="glyphicon glyphicon-pencil"></span> edit info</a>
+                </div>
+                <div class="form">
+                  <label for="mini-email" class="control-label">Your Email</label>
+                  <input type="text" class="form-control" id="mini-email" placeholder="hello@example.com">
+                </div>
+                <div class="clearfix"></div>
+                <div class="footer">
+                  <a href="#" id="mini-continue-btn" class="signup-widget-button">Continue &raquo;</a>
+                  <div class="clearfix"></div>
+                </div>
+              </form>
+              <form class="form big-form" role="form">
+                <div class="form-group">
+                  <div class="col-xs-6">
+                    <label for="firstName" class="control-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Sean"  name="firstName"/>
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="lastName" class="control-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Carter"  name="lastName"/>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="form-group">
+                  <div class="col-xs-6">
+                    <label for="email" class="control-label">Email Address</label>
+                    <input type="text" class="form-control" id="email" placeholder="123@example.com"  name="email"/>
+                  </div>
+                  <div class="col-xs-6">
+                    <label for="city" class="control-label">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="Los Angeles, CA"  name="city" />
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="footer">
+                  <a href="#" class="signup-widget-button" id="big-continue-btn">Continue &raquo;</a>
+                  <div class="clearfix"></div>
+                </div>
+              </form>
+              <div id="CASLfooter">
+                Enter your email address above to receive newsletters containing news, updates and promotions regarding products from Hive and Nicky Digital (Nicky Digital). You can withdraw your consent at any time. Please refer to our <a href="/privacy/" target="_blank">privacy policy</a>, <a href="/fantos/" target="_blank">terms of service</a>, or <a href="mailto:hello@hive.co">contact us</a> for more details.
+              </div>
+            </div>
+            <div id="completedSignupWidgetState">
+              <div class="completed-details">
+                <div class="post-signup-body">
+                    <img class="user-image img-circle" src="#" />
+                    <div class="post-signup-text">
+                      <h2>Hey, <span class="username"></span></h2>
+                      <h3>Thanks for signing up!</h3>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <hr>
+                <div class="redirect-text">
+                  You&#39;re All Set! You&#39;re on Nicky Digital&#39;s list! Arrive early to ensure entry!
+                </div>
+                
+                  <div class="redirect" style="display:none;">
+                    <hr>
+                    <div class="redirect-content">
+                      <i class="fa fa-spinner fa-pulse"></i> You will be redirected shortly...
+                    </div>
+                  </div>
+                
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="powered-by">
+          <a href="/?tid=swidpby&ctestid=14" target="_blank">
+            
+              <img src="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/img/powered_by_hive_dark.61605f2c6ab1.png" />
+            
+          </a>
+        </div>
+      </div>
+      
+      <div id="fb-root"></div>
+      <div class="clearfix"></div>
+
+      <script type="text/javascript" crossorigin="anonymous" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script type="text/javascript">
+      window.IS_IN_APP_BROWSER = false;
+      window.IS_IPHONE = false;
+      window.IS_ANDROID = false;
+      window.IS_MOBILE = false;
+</script>
+      
+        <script type="text/javascript" crossorigin="anonymous" src="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/js/bootstrap-transition.a05a07909ed9.js"></script>
+        <script type="text/javascript" crossorigin="anonymous" src="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/js/bootstrap-modal.f431c5a5af40.js"></script>
+        <script type="text/javascript">
+          window.FB_MAIN_APP_ID = '579120958808795';
+          window.SIGNUP_WIDGET_ID = 14;
+          window.AUTOLAUNCH = false;
+          window.TOUR_ID = 623;
+          window.USER_IS_ALREADY_SIGNED_UP = 'False' === 'True';
+          window.USER_IS_AUTHENTICATED = false;
+          window.USER_ID = '';
+
+          window.NEW_AUTH_FLOW = true;
+
+          window.IS_MODAL = 'False' === 'True';
+          window.REDIRECT_URL = "http://NickyDigital.com";;
+
+        </script>
+        <script>
+  window.DEBUG = false;
+
+  // look at is_authenticated first since savesa bunch of db hits for most requests
+  
+    window.IS_IMPERSONATING = false;
+    window.IS_MANAGER = false;
+  
+
+  if (!window.DEBUG){
+    (function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+    for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+    mixpanel.init("3862cbcde2f30c34dcc053ddb8ad29c1");
+  }
+
+  
+
+  function trackInternalEvent(event, data, callback){
+    // print for debug=True
+    // print for staging and local
+    // print for non-managers in prod
+    // track for managers in prod (minus impersonating)
+
+    if (!window.DEBUG && !window.IS_IMPERSONATING && window.IS_MANAGER){
+      // track
+      trackEvent(event, data, callback, true);
+    }
+    else{
+      // print
+      trackEvent(event, data, callback, false);
+    }
+  }
+
+  function trackExternalEvent(event, data, callback){
+    // print for debug=True
+    // print for staging and local
+    // track for everyone in prod (minus impersonating)
+
+    if (!window.DEBUG && !window.IS_IMPERSONATING){
+      // track
+      trackEvent(event, data, callback, true);
+    }
+    else{
+      // print
+      trackEvent(event, data, callback, false);
+    }
+  }
+
+  function trackEvent(event, data, callback, doTrack){
+    if (typeof callback == 'undefined'){
+      callback = function(){};
+    }
+
+    if (typeof data == 'undefined'){
+      data = {}
+    }
+    else if (typeof data != "object"){
+      data = {
+        'value': data,
+      }
+    }
+
+    // add some more data to the trackign event
+    data["visitor_key"] = getCookie('cookie_visitor_key');
+    data["session_key"] = getCookie('cookie_session_key');
+    data["url"] = location.href;
+
+    if (doTrack){
+      mixpanel.track(event, data, callback);
+    }
+    else {
+      // just print if not tracking
+      console.log("DEBUG MIXPANEL TRACKING EVENT: '" + event + "'");
+      console.log(data);
+      callback();
+    }
+  }
+
+  function trackAnalyticsEvent(eventType, instanceId, subType){
+    $.ajax({
+      type: "POST",
+      url: "/api/analytics/track/",
+      data: {
+        'eventType': eventType,
+        'instanceId': instanceId,
+        'subType': subType,
+      },
+    });
+  }
+
+  function getCookie(c_name) {
+    if (document.cookie.length > 0) {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start != -1) {
+            c_start = c_start + c_name.length + 1;
+            c_end = document.cookie.indexOf(";", c_start);
+            if (c_end == -1) {
+                c_end = document.cookie.length;
+            }
+            return unescape(document.cookie.substring(c_start, c_end));
+        }
+    }
+    return "";
+  }
+
+  function setCookie(name, value, days) {
+    var expires;
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else {
+        expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+  }
+</script>
+
+
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    // this CDATA stuff needed for google tags to validate
+    /* <![CDATA[ */
+    var retargetingData = {};
+    
+    visitorKey = getCookie('cookie_visitor_key');
+    if (visitorKey && visitorKey.length > 0){
+      retargetingData.visitor_key = visitorKey;
+    }
+    var google_conversion_id = 1004962694;
+    var google_custom_params = retargetingData;
+    google_custom_params.dynx_itemid = 0;
+    google_custom_params.dynx_itemid2 = 0;
+    var google_remarketing_only = true;
+    /* ]]> */
+
+    ga('create', 'UA-45828611-1', 'auto');
+    ga('require', 'displayfeatures');
+    ga('set', google_custom_params);
+    ga('send', 'pageview');
+
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1458880051082979');
+    fbq('track', 'PageView');
+    fbq('trackCustom', 'user_info', retargetingData);
+  </script>
+  <div style="display: none">
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+  </div>
+  <noscript>
+    <div style="display:inline;">
+      <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1004962694/?value=0&amp;guid=ON&amp;script=0"/>
+    </div>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1458880051082979&ev=PageView&noscript=1"/>
+  </noscript>
+
+        <script type="text/javascript" src="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/js/typeahead.bundle.269404901dd2.js"></script>
+        <script type="text/javascript" crossorigin="anonymous" src="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/js/global-popup.75e94f4fa750.js"></script>
+        <script type="text/javascript" crossorigin="anonymous" src="https://static-hive-prod-ticketlabsinc1.netdna-ssl.com/static/js/signup-widget.fc67fa8907fe.js"></script>
+      
+    </body>
+  </html>
