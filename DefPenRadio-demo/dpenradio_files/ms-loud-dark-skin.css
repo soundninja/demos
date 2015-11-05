@@ -1,0 +1,177 @@
+/**
+ *  Master Slider Sample Skin
+ *
+ * This file does not load by Masterslider and is just for those who wants 
+ * to know how skin file is structured and let them to create their own custom skin
+ * If you want to create your own custom skin you need to replace "ms-loud-dark-skin" with your unique skin name
+ */
+
+.ms-loud-dark-skin{
+	padding-top: 80px;
+}
+.ms-loud-dark-skin .ms-slide .ms-slide-vpbtn,
+.ms-loud-dark-skin .ms-video-btn{
+	width: 43px;
+	height: 43px;
+	background: url(ms_controls.png) no-repeat -16px -96px;
+	top: 50%;
+	left: 50%;
+	margin: -22px 0 0 -22px;
+}
+
+.ms-loud-dark-skin .ms-slide .ms-slide-vcbtn {
+	width: 19px;
+	height: 19px;
+	background: url(ms_controls.png) no-repeat -53px -160px;
+	top: 18px;
+	right: 30px;
+}
+
+/* controls */
+
+.ms-loud-dark-skin .ms-nav-next,
+.ms-loud-dark-skin .ms-nav-prev {
+	width: 34px;
+	background: url(ms_controls.png);
+	background-position: -74px -20px;
+	height: 61px;
+	cursor: pointer;
+	top: 50%;
+	left: 30px;
+	margin-top: -20px;
+	position: absolute;
+	z-index: 10;
+}
+.ms-loud-dark-skin .ms-nav-next {
+	right: 30px;
+	left: auto;
+	background-position: -74px -92px;
+}
+
+
+
+.ms-loud-dark-skin .ms-bullet {
+	width: 10px;
+	height: 10px;
+	background: url(ms_controls.png) no-repeat;
+	margin: 4px;
+	background-position: -24px -36px;
+}
+
+
+.ms-loud-dark-skin .ms-bullet-selected {
+	background-position: -24px -58px;
+}
+
+
+.ms-loud-dark-skin .ms-tooltip{
+	position: absolute;
+	z-index: 110;
+	cursor: auto;
+}
+
+.ms-loud-dark-skin .ms-tooltip-top .ms-tooltip-arrow,
+.ms-loud-dark-skin .ms-tooltip-bottom .ms-tooltip-arrow{
+	border-left: solid 10px transparent;
+	border-right: solid 10px transparent;
+	position: absolute;
+	left: 50%;
+	margin-left: -10px;
+}
+
+.ms-loud-dark-skin .ms-tooltip-top .ms-tooltip-arrow{
+	border-top: solid 10px;
+	border-top-color: silver;
+	border-top-color: rgba(240, 240, 240, 0.88);
+	bottom: -10px;
+}
+
+.ms-loud-dark-skin .ms-tooltip-bottom .ms-tooltip-arrow {
+	border-bottom: solid 10px;
+	border-bottom-color: silver;
+	border-bottom-color: rgba(240, 240, 240, 0.88);
+	top: -10px;
+}
+
+.ms-loud-dark-skin .ms-tooltip-right .ms-tooltip-arrow,
+.ms-loud-dark-skin .ms-tooltip-left .ms-tooltip-arrow{
+	border-top: solid 10px transparent;
+	border-bottom: solid 10px transparent;
+	position: absolute;
+	top: 50%;
+	margin-top: -10px;
+}
+
+.ms-loud-dark-skin .ms-tooltip-right .ms-tooltip-arrow{
+	border-right: solid 10px;
+	border-right-color: silver;
+	border-right-color: rgba(240, 240, 240, 0.88);
+	left: -10px;
+}
+
+.ms-loud-dark-skin .ms-tooltip-left .ms-tooltip-arrow {
+	border-left: solid 10px;
+	border-left-color: silver;
+	border-left-color: rgba(240, 240, 240, 0.88);
+	right: -10px;
+}
+
+.ms-loud-dark-skin .ms-tooltip-point {cursor: pointer;}
+.ms-loud-dark-skin .ms-tooltip-point .ms-point-center {
+	width: 12px;
+	height: 12px; 
+	border-radius: 15px;
+	border: solid 2px #BBB;
+	background: white;
+	margin: -8px 0 0 -8px;
+	position: absolute;
+	z-index: 5;
+}
+
+.ms-loud-dark-skin .ms-tooltip-point .ms-point-border {
+	width: 22px;
+	height: 22px; 
+	background: black;
+	background:rgba(0, 0, 0, 0.36);
+	margin: -11px 0 0 -11px;
+	position: absolute;
+	border-radius: 15px;
+	
+	animation: point-anim 1.5s infinite ;
+	-moz-animation: point-anim 1.5s infinite;
+	-webkit-animation: point-anim 1.5s infinite;
+	-o-animation: point-anim 1.5s infinite;
+}
+
+.ms-loud-dark-skin .ms-tooltip {
+	max-width:200px;
+}
+
+.ms-loud-dark-skin .ms-tooltip-cont {
+	padding: 10px;
+	background: silver;
+	background: rgba(240, 240, 240, 0.88);
+	text-shadow: 0 1px 0px white;
+	margin-left: -1px;
+}
+
+/* retina */
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+	
+	.ms-loud-dark-skin .ms-slide .ms-slide-vpbtn,
+	.ms-loud-dark-skin .ms-video-btn,
+	.ms-loud-dark-skin .ms-slide .ms-slide-vcbtn,
+	.ms-loud-dark-skin .ms-nav-next,
+	.ms-loud-dark-skin .ms-nav-prev,
+	.ms-loud-dark-skin .ms-bullet{
+		background-image:url(skins/light-skin-1-retina.png);
+		background-size: 152px 225px;
+	}
+	
+}

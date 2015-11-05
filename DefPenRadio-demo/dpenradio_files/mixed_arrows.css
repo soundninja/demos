@@ -1,0 +1,42 @@
+@font-face {
+	font-family: "icomoon";
+	src:url("icomoon.eot");
+	src:url("icomoon.eot#iefix") format("embedded-opentype"),
+		url("icomoon.woff") format("woff"),
+		url("icomoon.ttf") format("truetype"),
+		url("icomoon.svg") format("svg");
+	unicode-range: U+00-FFFF;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family:'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sds-thin-left-arrow:before {
+	content: "\e600";
+}
+.icon-sds-thin-right-arrow:before {
+	content: "\e601";
+}
+.icon-sds-thick-left-arrow:before {
+	content: "\e602";
+}
+.icon-sds-thick-right-arrow:before {
+	content: "\e603";
+}
+.icon-sds-medium-v-left:before {
+	content: "\e604";
+}
+.icon-sds-medium-v-right:before {
+	content: "\e605";
+}

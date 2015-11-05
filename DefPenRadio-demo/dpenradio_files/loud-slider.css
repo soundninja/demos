@@ -1,0 +1,163 @@
+/*
+	Loud Slider CSS
+	Version 1.0
+	Sakwa Design Studio
+*/
+*{
+	-webkit-font-smoothing:antialiased ; 
+	-moz-osx-font-smoothing:grayscale ;
+}
+.sds_loud_slider{
+
+}
+.loud_slider_container{
+	position:relative;
+	overflow:hidden;
+}
+
+.loud_slider_item{
+	
+}
+
+.loud_slider_previous,
+.loud_slider_next{
+	display:none;
+	cursor:pointer;
+}
+
+@media(min-width:1200px){
+	.loud_slider_previous,
+	.loud_slider_next{
+		display:inline-block !important;
+		max-height: 48px;
+		max-width:48px;
+		position:absolute;
+		top:55%;
+		z-index:999;
+		margin-top:-55px;
+	
+	}
+}
+
+
+.loud_slider_previous{
+	left:-48px;
+}
+.loud_slider_next{
+	right:-48px;
+	left:auto;
+}
+
+.loud_slider_item{
+	max-height:589px;
+}
+
+.loud_slider_item_pic{
+	position:relative;
+}
+
+.loud_slider_item_pic img{
+	width:100%;
+	display:none;
+	height: auto;
+}
+
+
+
+.loud_slider_text{
+	color:#fff;
+	font-size:1.8em;
+	font-family:Raleway, Georgia;
+	font-weight: 700;
+	line-height:125%;
+	background:#262526;
+	background:rgba(38,37,38,.91);
+	display:block;
+	padding:15px;
+}
+
+@media(min-width:768px){
+	.loud_slider_text{
+		font-size:3.5em;
+	}
+}
+
+.loud_slider_link{
+	display:block;
+	padding:8px 0 5px 15px;
+	margin:10px;
+	background: #f20017;
+	border: none;
+	outline: none;
+	font-family:Raleway , Georgia;
+	font-weight: 700;
+	line-height: 120% !important;
+	font-size: 24px;
+	color: #fff;
+	text-decoration: none;
+	-webkit-transition-property: background;
+	-moz-transition-property: background;
+	-o-transition-property: background;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-transition-timing-function: linear;
+	-moz-transition-timing-function: linear;
+	-o-transition-timing-function: linear;
+	transition-timing-function: linear;
+}
+
+
+
+.loud_slider_link:hover,
+.loud_slider_link:focus{
+	background:#C1007E;
+	color:#fff;
+}
+
+@media(min-width:992px){
+	.loud_slider_text_wrapper{
+		position:absolute;
+		top:35%;
+		right:3%;
+		left:auto;
+		padding:15px;
+
+		max-width:430px;
+		--moz-box-sizing: border-box;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+
+		display:block;
+		overflow:auto;
+		background:transparent !important;
+	}
+
+	.loud_slider_text{
+		position:relative;
+		z-index:30;
+
+		display:block;
+		overflow:hidden;
+
+		font-size:2.5em;
+		padding:15px 15px 30px;
+
+		-moz-font-kerning:auto;
+	}
+
+	.loud_slider_item{
+
+	}
+	.loud_slider_link{
+		margin:15px 15px 15px;
+		display: inline-block;
+		padding: 8px 15px 5px;
+		position:absolute;
+		bottom:0;
+		right:60px;
+		z-index:40;
+		margin:auto;
+	}
+}
