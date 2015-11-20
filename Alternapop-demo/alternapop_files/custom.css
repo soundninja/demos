@@ -1,0 +1,10 @@
+/*
+File:			custom.css
+Description:	Custom styles for Thesis
+More Info:		http://diythemes.com/thesis/rtfm/custom-css/
+*/
+
+img#wpstats{display:none}
+
+.custom #logo {background-image: url('images/alternapop_black_300x90.png'); background-repeat: no-repeat; width: 300px; height: 90px; text-indent: -9999px; }
+.custom #logo a {width: 300px; height: 90px; display: block; outline: none;}

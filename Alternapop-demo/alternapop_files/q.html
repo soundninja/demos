@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <link href="q_data/css.css" rel="stylesheet" type="text/css">
+        <style>
+        
+        </style>
+                <style>
+                    </style>
+        <script type="text/javascript">
+            if(typeof amzn_assoc_utils==="undefined"){amzn_assoc_utils={};}if(typeof amzn_assoc_utils.assocRuntimeMaker==="undefined"){amzn_assoc_utils.assocRuntimeMaker=function(l,g,d){var f={},j={},e=[],b,k=function(m){e.push(m);if(window.addEventListener){window.addEventListener("message",m,false);}else{window.attachEvent("onmessage",m);}},c=false,a=false,h=[];j.listen=function(){k(function(n){var m;if(n.origin.indexOf(l)<0&&n.origin.indexOf(g)<0){return;}if(n.data){m=amzn_assoc_utils.parse(n.data);if(m.slotNum===d){if(typeof m.op!=="undefined"&&m.op==="getRuntimeData"){n.source.postMessage(JSON.stringify({slotNum:d,rt:f}),"*");}}}});};j.init=function(n,m){if(typeof n==="object"){f=n;c=true;if(typeof m==="undefined"||!m){j.listen();}}};j.destroy=function(){var m=0;c=false;h=[];f={};a=false;for(m=0;m<e.length;m++){window.removeEventListener("message",e[m],false);}e=[];clearTimeout(b);};j.reinit=function(p,m){var o=h,n;j.destroy();j.init(p,m);for(n=0;n<o.length;n++){if(typeof o[n]==="function"){o[n](p);}}};j.append=function(m){var n;for(n in m){if(m.hasOwnProperty(n)){f[n]=m[n];}}};j.retrieveRuntime=function(m,o,n){if(!c){h.push(m);if(!a){k(function(r){var p=0;if(!c&&r.data){try{var q=JSON.parse(r.data);if(q.slotNum===d&&typeof q.rt!=="undefined"){f=q.rt;clearTimeout(b);for(p=0;p<h.length;p++){if(typeof h[p]==="function"){h[p](f);}}c=true;}}catch(r){}}});window.parent.postMessage(JSON.stringify({slotNum:d,op:"getRuntimeData"}),"*");if(typeof o==="number"&&typeof n==="object"){b=setTimeout(function(){f=n;for(i=0;i<h.length;i++){if(typeof h[i]==="function"){h[i](f);}}c=true;},o);}a=true;}}else{if(typeof m==="function"){m(f);}}};j.getValue=function(m){if(f.hasOwnProperty(m)){return f[m];}else{return null;}};return j;};}if(typeof amzn_assoc_utils.assocRuntime!=="object"){amzn_assoc_utils.assocRuntime={};}amzn_assoc_utils.assocRuntime["0"]=amzn_assoc_utils.assocRuntimeMaker("http://ws-na.amazon-adsystem.com","//z-na.amazon-adsystem.com","0");
+        
+            		var amazon_assoc_ir_f_call_acap = function(map) {
+			var logTypeStr = "", foresterURL, json;
+			if(typeof JSON !== 'undefined') json = JSON.stringify(map);
+			else if(typeof amzn_assoc_utils !== 'undefined') json = amzn_assoc_utils.stringify(map);
+			else return;
+			if(typeof map.logType !== "undefined") logTypeStr = "&logType=" + map.logType;
+			// forester URLs are of format //<end_point>/<api_version>/<channel_id>/<channel_version>/<OPERATION>/
+			// Depending on operation, we either pass the data in the URI or we pass them as query parameters
+			// if operation is OP, data must be in query parameters while if operation is TOP,
+			// data must be in the URI itself
+			foresterURL = "//fls-na.amazon-adsystem.com/1/acap/1/OE/";
+						    foresterURL = foresterURL + encodeURIComponent(json) + "?cb=" + (new Date()).getTime() + "&logType=" + logTypeStr;
+						(new Image()).src = foresterURL;
+		};
+                		var amazon_assoc_ir_f_call_associates_ads = function(map) {
+			var logTypeStr = "", foresterURL, json;
+			if(typeof JSON !== 'undefined') json = JSON.stringify(map);
+			else if(typeof amzn_assoc_utils !== 'undefined') json = amzn_assoc_utils.stringify(map);
+			else return;
+			if(typeof map.logType !== "undefined") logTypeStr = "&logType=" + map.logType;
+			// forester URLs are of format //<end_point>/<api_version>/<channel_id>/<channel_version>/<OPERATION>/
+			// Depending on operation, we either pass the data in the URI or we pass them as query parameters
+			// if operation is OP, data must be in query parameters while if operation is TOP,
+			// data must be in the URI itself
+			foresterURL = "//fls-na.amazon-adsystem.com/1/associates-ads/1/OP/r/json";
+						    foresterURL = foresterURL + "?cb=" + (new Date()).getTime() + logTypeStr + "&p=" + encodeURIComponent(json);
+						(new Image()).src = foresterURL;
+		};
+    var amazon_assoc_ir_f_call = amazon_assoc_ir_f_call_associates_ads;
+               var amazon_assoc_aax_f_call = function(aax_map, pixelURL) {
+       var json,payload;
+       if(typeof pixelURL === 'undefined') return;
+       if(typeof JSON !== 'undefined') json = JSON.stringify(aax_map);
+       else if(typeof amzn_assoc_utils !== 'undefined') json = amzn_assoc_utils.stringify(aax_map);
+       else return;
+       payload = encodeURIComponent(json);
+       if(typeof pixelURL === "string" && pixelURL != "") (new Image()).src = pixelURL + '?assoc_payload='+ payload;
+   };
+          
+            window.runtimeManager = amzn_assoc_utils.assocRuntime["0"];
+            window.backupRuntime = {"trackingId": "alternapopcom-20",
+                                    "url": ((window.location != window.parent.location)?document.referrer:document.location.href),
+                                    "aaxRequestId": "" };
+                                    
+            var recordInteraction = function(data) {
+                                    runtimeManager.retrieveRuntime(function(rt) {
+                        data.tag = rt["trackingId"];
+                        data.region = "US";
+                        data.linkCode = "w24";
+                        data.creative = "496581";
+                        data.campaignId = "212361";
+                        data.linkId = rt["linkid"];
+                        data.placement = "L7XGSM362BUM22OM";
+                        data.refUrl = rt["url"] ||
+                        ((window.location != window.parent.location) ?
+                            document.referrer : document.location.href);
+                        data.refUrl = data.refUrl.substring(0, 256);
+                        if(typeof data.pixelURL === "undefined") {
+                        	data.pixelURL = rt["pixelURL"];
+                        }
+                        if(typeof data.clickURL === "undefined") {
+                        	data.clickURL = rt["clickURL"];
+                        }
+                
+                        amazon_assoc_ir_f_call(data);
+                        if(typeof rt["pixelURL"] !== "undefined") {
+                       		amazon_assoc_aax_f_call(data,data.pixelURL);
+                       	}
+                    	
+                    }, 1000, window.backupRuntime);
+                            };
+            var recordAcapFeedback = function(data) {
+                runtimeManager.retrieveRuntime(function(rt) {
+                    data.type = "af";
+                    data.url = rt["url"] ||
+                    ((window.location != window.parent.location) ?
+                        document.referrer : document.location.href);
+                    data.url = data.url.substring(0, 256);
+                    if (typeof data.request_id === "undefined") {
+                        data.request_id = rt["aaxRequestId"];
+                    }
+                    if(typeof data.pixelURL === "undefined") {
+                        data.pixelURL = rt["pixelURL"];
+                    }
+                    if(typeof data.clickURL === "undefined") {
+                        data.clickURL = rt["clickURL"];
+                     }
+                    data.mkt = 'ATVPDKIKX0DER';
+                    amazon_assoc_ir_f_call_acap(data);
+                    }, 1000, window.backupRuntime);
+            };
+                // go through all the links on the page and add parameter ref-refURL
+    var addRefUrls = function(allLinks, linkid) {
+        var refRefUrl = new RegExp("^http://.*(amazon|endless|myhabit|amazonwireless|javari|smallparts)\\.(com|ca|co\\.jp|de|fr|co\\.uk|cn|it|es)/.*tag=.*", "i"),
+            pageUrl = (window.location != window.parent.location) ? document.referrer : document.location,
+            href, results, newUrl, i,
+            encodeStr = function(b) {
+                return b && encodeURIComponent(b).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+            };
+        for (i = 0; i < allLinks.length; i++) {
+            allLinks[i].rel = "nofollow";
+            href = new String(allLinks[i].href);
+            if (results = href.match(refRefUrl)) {
+                newUrl = href + "&ref-refURL=" + encodeStr(pageUrl);
+                if(typeof linkid === "string" && linkid !== "") newUrl = newUrl + "&linkId=" + linkid;
+                allLinks[i].href = newUrl;
+            }
+        }
+    };
+                // go through all the links on the page and wrap them behind AAX redirect click URL
+    var addClickUrls = function(allLinks, clickPixel) {
+         var newUrl,i,href;
+        if(typeof clickPixel === 'undefined') return;
+        else {      
+        	for (i = 0; i < allLinks.length; i++) {
+            	href = new String(allLinks[i].href);
+                newUrl = clickPixel + href;
+                allLinks[i].href = newUrl;
+                }
+            }
+    };
+                
+        </script>
+    </head>
+<body>
+        
+
+
+
+<a rel="nofollow" style="text-decoration: none;" id="fb_banner_link_L7XGSM362BUM22OM_0" target="_blank" href="http://aax-us-east.amazon-adsystem.com/x/c/Qd87OQBdkLuRl6_09U_bYeAAAAFRIw-VTAEAAAAANBzPRA/http://www.amazon.com/ref=as_sl_pc_ac_c_f?tag=alternapopcom-20&amp;linkCode=w24&amp;creative=496581&amp;camp=212361&amp;ref-refURL=http%3A%2F%2Fwww.alternapop.com%2F2015%2F08%2F27%2Fthe-chameleons-embark-on-us-tour-interpol-editors-post-punk%2F">
+<img src="q_data/amazon_assoc-ads_feature-tile_180x150_orange.png" style="border:none" height="150" width="180">
+</a>
+<script type="text/javascript">
+    (function() {
+        var link = document.getElementById("fb_banner_link_L7XGSM362BUM22OM_0"),
+            onclickHandler = function(e) {
+                var data = {};
+                data.logType = "contextual_clicks";
+                data.interaction = "click";
+                data.clickSource = "fallback";
+                data.boxIndex = -1;
+                data.page = -1;
+                data.asin = "";
+                data.asinRecommendationType = "";
+                                recordInteraction(data);
+            };
+        if(link.addEventListener) {
+            link.addEventListener("click", onclickHandler, false);
+            link.addEventListener("touchend", onclickHandler, false);
+        }
+        else {
+            link.attachEvent("onclick", onclickHandler);
+        }
+        recordInteraction({"interaction": "first_render", "logType": "contextual_navigation"
+                           });
+    }());
+</script>    
+    <script type="text/javascript">
+                      
+        
+
+                                    runtimeManager.retrieveRuntime(function(rt) {
+                (new Image()).src = "//ir-na.amazon-adsystem.com/e/ir?o=1&t=" + rt["trackingId"] +
+                                    "&l=w24&creative=496581&camp=212361";
+                            
+                addRefUrls(document.getElementsByTagName("a"), rt["linkid"]);
+                 if(typeof rt["clickURL"] !== "undefined") {
+                	addClickUrls(document.getElementsByTagName("a"), rt["clickURL"]);
+                  }
+              
+            }, 5000, window.backupRuntime);
+            
+            
+                        
+                
+                
+     
+    </script>
+
+
+
+</body></html>
