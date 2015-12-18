@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html dir="ltr" style="height:100%;" scroll="no" lang="en-US"><head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Issuu reader</title>
+        <style type="text/css">
+            * {
+                margin:0;
+                padding:0;
+            }
+
+            html, body, div {
+                overflow:hidden;
+                width:100%;
+                height:100%;
+            }
+        </style>
+        <script type="text/javascript">
+            var issuuIframe = true;
+        </script>
+    </head>
+    <body dir="ltr">
+        <script type="text/javascript">
+            function escapeHtml(string) {
+                var entityMap = {
+                    "&": "&amp;",
+                    "<": "&lt;",
+                    ">": "&gt;",
+                    '"': '&quot;',
+                    "'": '&#39;',
+                    "/": '&#x2F;'
+                };
+                return String(string).replace(/[&<>"'\/]/g, function(s) {
+                    return entityMap[s];
+                });
+            }
+            
+            function getEmbedId(val) {
+                var regxRule = /^([0-9]{1,8})\/([0-9]{1,8}).*$/;
+                var matches = regxRule.exec(val);
+                return (matches && matches.length > 2) ? matches[1] + '/' + matches[2] : 'invalid';
+            }
+
+            document.write('<div data-configid="' + escapeHtml(getEmbedId(decodeURIComponent(location.hash.replace('#', '')))) + '" class="issuuembed"></div>');
+        </script><div data-configid="1813476/14501181" class="issuuembed issuu-isrendered"><div class="pcover" href="http://issuu.com/bigupmagazine/docs/big_up_seventeen_issuu?e=1813476/14501181" style="width:100%; height:100%; display:block;    background-color:#ffffff; position:relative; text-align:center; font:bold 18px Helvetica Neue, HelveticaNeue, Helvetica, Trebuchet, Trebuchet MS, Arial, sans-serif;">    <a href="http://issuu.com/bigupmagazine/docs/big_up_seventeen_issuu?e=1813476/14501181" class="read-link" style="display: initial;" target="_blank">        <img style="width:auto; height:auto; max-width:90%; max-height:90%; margin:0; position:absolute; top:50%; left:50%; margin-right:-50%; transform: translate(-50%, -50%); -webkit-box-shadow:0px 2px 8px rgba(50, 50, 50, 0.7); -moz-box-shadow:0px 2px 8px rgba(50, 50, 50, 0.7); box-shadow:0px 2px 8px rgba(50, 50, 50, 0.7);" src="embed_data/page_1_thumb_large.jpg" alt="Seventeen: Elusive Issue -- Big Up Magazine">        <span style="position:absolute; top:50%; left:50%; z-index:2; display:block;            width:150px; height:50px; margin-top:-25px; margin-left:-75px;            line-height:48px; vertical-align:middle; text-align:center; background-color: rgb(0,0,0);            -moz-border-radius: 15px;            -webkit-border-radius: 15px;            -ms-border-radius: 15px;            -o-border-radius: 15px;            border-radius: 15px;            background-color: rgba(0,0,0, 0.7); border: 2px solid white; color: white; text-decoration: none;            text-indent: initial;">Read now        </span>    </a>    <a href="http://issuu.com/" target="_blank">        <img href="http://issuu.com/" alt="issuu is the world's largest collection of free-to-read publications including magazines, newspapers, portfolios, and catalogs. You can publish too." style="width:58px; display:block; position:absolute; bottom:10px; right:10px; opacity:0.3; border-width:0px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAaCAYAAAAOl/o1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NTlGNEFEMTBBMTcxMUUyQUI1N0I0NkQ0RkNFMjg5MiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NTlGNEFEMjBBMTcxMUUyQUI1N0I0NkQ0RkNFMjg5MiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjY1OUY0QUNGMEExNzExRTJBQjU3QjQ2RDRGQ0UyODkyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY1OUY0QUQwMEExNzExRTJBQjU3QjQ2RDRGQ0UyODkyIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+dJYXrgAABBRJREFUeNrsWF9IU2EU36YIU5YZ9hA+RCr5r5UwwZc096LUg+ReoubDXhQShPlkOF/1zVB8yD8PvWwW/dnCytoeWihEDYWVoQYpDlwFM8sNG2m5zm/cTz5u310aEub1wOH77vnOPfc7v3u+c8692kQioRFQNnGhZn9TmPiTXJjOzdOIrxHbVAAGIwDylNhOvAqBVoqQDGIf8TmNOgnRUolRJwkcKgYDlEd8k0UIouMj8RG5ViwW+xoMBt+Vl5cXGQyGwyoA5jQi5IQIDJDZbH5cXV0dwaiSSDHppPwhpFAolM6PKiB9Skf9fn/Z6Ojo+/r6+jK1JBPkECONbzQHBGrRpVqdmJh4VVFR4fJ4PH752vDw8JO6ujoX1hl3d3c/CIfDIVFyxhqvq6TP7IrsJOsjybEOPbkM9pR8wRqzC7/eEmH8TRERklAgk8nkJJWHGEVyJR4fH3/JdJeWlhZzc3Nvp9J3u93PmD6TdXV1eUR7gpzppJLJibc7LZHgGVd3nCzxZqamptDaa8jgj6qqqmOYLy8vfxsYGPjg8/my5+bmVkie1G9vb39Bawa9Xr/e19enLy4uTlY06AwODq7A1uzs7GpDQ8M/OxeniPhRqXXfFkUike/svo6Ojov8msgpcnwTY2lpabypqcnC5ACMrvdcEtHt9IaSkpJsNlfKLzxZLJYsjIiEtra2uzi7ezmr7hgQigKz1WqNMSfJ4TWtVvtInugYtba21uTn50cx7+3t1RuNxsXMzEx3Y2Pjrb0Iju5vbnI6nZcpcR6tra1dZTLkjubm5p8FBQUjvKNo+efn568MDQ2lMWDi8XiGy+UyABwA898DIuWASq/Xa41Go2fhLFWeJDgLCwuHbDbba7k+5YvzAIaqjhHJmCrPGuQARlQuKVdtKOSwjVT7QonfjmzXAeEjAM5OTk5a+aOk+FmZl3ccyZgcu8RAobK7xtZZ1FEUbsodwTXkvB6IOumt/zf9/f3P5c/kZbzurgCCPIGcgVCXN0/kZHKzzFEQcgtyBqKAd5CfUyne2kdnZ2ehVMaz6Ct7DEkbDRSeS0fOCznWe3p6zvBllAHkcDjSsTfcA8YcMgaiqNRuu3VHFcHbxnFABECGDVIkfEEewDXyQk5OTgIfgGyzOEKIGtYhsg0lPyelozUzM6OHDfQngUDgJL9ROI98pLRp3j4PMADEkRXdg30Gg8ELf/iN0YJOtUipu6MHj4m6RnSfdrv9Dj3ExTpAcuw+vQEn36UygoxAHOE7Vswhgy3Rs9FJwh7sMvvQhzyRgrBXfl+YK3W9ArIhQvR042d8+h5822kqcXbjxDcOsNAEiQP8T+ZJYqNKwVghriGeZtl9XfrrfF1aVAvB73v4lwowWJURKSr+Z91nYEzLhb8EGABnI1kQq06oHQAAAABJRU5ErkJggg==">    </a></div></div>
+        <script type="text/javascript" src="embed_data/embed.js"></script>
+    
+
+</body></html>
